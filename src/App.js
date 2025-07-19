@@ -10,6 +10,7 @@ import VideoPlayer from './pages/VideoPlayer';
 import Quiz from './pages/Quiz';
 import Progress from './pages/Progress';
 import OfflineIndicator from './components/OfflineIndicator';
+import PWAUpdateManager from './components/PWAUpdateManager';
 import { ProgressProvider } from './contexts/ProgressContext';
 import { OfflineProvider } from './contexts/OfflineContext';
 
@@ -39,6 +40,7 @@ function App() {
             </main>
             
             <Footer />
+            <PWAUpdateManager />
           </div>
         </Router>
       </ProgressProvider>
@@ -46,4 +48,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

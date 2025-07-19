@@ -14,14 +14,10 @@ root.render(
 // Register service worker for PWA functionality with update handling
 serviceWorkerRegistration.register({
   onUpdate: (registration) => {
-    // Notify user of available update
-    if (confirm('New version available! Would you like to update?')) {
-      // Tell the waiting SW to skip waiting
-      if (registration && registration.waiting) {
-        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-      }
-      window.location.reload();
-    }
+    // Send message to trigger update notification component
+    window.dispatchEvent(new CustomEvent('sw-update-available', {
+      detail: { registration }
+    }));
   },
   onSuccess: (registration) => {
     console.log('PWA installed successfully');
