@@ -9,6 +9,7 @@ import ModuleDetail from './pages/ModuleDetail';
 import VideoPlayer from './pages/VideoPlayer';
 import Quiz from './pages/Quiz';
 import Progress from './pages/Progress';
+import Flashcards from './pages/Flashcards';
 import OfflineIndicator from './components/OfflineIndicator';
 import { ProgressProvider } from './contexts/ProgressContext';
 import { OfflineProvider } from './contexts/OfflineContext';
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/modules/:moduleId" element={<ModuleDetail />} />
                 <Route path="/video/:videoId" element={<VideoPlayer />} />
                 <Route path="/quiz/:moduleId" element={<Quiz />} />
+                <Route path="/flashcards/:moduleId" element={<Flashcards />} />
                 <Route path="/progress" element={<Progress />} />
               </Routes>
             </main>

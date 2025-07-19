@@ -21,11 +21,9 @@ const Modules = () => {
     'traumatic-injuries': 'trauma',
     'burns-management': 'trauma',
     'head-spinal-trauma': 'trauma',
+    'severe-bleeding': 'trauma',
     'chest-abdominal-injuries': 'medical',
-    'vulnerable-populations': 'specialized',
-    'building-collapse': 'trauma',
-    'chemical-injuries': 'medical',
-    'psychological-first-aid': 'psychological'
+    'chemical-injuries': 'medical'
   };
 
   const filteredModules = useMemo(() => {
