@@ -1,17 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Play, Download, CheckCircle, Clock, FileText, Award, ArrowLeft } from 'lucide-react';
+import { Play, CheckCircle, Clock, FileText, Award, ArrowLeft, Download, Wifi, WifiOff } from 'lucide-react';
 import { getModuleById } from '../data/modules';
 import { useProgress } from '../contexts/ProgressContext';
 import { useOffline } from '../contexts/OfflineContext';
+import VideoDownloadButton from '../components/VideoDownloadButton';
+import ContentCachingService from '../services/ContentCachingService';
 
 const ModuleDetail = () => {
   const { moduleId } = useParams();
-  const [downloadingVideos, setDownloadingVideos] = useState(new Set());
-  const { isModuleCompleted, getQuizScore, addDownloadedVideo, isVideoDownloaded } = useProgress();
+  const [isModuleCached, setIsModuleCached] = useState(false);
+  const [cachingModule, setCachingModule] = useState(false);
+  const { isModuleCompleted, getQuizScore } = useProgress();
   const { isOnline } = useOffline();
 
   const module = getModuleById(moduleId);
+
+  useEffect(() => {
+    const checkCacheStatus = async () => {
+      if (module) {
+        const cached = await ContentCachingService.isModuleCached(moduleId);
+        setIsModuleCached(cached);
+      }
+    };
+    checkCacheStatus();
+  }, [moduleId, module]);
 
   if (!module) {
     return (
@@ -29,41 +42,22 @@ const ModuleDetail = () => {
   const isCompleted = isModuleCompleted(moduleId);
   const quizScore = getQuizScore(moduleId);
 
-  const handleDownloadVideo = async (videoId) => {
+  const handleCacheModule = async () => {
     if (!isOnline) {
-      alert('You need to be online to download videos.');
+      alert('You need to be online to cache module content.');
       return;
     }
 
-    setDownloadingVideos(prev => new Set(prev).add(videoId));
-    
+    setCachingModule(true);
     try {
-      // Simulate download process
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Add to downloaded videos
-      await addDownloadedVideo(videoId);
-      
-      alert('Video downloaded successfully! You can now watch it offline.');
+      await ContentCachingService.cacheModuleData(module);
+      setIsModuleCached(true);
+      alert('Module content cached successfully! You can now access it offline.');
     } catch (error) {
-      alert('Failed to download video. Please try again.');
+      alert('Failed to cache module content. Please try again.');
     } finally {
-      setDownloadingVideos(prev => {
-        const newSet = new Set(prev);
-        newSet.delete(videoId);
-        return newSet;
-      });
+      setCachingModule(false);
     }
-  };
-
-  const getVideoStatus = (videoId) => {
-    if (isVideoDownloaded(videoId)) {
-      return 'downloaded';
-    }
-    if (downloadingVideos.has(videoId)) {
-      return 'downloading';
-    }
-    return 'not-downloaded';
   };
 
   return (
@@ -78,6 +72,18 @@ const ModuleDetail = () => {
           <span>Back to Modules</span>
         </Link>
 
+        {/* Offline Status Banner */}
+        {!isOnline && (
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+            <div className="flex items-center space-x-2">
+              <WifiOff className="w-5 h-5 text-yellow-600" />
+              <span className="text-yellow-800 font-medium">
+                You're offline. {isModuleCached ? 'This module is available offline.' : 'Some content may not be available.'}
+              </span>
+            </div>
+          </div>
+        )}
+
         {/* Module Header */}
         <div className="bg-white rounded-lg shadow-md p-8 mb-8">
           <div className="flex items-start justify-between mb-6">
@@ -91,6 +97,12 @@ const ModuleDetail = () => {
             <div className="text-right">
               <div className="text-sm text-gray-500 mb-1">Duration</div>
               <div className="text-lg font-semibold text-gray-900">{module.duration}</div>
+              {isModuleCached && (
+                <div className="flex items-center space-x-1 text-green-600 text-sm mt-1">
+                  <Download className="w-3 h-3" />
+                  <span>Cached</span>
+                </div>
+              )}
             </div>
           </div>
 
@@ -128,6 +140,26 @@ const ModuleDetail = () => {
             </div>
           )}
 
+          {/* Offline Actions */}
+          {isOnline && !isModuleCached && (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="font-semibold text-blue-800">Make Available Offline</h3>
+                  <p className="text-blue-700 text-sm">Cache this module for offline access</p>
+                </div>
+                <button
+                  onClick={handleCacheModule}
+                  disabled={cachingModule}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 flex items-center space-x-2"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>{cachingModule ? 'Caching...' : 'Cache Module'}</span>
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             {!isCompleted ? (
@@ -150,10 +182,10 @@ const ModuleDetail = () => {
             
             <Link
               to={`/quiz/${moduleId}`}
-              className="flex-1 bg-secondary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary-700 transition-colors flex items-center justify-center space-x-2"
+              className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors flex items-center justify-center space-x-2"
             >
               <FileText className="w-5 h-5" />
-              <span>Take Quiz</span>
+              <span>{quizScore !== null ? 'Retake Quiz' : 'Take Quiz'}</span>
             </Link>
           </div>
         </div>
@@ -161,86 +193,52 @@ const ModuleDetail = () => {
         {/* Videos Section */}
         <div className="bg-white rounded-lg shadow-md p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Training Videos</h2>
-          
-          <div className="space-y-4">
-            {module.videos.map((video, index) => {
-              const videoStatus = getVideoStatus(video.id);
-              
-              return (
-                <div key={video.id} className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                        <span className="text-primary-600 font-bold">{index + 1}</span>
+          <div className="grid gap-6">
+            {module.videos.map((video, index) => (
+              <div key={video.id} className="border border-gray-200 rounded-lg p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{video.title}</h3>
+                    <p className="text-gray-600 mb-3">{video.description}</p>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <div className="flex items-center space-x-1">
+                        <Clock className="w-4 h-4" />
+                        <span>{video.duration}</span>
                       </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-900">{video.title}</h3>
-                        <p className="text-gray-600 text-sm">{video.description}</p>
-                        <div className="flex items-center space-x-4 mt-1">
-                          <span className="text-sm text-gray-500">{video.duration}</span>
-                          {videoStatus === 'downloaded' && (
-                            <span className="text-sm text-green-600 font-medium">✓ Downloaded</span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-2">
-                      {/* Download Button */}
-                      {videoStatus === 'not-downloaded' && (
-                        <button
-                          onClick={() => handleDownloadVideo(video.id)}
-                          disabled={!isOnline}
-                          className="p-2 text-gray-600 hover:text-primary-600 disabled:opacity-50 disabled:cursor-not-allowed"
-                          title={!isOnline ? 'You need to be online to download' : 'Download for offline viewing'}
-                        >
-                          <Download className="w-5 h-5" />
-                        </button>
-                      )}
-                      
-                      {videoStatus === 'downloading' && (
-                        <div className="p-2 text-primary-600">
-                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-600"></div>
-                        </div>
-                      )}
-                      
-                      {videoStatus === 'downloaded' && (
-                        <div className="p-2 text-green-600">
-                          <CheckCircle className="w-5 h-5" />
-                        </div>
-                      )}
-                      
-                      {/* Watch Button */}
-                      <Link
-                        to={`/video/${video.id}`}
-                        className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2"
-                      >
-                        <Play className="w-4 h-4" />
-                        <span>Watch</span>
-                      </Link>
+                      <span>Video {index + 1} of {module.videos.length}</span>
                     </div>
                   </div>
+                  <div className="flex flex-col items-end space-y-2 ml-4">
+                    <Link
+                      to={`/video/${video.id}`}
+                      className="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors flex items-center space-x-2"
+                    >
+                      <Play className="w-4 h-4" />
+                      <span>Watch</span>
+                    </Link>
+                    <VideoDownloadButton video={video} size="sm" />
+                  </div>
                 </div>
-              );
-            })}
+
+                {/* Video thumbnail if available */}
+                {video.thumbnail && (
+                  <div className="mt-4">
+                    <img
+                      src={video.thumbnail}
+                      alt={video.title}
+                      className="w-full h-32 object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
-
-        {/* Offline Notice */}
-        {!isOnline && (
-          <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-            <div className="flex items-center space-x-2">
-              <Clock className="w-5 h-5 text-yellow-600" />
-              <span className="text-yellow-800 font-medium">You're currently offline</span>
-            </div>
-            <p className="text-yellow-700 text-sm mt-1">
-              Only downloaded videos are available. Connect to the internet to download more content.
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );
 };
 
-export default ModuleDetail; 
+export default ModuleDetail;
+
