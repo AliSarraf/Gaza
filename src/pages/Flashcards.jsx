@@ -57,7 +57,7 @@ const Flashcards = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-2 sm:px-4 lg:px-8">
         {/* Back Button */}
         <Link
           to={`/modules/${moduleId}`}
@@ -68,7 +68,7 @@ const Flashcards = () => {
         </Link>
 
         {/* Header */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div className="bg-white rounded-lg shadow-md p-4 sm:p-8 mb-8">
           <div className="flex items-center space-x-4 mb-6">
             <span className="text-4xl">{module.icon}</span>
             <div>
@@ -82,7 +82,7 @@ const Flashcards = () => {
           </div>
 
           {/* Module Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             <div className="bg-gray-50 rounded-lg p-4 text-center">
               <div className="text-2xl font-bold text-gray-900">{flashcards.length}</div>
               <div className="text-sm text-gray-600">Flashcard Sets</div>
@@ -103,18 +103,18 @@ const Flashcards = () => {
         {/* Flashcard Sets */}
         <div className="space-y-6">
           {flashcards.map((flashcard, index) => (
-            <div key={flashcard.id} className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex items-center justify-between">
+            <div key={flashcard.id} className="bg-white rounded-lg shadow-md p-4 sm:p-6 flex flex-col">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">{flashcard.icon}</span>
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center">
+                    <span className="text-xl sm:text-2xl">{flashcard.icon}</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
                       {flashcard.title}
                     </h3>
-                    <p className="text-gray-600 mb-2">{flashcard.description}</p>
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                    <p className="text-gray-600 mb-2 text-sm sm:text-base">{flashcard.description}</p>
+                    <div className="flex flex-wrap items-center space-x-2 sm:space-x-4 text-xs sm:text-sm text-gray-500">
                       <div className="flex items-center space-x-1">
                         <BookOpen className="w-4 h-4" />
                         <span>{flashcard.steps.length} Steps</span>
@@ -130,26 +130,24 @@ const Flashcards = () => {
                     </div>
                   </div>
                 </div>
-                
                 <button
                   onClick={() => startFlashcard(flashcard)}
-                  className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center space-x-2"
+                  className="w-full md:w-auto bg-red-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center space-x-2 text-base sm:text-lg whitespace-normal"
                 >
                   <Play className="w-5 h-5" />
-                  <span>Start Training</span>
+                  <span className="truncate">Start Training</span>
                 </button>
               </div>
-
               {/* Steps Preview */}
-              <div className="mt-6 border-t border-gray-200 pt-4">
-                <h4 className="font-semibold text-gray-900 mb-3">Training Steps:</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="mt-4 sm:mt-6 border-t border-gray-200 pt-4">
+                <h4 className="font-semibold text-gray-900 mb-3 text-base sm:text-lg">Training Steps:</h4>
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3">
                   {flashcard.steps.map((step, stepIndex) => (
-                    <div key={stepIndex} className="flex items-center space-x-2 text-sm text-gray-600">
+                    <div key={stepIndex} className="flex items-center space-x-2 text-xs sm:text-sm text-gray-600">
                       <div className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-xs font-medium">
                         {step.step}
                       </div>
-                      <span>{step.title}</span>
+                      <span className="truncate max-w-[120px] sm:max-w-none">{step.title}</span>
                     </div>
                   ))}
                 </div>
@@ -159,7 +157,7 @@ const Flashcards = () => {
         </div>
 
         {/* Training Tips */}
-        <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-4 sm:p-6">
           <h3 className="font-semibold text-blue-900 mb-3">💡 Training Tips</h3>
           <ul className="text-blue-800 text-sm space-y-2">
             <li>• Practice each flashcard set multiple times to build muscle memory</li>
@@ -170,7 +168,7 @@ const Flashcards = () => {
         </div>
 
         {/* Emergency Context */}
-        <div className="mt-6 bg-red-50 border border-red-200 rounded-lg p-6">
+        <div className="mt-6 bg-red-50 border border-red-200 rounded-lg p-4 sm:p-6">
           <h3 className="font-semibold text-red-900 mb-3">⚠️ Emergency Context</h3>
           <p className="text-red-800 text-sm">
             These flashcards are designed for blast injury scenarios where immediate action can save lives. 
