@@ -11,7 +11,7 @@ import Quiz from './pages/Quiz';
 import Progress from './pages/Progress';
 import Flashcards from './pages/Flashcards';
 import OfflineIndicator from './components/OfflineIndicator';
-import { ProgressProvider, DebugProgressPanel } from './contexts/ProgressContext';
+import { ProgressProvider } from './contexts/ProgressContext';
 import { OfflineProvider } from './contexts/OfflineContext';
 import { LocaleProvider } from './contexts/LocaleContext.jsx';
 
@@ -43,7 +43,6 @@ function App() {
               </main>
 
               <Footer />
-            <DebugProgressPanel />
             </div>
           </Router>
         </ProgressProvider>
