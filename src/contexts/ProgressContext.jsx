@@ -94,43 +94,55 @@ export const ProgressProvider = ({ children }) => {
   };
 
   const completeModule = async (moduleId) => {
-    dispatch({ type: 'COMPLETE_MODULE', payload: moduleId });
     const newCompletedModules = [...new Set([...state.completedModules, moduleId])];
     await saveProgress({
       completedModules: newCompletedModules,
       quizScores: state.quizScores,
       downloadedVideos: state.downloadedVideos
     });
+    dispatch({ type: 'COMPLETE_MODULE', payload: moduleId });
   };
 
-  const updateQuizScore = async (moduleId, score) => {
-    dispatch({ type: 'UPDATE_QUIZ_SCORE', payload: { moduleId, score } });
-    const newQuizScores = { ...state.quizScores, [moduleId]: score };
+  const updateQuizScore = async (moduleId, score, newCompletedModules, newQuizScores, newDownloadedVideos) => {
+    // If new state is provided, use it for atomic update; otherwise, use legacy behavior
+    const completedModulesToSave = newCompletedModules || state.completedModules;
+    const quizScoresToSave = newQuizScores || { ...state.quizScores, [moduleId]: score };
+    const downloadedVideosToSave = newDownloadedVideos || state.downloadedVideos;
     await saveProgress({
-      completedModules: state.completedModules,
-      quizScores: newQuizScores,
-      downloadedVideos: state.downloadedVideos
+      completedModules: completedModulesToSave,
+      quizScores: quizScoresToSave,
+      downloadedVideos: downloadedVideosToSave
     });
+    // Dispatch both updates if atomic, or just quiz score if legacy
+    if (newCompletedModules && newQuizScores) {
+      dispatch({ type: 'LOAD_PROGRESS', payload: {
+        completedModules: completedModulesToSave,
+        quizScores: quizScoresToSave,
+        downloadedVideos: downloadedVideosToSave
+      }});
+    } else {
+      dispatch({ type: 'UPDATE_QUIZ_SCORE', payload: { moduleId, score } });
+    }
   };
 
   const addDownloadedVideo = async (videoId) => {
-    dispatch({ type: 'ADD_DOWNLOADED_VIDEO', payload: videoId });
     const newDownloadedVideos = [...new Set([...state.downloadedVideos, videoId])];
     await saveProgress({
       completedModules: state.completedModules,
       quizScores: state.quizScores,
       downloadedVideos: newDownloadedVideos
     });
+    dispatch({ type: 'ADD_DOWNLOADED_VIDEO', payload: videoId });
   };
 
   const removeDownloadedVideo = async (videoId) => {
-    dispatch({ type: 'REMOVE_DOWNLOADED_VIDEO', payload: videoId });
     const newDownloadedVideos = state.downloadedVideos.filter(id => id !== videoId);
     await saveProgress({
       completedModules: state.completedModules,
       quizScores: state.quizScores,
       downloadedVideos: newDownloadedVideos
     });
+    dispatch({ type: 'REMOVE_DOWNLOADED_VIDEO', payload: videoId });
   };
 
   const isModuleCompleted = (moduleId) => {
