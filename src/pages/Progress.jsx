@@ -58,18 +58,18 @@ const Progress = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Your Learning Progress</h1>
-          <p className="text-lg text-gray-600">
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">Your Learning Progress</h1>
+          <p className="text-base sm:text-lg text-gray-600">
             Track your journey through first aid and emergency training
           </p>
         </div>
 
         {/* Overall Progress Card */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-center">
             {/* Progress Circle */}
             <div className="text-center">
-              <div className="relative w-32 h-32 mx-auto mb-4">
+              <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4">
                 <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                   <path
                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -87,19 +87,19 @@ const Progress = () => {
                   />
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-gray-900">{progressPercentage}%</span>
+                  <span className="text-lg sm:text-2xl font-bold text-gray-900">{progressPercentage}%</span>
                 </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">Overall Progress</h3>
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900">Overall Progress</h3>
             </div>
 
             {/* Achievement Level */}
             <div className="text-center">
-              <div className={`w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                <AchievementIcon className={`w-12 h-12 ${achievement.color}`} />
+              <div className={`w-20 h-20 sm:w-24 sm:h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                <AchievementIcon className={`w-10 h-10 sm:w-12 sm:h-12 ${achievement.color}`} />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{achievement.level}</h3>
-              <p className="text-gray-600">Achievement Level</p>
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{achievement.level}</h3>
+              <p className="text-sm sm:text-base text-gray-600">Achievement Level</p>
             </div>
 
             {/* Stats */}
@@ -121,45 +121,45 @@ const Progress = () => {
         </div>
 
         {/* Detailed Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
             <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <BookOpen className="w-6 h-6 text-primary-600" />
             </div>
-            <div className="text-2xl font-bold text-gray-900 mb-2">{completedModules.length}</div>
-            <div className="text-gray-600">Modules Completed</div>
+            <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{completedModules.length}</div>
+            <div className="text-sm sm:text-base text-gray-600">Modules Completed</div>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="w-6 h-6 text-green-600" />
             </div>
-            <div className="text-2xl font-bold text-gray-900 mb-2">{totalQuestions}</div>
-            <div className="text-gray-600">Quiz Questions</div>
+            <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{totalQuestions}</div>
+            <div className="text-sm sm:text-base text-gray-600">Quiz Questions</div>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <TrendingUp className="w-6 h-6 text-blue-600" />
             </div>
-            <div className="text-2xl font-bold text-gray-900 mb-2">{averageQuizScore}%</div>
-            <div className="text-gray-600">Average Score</div>
+            <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{averageQuizScore}%</div>
+            <div className="text-sm sm:text-base text-gray-600">Average Score</div>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
             <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <Clock className="w-6 h-6 text-purple-600" />
             </div>
-            <div className="text-2xl font-bold text-gray-900 mb-2">{totalVideos}</div>
-            <div className="text-gray-600">Total Videos</div>
+            <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{totalVideos}</div>
+            <div className="text-sm sm:text-base text-gray-600">Total Videos</div>
           </div>
         </div>
 
         {/* Module Progress */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Module Progress</h2>
+        <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Module Progress</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {trainingModules.map((module) => {
               const progress = getModuleProgress(module.id);
               

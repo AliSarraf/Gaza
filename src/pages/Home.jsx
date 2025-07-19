@@ -43,9 +43,9 @@ const Home = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               First Aid Training for
-              <span className="block text-primary-200">Crisis Zones</span>
+              <span className="block text-primary-200">Gaza</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-primary-100 mb-8 max-w-3xl mx-auto px-4">
               Comprehensive emergency training designed to work offline. Learn life-saving skills 
               that can make a difference when professional help is delayed.
             </p>
@@ -73,8 +73,8 @@ const Home = () => {
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Your Learning Journey</h2>
-            <p className="text-lg text-gray-600">Track your progress through our comprehensive training modules</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Your Learning Journey</h2>
+            <p className="text-base sm:text-lg text-gray-600">Track your progress through our comprehensive training modules</p>
           </div>
           
           <div className="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
@@ -100,8 +100,8 @@ const Home = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose This Training?</h2>
-            <p className="text-lg text-gray-600">Designed specifically for challenging environments and limited resources</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Why Choose This Training?</h2>
+            <p className="text-base sm:text-lg text-gray-600">Designed specifically for challenging environments and limited resources</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -125,8 +125,8 @@ const Home = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Training Modules</h2>
-            <p className="text-lg text-gray-600">Start with these essential life-saving skills</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Featured Training Modules</h2>
+            <p className="text-base sm:text-lg text-gray-600">Start with these essential life-saving skills</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -171,33 +171,33 @@ const Home = () => {
       {/* Offline Capability */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-lg p-8 text-white">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-4">Learn Offline</h2>
-                <p className="text-xl text-primary-100 mb-6">
-                  Download training videos to your device and access them without internet connection. 
-                  Perfect for areas with limited connectivity.
-                </p>
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-2">
-                    <Download className="w-5 h-5" />
-                    <span>Download videos</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Shield className="w-5 h-5" />
-                    <span>Access offline</span>
+                      <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-lg p-6 sm:p-8 text-white">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-4">Learn Offline</h2>
+                  <p className="text-lg sm:text-xl text-primary-100 mb-6">
+                    Download training videos to your device and access them without internet connection. 
+                    Perfect for areas with limited connectivity.
+                  </p>
+                  <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <Download className="w-5 h-5" />
+                      <span>Download videos</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Shield className="w-5 h-5" />
+                      <span>Access offline</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="text-center">
-                <div className="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Download className="w-16 h-16" />
+                              <div className="text-center">
+                  <div className="w-24 h-24 sm:w-32 sm:h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Download className="w-12 h-12 sm:w-16 sm:h-16" />
+                  </div>
+                  <p className="text-sm sm:text-base text-primary-100">
+                    {isOnline ? 'Ready to download content' : 'Currently offline - using downloaded content'}
+                  </p>
                 </div>
-                <p className="text-primary-100">
-                  {isOnline ? 'Ready to download content' : 'Currently offline - using downloaded content'}
-                </p>
-              </div>
             </div>
           </div>
         </div>

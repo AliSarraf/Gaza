@@ -155,29 +155,29 @@ const VideoPlayer = () => {
           )}
 
           {/* Video Controls */}
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2 sm:p-4">
             {/* Progress Bar */}
             <div 
-              className="w-full h-1 bg-gray-600 rounded cursor-pointer mb-4"
+              className="w-full h-1 bg-gray-600 rounded cursor-pointer mb-2 sm:mb-4"
               onClick={handleSeek}
             >
               <div 
                 className="h-full bg-primary-600 rounded relative"
                 style={{ width: `${(currentTime / duration) * 100}%` }}
               >
-                <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-primary-600 rounded-full"></div>
+                <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 sm:w-3 sm:h-3 bg-primary-600 rounded-full"></div>
               </div>
             </div>
 
             {/* Control Buttons */}
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2 sm:space-x-4">
                 {/* Play/Pause */}
                 <button
                   onClick={togglePlay}
                   className="text-white hover:text-gray-300 transition-colors"
                 >
-                  {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
+                  {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6" />}
                 </button>
 
                 {/* Skip Back/Forward */}
@@ -185,17 +185,17 @@ const VideoPlayer = () => {
                   onClick={() => skipTime(-10)}
                   className="text-white hover:text-gray-300 transition-colors"
                 >
-                  <SkipBack className="w-5 h-5" />
+                  <SkipBack className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
                 <button
                   onClick={() => skipTime(10)}
                   className="text-white hover:text-gray-300 transition-colors"
                 >
-                  <SkipForward className="w-5 h-5" />
+                  <SkipForward className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
 
-                {/* Volume */}
-                <div className="flex items-center space-x-2">
+                {/* Volume - Hidden on very small screens */}
+                <div className="hidden sm:flex items-center space-x-2">
                   <button
                     onClick={toggleMute}
                     className="text-white hover:text-gray-300 transition-colors"
@@ -214,19 +214,19 @@ const VideoPlayer = () => {
                 </div>
 
                 {/* Time Display */}
-                <span className="text-white text-sm">
+                <span className="text-white text-xs sm:text-sm">
                   {formatTime(currentTime)} / {formatTime(duration)}
                 </span>
               </div>
 
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2 sm:space-x-4">
                 {/* Transcript Toggle */}
                 <button
                   onClick={() => setShowTranscript(!showTranscript)}
                   className="text-white hover:text-gray-300 transition-colors"
                   title="Toggle Transcript"
                 >
-                  <FileText className="w-5 h-5" />
+                  <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
 
                 {/* Fullscreen */}
@@ -234,7 +234,7 @@ const VideoPlayer = () => {
                   onClick={toggleFullscreen}
                   className="text-white hover:text-gray-300 transition-colors"
                 >
-                  {isFullscreen ? <Minimize className="w-5 h-5" /> : <Maximize className="w-5 h-5" />}
+                  {isFullscreen ? <Minimize className="w-4 h-4 sm:w-5 sm:h-5" /> : <Maximize className="w-4 h-4 sm:w-5 sm:h-5" />}
                 </button>
               </div>
             </div>
@@ -242,10 +242,10 @@ const VideoPlayer = () => {
         </div>
 
         {/* Video Info Panel */}
-        <div className="absolute top-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg max-w-sm">
-          <h2 className="text-lg font-semibold mb-2">{video.title}</h2>
-          <p className="text-sm text-gray-300 mb-2">{video.description}</p>
-          <div className="flex items-center justify-between text-sm">
+        <div className="absolute top-4 right-4 bg-black bg-opacity-75 text-white p-3 sm:p-4 rounded-lg max-w-xs sm:max-w-sm">
+          <h2 className="text-sm sm:text-lg font-semibold mb-2">{video.title}</h2>
+          <p className="text-xs sm:text-sm text-gray-300 mb-2">{video.description}</p>
+          <div className="flex items-center justify-between text-xs sm:text-sm">
             <span>Duration: {video.duration}</span>
             {isDownloaded && (
               <span className="text-green-400">✓ Downloaded</span>
@@ -258,14 +258,14 @@ const VideoPlayer = () => {
           to={module ? `/modules/${module.id}` : '/modules'}
           className="absolute top-4 left-4 bg-black bg-opacity-75 text-white p-2 rounded-lg hover:bg-opacity-90 transition-colors"
         >
-          <ArrowLeft className="w-5 h-5" />
+          <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
         </Link>
       </div>
 
       {/* Transcript Panel */}
       {showTranscript && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-2xl max-h-96 overflow-y-auto">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg p-4 sm:p-6 w-full max-w-2xl max-h-96 overflow-y-auto">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold">Transcript</h3>
               <button

@@ -142,19 +142,19 @@ const Quiz = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Results Header */}
           <div className="text-center mb-8">
-            <div className={`w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 ${
+            <div className={`w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center mx-auto mb-4 ${
               isPassing ? 'bg-green-100' : 'bg-red-100'
             }`}>
               {isPassing ? (
-                <Award className="w-12 h-12 text-green-600" />
+                <Award className="w-10 h-10 sm:w-12 sm:h-12 text-green-600" />
               ) : (
-                <XCircle className="w-12 h-12 text-red-600" />
+                <XCircle className="w-10 h-10 sm:w-12 sm:h-12 text-red-600" />
               )}
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
               {isPassing ? 'Congratulations!' : 'Quiz Complete'}
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600">
               {isPassing 
                 ? 'You have successfully completed this module!' 
                 : 'You need 70% to pass. Review the material and try again.'
@@ -163,34 +163,34 @@ const Quiz = () => {
           </div>
 
           {/* Score Card */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div className="text-center">
-                <div className={`text-4xl font-bold mb-2 ${
+                <div className={`text-3xl sm:text-4xl font-bold mb-2 ${
                   isPassing ? 'text-green-600' : 'text-red-600'
                 }`}>
                   {score}%
                 </div>
-                <div className="text-gray-600">Final Score</div>
+                <div className="text-sm sm:text-base text-gray-600">Final Score</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-gray-900 mb-2">
+                <div className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
                   {correctAnswers}/{questions.length}
                 </div>
-                <div className="text-gray-600">Correct Answers</div>
+                <div className="text-sm sm:text-base text-gray-600">Correct Answers</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-gray-900 mb-2">
+                <div className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
                   {formatTime(timeSpent)}
                 </div>
-                <div className="text-gray-600">Time Spent</div>
+                <div className="text-sm sm:text-base text-gray-600">Time Spent</div>
               </div>
             </div>
           </div>
 
           {/* Question Review */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Question Review</h2>
+          <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Question Review</h2>
             <div className="space-y-6">
               {questions.map((question, index) => {
                 const selectedAnswer = selectedAnswers[question.id];
