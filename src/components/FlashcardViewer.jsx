@@ -122,11 +122,16 @@ const FlashcardViewer = ({ flashcardSet, onClose }) => {
             {/* Image Placeholder */}
             {step.image && (
               <div className="bg-gray-100 rounded-lg h-40 sm:h-64 flex items-center justify-center mb-4 sm:mb-6">
-                <div className="text-center text-gray-500">
-                  <div className="text-2xl sm:text-4xl mb-2">📷</div>
-                  <p className="text-xs sm:text-sm">Training Image</p>
-                  <p className="text-xs">{step.image}</p>
-                </div>
+                <img
+                  src={step.image.startsWith('/') ? step.image : `/public/${step.image}`}
+                  alt="Training Step"
+                  className="object-contain h-full max-h-56 sm:max-h-60 w-auto rounded"
+                  onError={e => {
+                    e.target.onerror = null;
+                    e.target.style.display = 'none';
+                    e.target.parentNode.innerHTML = `<div class="text-center text-gray-500"><div class="text-2xl sm:text-4xl mb-2">📷</div><p class="text-xs sm:text-sm">Training Image</p><p class="text-xs">${step.image}</p></div>`;
+                  }}
+                />
               </div>
             )}
           </div>
