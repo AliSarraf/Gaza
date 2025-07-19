@@ -4,6 +4,7 @@ import { Play, BookOpen, Award, Download, Shield, Heart, Users, Clock } from 'lu
 import { trainingModules } from '../data/modules';
 import { useProgress } from '../contexts/ProgressContext';
 import { useOffline } from '../contexts/OfflineContext';
+import {i18n} from "../i18n";
 
 const Home = () => {
   const { getProgressPercentage, completedModules } = useProgress();
@@ -15,23 +16,23 @@ const Home = () => {
   const features = [
     {
       icon: Shield,
-      title: 'Offline Access',
-      description: 'Download videos and access training content without internet connection'
+      title: i18n.t(['Home', 'Offline Access']),
+      description: i18n.t(['Home', 'Download videos and access training content without internet connection'])
     },
     {
       icon: Heart,
-      title: 'Life-Saving Skills',
-      description: 'Learn critical first aid techniques for emergency situations'
+      title: i18n.t(['Home', 'Life-Saving Skills']),
+      description: i18n.t(['Home', 'Learn critical first aid techniques for emergency situations'])
     },
     {
       icon: Users,
-      title: 'Community Focused',
-      description: 'Designed specifically for crisis zones and community responders'
+      title: i18n.t(['Home', 'Community Focused']),
+      description: i18n.t(['Home', 'Designed specifically for crisis zones and community responders'])
     },
     {
       icon: Clock,
-      title: 'Self-Paced Learning',
-      description: 'Learn at your own pace with comprehensive video tutorials'
+      title: i18n.t(['Home', 'Self-Paced Learning']),
+      description: i18n.t(['Home', 'Learn at your own pace with comprehensive video tutorials'])
     }
   ];
 
@@ -42,12 +43,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              First Aid Training for
-              <span className="block text-primary-200">Gaza</span>
+              {i18n.t(["Home", "First Aid Training for Gaza"])}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-primary-100 mb-8 max-w-3xl mx-auto px-4">
-              Comprehensive emergency training designed to work offline. Learn life-saving skills 
-              that can make a difference when professional help is delayed.
+              {i18n.t(["Home", "Comprehensive emergency training designed to work offline"])} {i18n.t(["Home", "Learn life-saving skills that can make a difference when professional help is delayed"])}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -55,14 +54,14 @@ const Home = () => {
                 className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2"
               >
                 <BookOpen className="w-5 h-5" />
-                <span>Start Training</span>
+                <span>{i18n.t(['Home', 'Start Training'])}</span>
               </Link>
               <Link
                 to="/progress"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors flex items-center justify-center space-x-2"
               >
                 <Award className="w-5 h-5" />
-                <span>View Progress</span>
+                <span>{i18n.t(['Home', 'View Progress'])}</span>
               </Link>
             </div>
           </div>
@@ -73,13 +72,13 @@ const Home = () => {
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Your Learning Journey</h2>
-            <p className="text-base sm:text-lg text-gray-600">Track your progress through our comprehensive training modules</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{i18n.t(['Home', 'Your Learning Journey'])}</h2>
+            <p className="text-base sm:text-lg text-gray-600">{i18n.t(['Home', 'Track your progress through our comprehensive training modules'])}</p>
           </div>
           
           <div className="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
             <div className="flex items-center justify-between mb-4">
-              <span className="text-lg font-semibold text-gray-900">Overall Progress</span>
+              <span className="text-lg font-semibold text-gray-900">{i18n.t(['Home', 'Overall Progress'])}</span>
               <span className="text-2xl font-bold text-primary-600">{progressPercentage}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3 mb-4">
@@ -89,8 +88,8 @@ const Home = () => {
               ></div>
             </div>
             <div className="flex justify-between text-sm text-gray-600">
-              <span>{completedModules.length} of {trainingModules.length} modules completed</span>
-              <span>{trainingModules.length - completedModules.length} remaining</span>
+              <span>{completedModules.length}/{trainingModules.length} {i18n.t(['Home', 'Modules Completed'])}</span>
+              <span>{trainingModules.length - completedModules.length} {i18n.t(['Home', 'Remaining'])}</span>
             </div>
           </div>
         </div>
@@ -100,8 +99,8 @@ const Home = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Why Choose This Training?</h2>
-            <p className="text-base sm:text-lg text-gray-600">Designed specifically for challenging environments and limited resources</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{i18n.t(['Home', 'Why Choose This Training?'])}</h2>
+            <p className="text-base sm:text-lg text-gray-600">{i18n.t(['Home', 'Designed specifically for challenging environments and limited resources'])}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -125,8 +124,8 @@ const Home = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Featured Training Modules</h2>
-            <p className="text-base sm:text-lg text-gray-600">Start with these essential life-saving skills</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{i18n.t(['Home', 'Featured Training Modules'])}</h2>
+            <p className="text-base sm:text-lg text-gray-600">{i18n.t(['Home', 'Start with these essential life-saving skills'])}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -148,7 +147,7 @@ const Home = () => {
                       className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2"
                     >
                       <Play className="w-4 h-4" />
-                      <span>Start</span>
+                      <span>{i18n.t(['Home', 'Start'])}</span>
                     </Link>
                   </div>
                 </div>
@@ -162,7 +161,7 @@ const Home = () => {
               className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-flex items-center space-x-2"
             >
               <BookOpen className="w-5 h-5" />
-              <span>View All Modules</span>
+              <span>{i18n.t(['Home', 'View All Modules'])}</span>
             </Link>
           </div>
         </div>
@@ -174,19 +173,19 @@ const Home = () => {
                       <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-lg p-6 sm:p-8 text-white">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-4">Learn Offline</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-4">{i18n.t(['Home', 'Learn Offline'])}</h2>
                   <p className="text-lg sm:text-xl text-primary-100 mb-6">
-                    Download training videos to your device and access them without internet connection. 
-                    Perfect for areas with limited connectivity.
+                    {i18n.t(['Home', 'Download training videos to your device and access them without internet connection'])}.
+                    {i18n.t(['Home', 'Perfect for areas with limited connectivity'])}.
                   </p>
                   <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                     <div className="flex items-center space-x-2">
                       <Download className="w-5 h-5" />
-                      <span>Download videos</span>
+                      <span>{i18n.t(['Home', 'Download videos'])}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Shield className="w-5 h-5" />
-                      <span>Access offline</span>
+                      <span>{i18n.t(['Home', 'Access offline'])}</span>
                     </div>
                   </div>
                 </div>
@@ -195,7 +194,7 @@ const Home = () => {
                     <Download className="w-12 h-12 sm:w-16 sm:h-16" />
                   </div>
                   <p className="text-sm sm:text-base text-primary-100">
-                    {isOnline ? 'Ready to download content' : 'Currently offline - using downloaded content'}
+                    {isOnline ? i18n.t(['Home', 'Ready to download content']) : i18n.t(['Home', 'Currently offline - using downloaded content'])}
                   </p>
                 </div>
             </div>

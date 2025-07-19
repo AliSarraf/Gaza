@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Download, Home, BookOpen, BarChart3 } from 'lucide-react';
 import { useProgress } from '../contexts/ProgressContext';
 import { useOffline } from '../contexts/OfflineContext';
+import {i18n} from "../i18n";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,9 +40,9 @@ const Header = () => {
   };
 
   const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'Modules', href: '/modules', icon: BookOpen },
-    { name: 'Progress', href: '/progress', icon: BarChart3 },
+    { name: i18n.t(['Header', 'Home']), href: '/', icon: Home },
+    { name: i18n.t(['Header', 'Modules']), href: '/modules', icon: BookOpen },
+    { name: i18n.t(['Header', 'Progress']), href: '/progress', icon: BarChart3 },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -56,7 +57,7 @@ const Header = () => {
               <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">FA</span>
               </div>
-              <span className="text-lg sm:text-xl font-bold text-gray-900">First Aid Training</span>
+              <span className="text-lg sm:text-xl font-bold text-gray-900">{i18n.t(['Header', 'First Aid Training'])}</span>
             </Link>
           </div>
 
@@ -89,7 +90,7 @@ const Header = () => {
                   {getProgressPercentage()}%
                 </span>
               </div>
-              <span className="text-sm text-gray-600">Complete</span>
+              <span className="text-sm text-gray-600">{i18n.t(['Header', 'Complete'])}</span>
             </div>
 
             {/* Online/Offline Status */}
@@ -101,7 +102,7 @@ const Header = () => {
               <div className={`w-2 h-2 rounded-full ${
                 isOnline ? 'bg-green-500' : 'bg-red-500'
               }`}></div>
-              <span>{isOnline ? 'Online' : 'Offline'}</span>
+              <span>{isOnline ? i18n.t(['Header', 'Online']) : i18n.t(['Header', 'Offline'])}</span>
             </div>
 
             {/* Install Button */}
@@ -111,7 +112,7 @@ const Header = () => {
                 className="flex items-center space-x-1 bg-primary-600 text-white px-3 py-1 rounded-md text-sm hover:bg-primary-700 transition-colors"
               >
                 <Download className="w-4 h-4" />
-                <span>Install</span>
+                <span>{i18n.t(['Header', 'Install'])}</span>
               </button>
             )}
           </div>
@@ -157,9 +158,9 @@ const Header = () => {
               {/* Mobile Progress */}
               <div className="px-3 py-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Progress</span>
+                  <span className="text-sm text-gray-600">{i18n.t(['Header', 'Progress'])}</span>
                   <span className="text-sm font-medium text-gray-900">
-                    {getProgressPercentage()}% Complete
+                    {getProgressPercentage()}% {i18n.t(["Header", "Complete"])}
                   </span>
                 </div>
               </div>
@@ -171,7 +172,7 @@ const Header = () => {
                   className="w-full flex items-center justify-center space-x-2 bg-primary-600 text-white px-3 py-2 rounded-md text-sm hover:bg-primary-700 transition-colors"
                 >
                   <Download className="w-4 h-4" />
-                  <span>Install App</span>
+                  <span>{i18n.t(["Header", "Install App"])}</span>
                 </button>
               )}
             </div>

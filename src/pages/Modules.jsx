@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Search, Play, CheckCircle, Clock, Filter } from 'lucide-react';
 import { trainingModules } from '../data/modules';
 import { useProgress } from '../contexts/ProgressContext';
+import {i18n} from "../i18n";
 
 const Modules = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -10,11 +11,11 @@ const Modules = () => {
   const { isModuleCompleted, getQuizScore } = useProgress();
 
   const categories = [
-    { id: 'all', name: 'All Modules' },
-    { id: 'trauma', name: 'Trauma & Injuries' },
-    { id: 'medical', name: 'Medical Emergencies' },
-    { id: 'specialized', name: 'Specialized Care' },
-    { id: 'psychological', name: 'Psychological Support' }
+    { id: 'all', name: i18n.t(['Modules', 'All Modules']) },
+    { id: 'trauma', name: i18n.t(['Modules', 'Trauma & Injuries']) },
+    { id: 'medical', name: i18n.t(['Modules', 'Medical Emergencies']) },
+    { id: 'specialized', name: i18n.t(['Modules', 'Specialized Care']) },
+    { id: 'psychological', name: i18n.t(['Modules', 'Psychological Support']) }
   ];
 
   const categoryMapping = {
@@ -80,9 +81,9 @@ const Modules = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">Training Modules</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">{i18n.t(['Modules', 'Training Modules'])}</h1>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-            Comprehensive first aid and emergency training modules designed for crisis zones. 
+            {i18n.t(['Modules', 'Comprehensive first aid and emergency training modules designed for crisis zones'])}.
             Learn essential life-saving skills at your own pace.
           </p>
         </div>
@@ -95,7 +96,7 @@ const Modules = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search modules..."
+                placeholder={i18n.t(['Modules', 'Search modules'])}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
@@ -123,7 +124,7 @@ const Modules = () => {
         {/* Results Count */}
         <div className="mb-6">
           <p className="text-gray-600">
-            Showing {filteredModules.length} of {trainingModules.length} modules
+            {i18n.t(['Modules', 'Showing X of Y modules']).replace('{count}', filteredModules.length).replace('{total}', trainingModules.length)}
           </p>
         </div>
 
@@ -147,8 +148,8 @@ const Modules = () => {
                     <div className={`flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium flex-shrink-0 ${getStatusColor(status.status)}`}>
                       {getStatusIcon(status.status)}
                       <span className="capitalize hidden sm:inline">
-                        {status.status === 'completed' ? 'Complete' : 
-                         status.status === 'in-progress' ? 'In Progress' : 'Not Started'}
+                        {status.status === 'completed' ? i18n.t(['Modules', 'Complete']) :
+                         status.status === 'in-progress' ? i18n.t(['Modules', 'In Progress']) : i18n.t(['Modules', 'Not Started'])}
                       </span>
                     </div>
                   </div>
@@ -158,15 +159,15 @@ const Modules = () => {
 
                   {/* Stats */}
                   <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500 mb-4">
-                    <span>{module.videos.length} videos</span>
-                    <span>{module.quiz.questions.length} quiz questions</span>
+                    <span>{module.videos.length} {i18n.t(['Modules', 'videos'])}</span>
+                    <span>{module.quiz.questions.length} {i18n.t(['Modules', 'quiz questions'])}</span>
                   </div>
 
                   {/* Quiz Score */}
                   {status.score !== null && (
                     <div className="mb-4 p-3 bg-green-50 rounded-lg">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-green-800">Quiz Score</span>
+                        <span className="text-sm font-medium text-green-800">{i18n.t(['Modules', 'Quiz Score'])}</span>
                         <span className="text-lg font-bold text-green-600">{status.score}%</span>
                       </div>
                     </div>
@@ -184,12 +185,12 @@ const Modules = () => {
                     {status.status === 'completed' ? (
                       <>
                         <CheckCircle className="w-4 h-4" />
-                        <span>Review</span>
+                        <span>{i18n.t(['Modules', 'Review'])}</span>
                       </>
                     ) : (
                       <>
                         <Play className="w-4 h-4" />
-                        <span>Start Module</span>
+                        <span>{i18n.t(['Modules', 'Start Module'])}</span>
                       </>
                     )}
                   </Link>
@@ -205,9 +206,9 @@ const Modules = () => {
             <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Search className="w-8 h-8 text-gray-400" />
             </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No modules found</h3>
+            <h3 className="text-lg font-medium text-gray-900 mb-2">{i18n.t(['Modules', 'No modules found'])}</h3>
             <p className="text-gray-600">
-              Try adjusting your search terms or filter criteria.
+              {i18n.t(['Modules', 'Try adjusting your search terms or filter criteria.'])}
             </p>
           </div>
         )}
@@ -216,4 +217,4 @@ const Modules = () => {
   );
 };
 
-export default Modules; 
+export default Modules;
