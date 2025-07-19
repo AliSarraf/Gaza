@@ -11,41 +11,45 @@ import Quiz from './pages/Quiz';
 import Progress from './pages/Progress';
 import Flashcards from './pages/Flashcards';
 import OfflineIndicator from './components/OfflineIndicator';
-import { ProgressProvider } from './contexts/ProgressContext';
+import { ProgressProvider, DebugProgressPanel } from './contexts/ProgressContext';
 import { OfflineProvider } from './contexts/OfflineContext';
+import { LocaleProvider } from './contexts/LocaleContext.jsx';
 
 function App() {
   return (
-    <OfflineProvider>
-      <ProgressProvider>
-        <Router>
-          <div className="min-h-screen bg-gray-50 flex flex-col">
-            <Helmet>
-              <title>First Aid Training PWA</title>
-              <meta name="description" content="Comprehensive first aid and emergency training for crisis zones" />
-            </Helmet>
-            
-            <Header />
-            <OfflineIndicator />
-            
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/modules" element={<Modules />} />
-                <Route path="/modules/:moduleId" element={<ModuleDetail />} />
-                <Route path="/video/:videoId" element={<VideoPlayer />} />
-                <Route path="/quiz/:moduleId" element={<Quiz />} />
-                <Route path="/flashcards/:moduleId" element={<Flashcards />} />
+    <LocaleProvider>
+      <OfflineProvider>
+        <ProgressProvider>
+          <Router>
+            <div className="min-h-screen bg-gray-50 flex flex-col">
+              <Helmet>
+                <title>First Aid Training PWA</title>
+                <meta name="description" content="Comprehensive first aid and emergency training for crisis zones" />
+              </Helmet>
+
+              <Header />
+              <OfflineIndicator />
+
+              <main className="flex-1">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/modules" element={<Modules />} />
+                  <Route path="/modules/:moduleId" element={<ModuleDetail />} />
+                  <Route path="/video/:videoId" element={<VideoPlayer />} />
+                  <Route path="/quiz/:moduleId" element={<Quiz />} />
+                  <Route path="/flashcards/:moduleId" element={<Flashcards />} />
                 <Route path="/progress" element={<Progress />} />
-              </Routes>
-            </main>
-            
-            <Footer />
-          </div>
-        </Router>
-      </ProgressProvider>
-    </OfflineProvider>
+                </Routes>
+              </main>
+
+              <Footer />
+            <DebugProgressPanel />
+            </div>
+          </Router>
+        </ProgressProvider>
+      </OfflineProvider>
+    </LocaleProvider>
   );
 }
 
-export default App; 
+export default App;

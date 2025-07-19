@@ -16,7 +16,7 @@ const Quiz = () => {
   const [timeSpent, setTimeSpent] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const { updateQuizScore, completeModule } = useProgress();
+  const { updateQuizScore, completeModule, isModuleCompleted, getQuizScore, downloadedVideos, loading, completedModules, quizScores } = useProgress();
 
   const module = getModuleById(moduleId);
   const questions = module?.quiz?.questions || [];
@@ -72,18 +72,17 @@ const Quiz = () => {
 
   const handleSubmitQuiz = async () => {
     setIsSubmitting(true);
-    
     try {
       const score = calculateScore();
-      
-      // Update quiz score
-      await updateQuizScore(moduleId, score);
-      
-      // Mark module as completed if score is passing (70% or higher)
-      if (score >= 70) {
-        await completeModule(moduleId);
-      }
-      
+      // Atomically update both quiz score and completion status
+      const isPassing = score >= 70;
+      // Merge with all previously completed modules
+      const newCompletedModules = isPassing
+        ? Array.from(new Set([...(completedModules || []), moduleId]))
+        : completedModules || [];
+      // Merge with all previous quiz scores
+      const newQuizScores = { ...(quizScores || {}), [moduleId]: score };
+      await updateQuizScore(moduleId, score, newCompletedModules, newQuizScores, downloadedVideos);
       setShowResults(true);
     } catch (error) {
       console.error('Error submitting quiz:', error);
@@ -126,6 +125,14 @@ const Quiz = () => {
             Back to Modules
           </Link>
         </div>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <span className="text-lg text-gray-600">Loading progress...</span>
       </div>
     );
   }

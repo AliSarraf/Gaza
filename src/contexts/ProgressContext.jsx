@@ -94,43 +94,55 @@ export const ProgressProvider = ({ children }) => {
   };
 
   const completeModule = async (moduleId) => {
-    dispatch({ type: 'COMPLETE_MODULE', payload: moduleId });
     const newCompletedModules = [...new Set([...state.completedModules, moduleId])];
     await saveProgress({
       completedModules: newCompletedModules,
       quizScores: state.quizScores,
       downloadedVideos: state.downloadedVideos
     });
+    dispatch({ type: 'COMPLETE_MODULE', payload: moduleId });
   };
 
-  const updateQuizScore = async (moduleId, score) => {
-    dispatch({ type: 'UPDATE_QUIZ_SCORE', payload: { moduleId, score } });
-    const newQuizScores = { ...state.quizScores, [moduleId]: score };
+  const updateQuizScore = async (moduleId, score, newCompletedModules, newQuizScores, newDownloadedVideos) => {
+    // If new state is provided, use it for atomic update; otherwise, use legacy behavior
+    const completedModulesToSave = newCompletedModules || state.completedModules;
+    const quizScoresToSave = newQuizScores || { ...state.quizScores, [moduleId]: score };
+    const downloadedVideosToSave = newDownloadedVideos || state.downloadedVideos;
     await saveProgress({
-      completedModules: state.completedModules,
-      quizScores: newQuizScores,
-      downloadedVideos: state.downloadedVideos
+      completedModules: completedModulesToSave,
+      quizScores: quizScoresToSave,
+      downloadedVideos: downloadedVideosToSave
     });
+    // Dispatch both updates if atomic, or just quiz score if legacy
+    if (newCompletedModules && newQuizScores) {
+      dispatch({ type: 'LOAD_PROGRESS', payload: {
+        completedModules: completedModulesToSave,
+        quizScores: quizScoresToSave,
+        downloadedVideos: downloadedVideosToSave
+      }});
+    } else {
+      dispatch({ type: 'UPDATE_QUIZ_SCORE', payload: { moduleId, score } });
+    }
   };
 
   const addDownloadedVideo = async (videoId) => {
-    dispatch({ type: 'ADD_DOWNLOADED_VIDEO', payload: videoId });
     const newDownloadedVideos = [...new Set([...state.downloadedVideos, videoId])];
     await saveProgress({
       completedModules: state.completedModules,
       quizScores: state.quizScores,
       downloadedVideos: newDownloadedVideos
     });
+    dispatch({ type: 'ADD_DOWNLOADED_VIDEO', payload: videoId });
   };
 
   const removeDownloadedVideo = async (videoId) => {
-    dispatch({ type: 'REMOVE_DOWNLOADED_VIDEO', payload: videoId });
     const newDownloadedVideos = state.downloadedVideos.filter(id => id !== videoId);
     await saveProgress({
       completedModules: state.completedModules,
       quizScores: state.quizScores,
       downloadedVideos: newDownloadedVideos
     });
+    dispatch({ type: 'REMOVE_DOWNLOADED_VIDEO', payload: videoId });
   };
 
   const isModuleCompleted = (moduleId) => {
@@ -175,4 +187,31 @@ export const useProgress = () => {
     throw new Error('useProgress must be used within a ProgressProvider');
   }
   return context;
+}; 
+
+// Debug panel for development
+export const DebugProgressPanel = () => {
+  const progress = useContext(ProgressContext);
+  if (process.env.NODE_ENV === 'production') return null;
+  return (
+    <div style={{
+      position: 'fixed',
+      bottom: 0,
+      right: 0,
+      background: 'rgba(0,0,0,0.85)',
+      color: 'white',
+      padding: '1rem',
+      zIndex: 9999,
+      fontSize: '12px',
+      maxWidth: '350px',
+      borderTopLeftRadius: '8px',
+      fontFamily: 'monospace',
+    }}>
+      <div><b>Progress Debug Panel</b></div>
+      <div><b>loading:</b> {String(progress.loading)}</div>
+      <div><b>completedModules:</b> {JSON.stringify(progress.completedModules)}</div>
+      <div><b>quizScores:</b> {JSON.stringify(progress.quizScores)}</div>
+      <div><b>downloadedVideos:</b> {JSON.stringify(progress.downloadedVideos)}</div>
+    </div>
+  );
 }; 
