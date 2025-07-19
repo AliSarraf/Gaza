@@ -188,30 +188,3 @@ export const useProgress = () => {
   }
   return context;
 }; 
-
-// Debug panel for development
-export const DebugProgressPanel = () => {
-  const progress = useContext(ProgressContext);
-  if (process.env.NODE_ENV === 'production') return null;
-  return (
-    <div style={{
-      position: 'fixed',
-      bottom: 0,
-      right: 0,
-      background: 'rgba(0,0,0,0.85)',
-      color: 'white',
-      padding: '1rem',
-      zIndex: 9999,
-      fontSize: '12px',
-      maxWidth: '350px',
-      borderTopLeftRadius: '8px',
-      fontFamily: 'monospace',
-    }}>
-      <div><b>Progress Debug Panel</b></div>
-      <div><b>loading:</b> {String(progress.loading)}</div>
-      <div><b>completedModules:</b> {JSON.stringify(progress.completedModules)}</div>
-      <div><b>quizScores:</b> {JSON.stringify(progress.quizScores)}</div>
-      <div><b>downloadedVideos:</b> {JSON.stringify(progress.downloadedVideos)}</div>
-    </div>
-  );
-}; 
