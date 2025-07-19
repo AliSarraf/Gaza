@@ -167,6 +167,43 @@ const ModuleDetail = () => {
           </div>
         </div>
 
+        {/* Flashcards Section */}
+        {module.flashcards && module.flashcards.length > 0 && (
+          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-gray-900">First Aid Flashcards</h2>
+              <Link
+                to={`/flashcards/${moduleId}`}
+                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors flex items-center space-x-2"
+              >
+                <span>View All</span>
+              </Link>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              {module.flashcards.slice(0, 4).map((flashcard) => (
+                <div key={flashcard.id} className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <span className="text-2xl">{flashcard.icon}</span>
+                    <h3 className="font-semibold text-gray-900">{flashcard.title}</h3>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-3">{flashcard.description}</p>
+                  <div className="text-xs text-gray-500">
+                    {flashcard.steps.length} steps • ~{Math.ceil(flashcard.steps.length * 1.5)} min
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              to={`/flashcards/${moduleId}`}
+              className="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center space-x-2"
+            >
+              <span>Start Flashcard Training</span>
+            </Link>
+          </div>
+        )}
+
         {/* Videos Section */}
         <div className="bg-white rounded-lg shadow-md p-6 sm:p-8">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">{i18n.t(['ModuleDetail', 'Training Videos'])}</h2>
