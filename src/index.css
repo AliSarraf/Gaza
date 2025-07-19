@@ -11,6 +11,20 @@
   
   body {
     @apply bg-gray-50 text-gray-900;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+  
+  /* Improve touch targets on mobile */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better text rendering on mobile */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 

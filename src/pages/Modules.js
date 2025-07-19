@@ -80,8 +80,8 @@ const Modules = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Training Modules</h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">Training Modules</h1>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Comprehensive first aid and emergency training modules designed for crisis zones. 
             Learn essential life-saving skills at your own pace.
           </p>
@@ -89,7 +89,7 @@ const Modules = () => {
 
         {/* Search and Filter */}
         <div className="mb-8">
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             {/* Search */}
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -108,7 +108,7 @@ const Modules = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none bg-white"
+                className="w-full sm:w-auto pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent appearance-none bg-white"
               >
                 {categories.map(category => (
                   <option key={category.id} value={category.id}>
@@ -128,25 +128,25 @@ const Modules = () => {
         </div>
 
         {/* Modules Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredModules.map((module) => {
             const status = getModuleStatus(module.id);
             
             return (
               <div key={module.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 {/* Module Header */}
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <span className="text-3xl">{module.icon}</span>
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-900">{module.title}</h3>
-                        <p className="text-sm text-gray-500">{module.duration}</p>
+                    <div className="flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
+                      <span className="text-2xl sm:text-3xl flex-shrink-0">{module.icon}</span>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 truncate">{module.title}</h3>
+                        <p className="text-xs sm:text-sm text-gray-500">{module.duration}</p>
                       </div>
                     </div>
-                    <div className={`flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(status.status)}`}>
+                    <div className={`flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium flex-shrink-0 ${getStatusColor(status.status)}`}>
                       {getStatusIcon(status.status)}
-                      <span className="capitalize">
+                      <span className="capitalize hidden sm:inline">
                         {status.status === 'completed' ? 'Complete' : 
                          status.status === 'in-progress' ? 'In Progress' : 'Not Started'}
                       </span>
@@ -154,10 +154,10 @@ const Modules = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-600 mb-4 line-clamp-3">{module.description}</p>
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-3">{module.description}</p>
 
                   {/* Stats */}
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500 mb-4">
                     <span>{module.videos.length} videos</span>
                     <span>{module.quiz.questions.length} quiz questions</span>
                   </div>
