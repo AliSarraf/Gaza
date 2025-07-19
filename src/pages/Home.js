@@ -42,8 +42,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              First Aid Training for
-              <span className="block text-primary-200">Crisis Zones</span>
+              First Aid Training for Gaza
             </h1>
             <p className="text-xl md:text-2xl text-primary-100 mb-8 max-w-3xl mx-auto">
               Comprehensive emergency training designed to work offline. Learn life-saving skills 
