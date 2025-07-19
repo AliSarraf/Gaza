@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-<<<<<<< HEAD:src/App.js
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -14,19 +13,6 @@ import Flashcards from './pages/Flashcards';
 import OfflineIndicator from './components/OfflineIndicator';
 import { ProgressProvider } from './contexts/ProgressContext';
 import { OfflineProvider } from './contexts/OfflineContext';
-=======
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
-import Home from './pages/Home.jsx';
-import Modules from './pages/Modules.jsx';
-import ModuleDetail from './pages/ModuleDetail.jsx';
-import VideoPlayer from './pages/VideoPlayer.jsx';
-import Quiz from './pages/Quiz.jsx';
-import Progress from './pages/Progress.jsx';
-import OfflineIndicator from './components/OfflineIndicator.jsx';
-import { ProgressProvider } from './contexts/ProgressContext.jsx';
-import { OfflineProvider } from './contexts/OfflineContext.jsx';
->>>>>>> 923de1fb201d0feae5f83e3028312b5779e35dc6:src/App.jsx
 
 function App() {
   return (
