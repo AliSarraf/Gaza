@@ -12,7 +12,9 @@
     "Offline": "غير متصل بالإنترنت",
     "Complete": "مكتمل",
     "Install": "تثبيت",
-    "Install App": "تثبيت التطبيق"
+    "Install App": "تثبيت التطبيق",
+    "Language": "اللغة",
+    "Select Language": "اختر اللغة"
   },
   "Home": {
     "First Aid Training for Gaza": "تدريب الإسعافات الأولية لقطاع غزة",
@@ -29,7 +31,7 @@
     "Designed specifically for challenging environments and limited resources": "مصمم خصيصًا للبيئات الصعبة والموارد المحدودة.",
     "View All Modules": "عرض جميع الوحدات",
     "Learn Offline": "تعلم دون اتصال بالإنترنت",
-    "Download training videos to your device and access them without internet connection": "قم بتنزيل مقاطع الفيديو التدريبية على جهازك والوصول إليها دون اتصال بالإنترنت.",
+    "Download training videos to your device and access them without internet connection": "قم بتنزيل مقاطع الفيديو الت��ريبية على جهازك والوصول إليها دون اتصال بالإنترنت.",
     "Perfect for areas with limited connectivity": "مثالي للمناطق ذات الاتصال المحدود.",
     "Offline Access": "الوصول دون اتصال بالإنترنت",
     "Life-Saving Skills": "مهارات إنقاذ الحياة",
@@ -48,7 +50,7 @@
     "Currently offline - using downloaded content": "حاليًا غير متصل بالإنترنت - استخدام المحتوى الذي تم تنزيله"
   },
   "Modules": {
-    "Training Modules": "وحدات التدريب",
+    "Training Modules": "وحد��ت التدريب",
     "Comprehensive first aid and emergency training modules designed for crisis zones": "وحدات تدريب شاملة للإسعافات الأولية والطوارئ مصممة لمناطق الأزمات",
     "Learn life-saving skills that work offline": "تعلم مهارات إنقاذ الحياة التي تعمل دون اتصال بالإنترنت",
     "Search modules": "البحث في الوحدات...",
@@ -92,7 +94,7 @@
     "First Steps": "الخطوات الأولى",
     "Complete your first module": "أكمل وحدتك الأولى",
     "Getting There": "في الطريق",
-    "Complete 3 modules": "أكمل 3 وحدات",
+    "Complete 3 modules": "أكم�� 3 وحدات",
     "Halfway There": "في منتصف الطريق",
     "Complete 5 modules": "أكمل 5 وحدات",
     "High Achiever": "متفوق",

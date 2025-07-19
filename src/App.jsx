@@ -12,38 +12,41 @@ import Progress from './pages/Progress.jsx';
 import OfflineIndicator from './components/OfflineIndicator.jsx';
 import { ProgressProvider } from './contexts/ProgressContext.jsx';
 import { OfflineProvider } from './contexts/OfflineContext.jsx';
+import { LocaleProvider } from './contexts/LocaleContext.jsx';
 
 function App() {
   return (
-    <OfflineProvider>
-      <ProgressProvider>
-        <Router>
-          <div className="min-h-screen bg-gray-50 flex flex-col">
-            <Helmet>
-              <title>First Aid Training PWA</title>
-              <meta name="description" content="Comprehensive first aid and emergency training for crisis zones" />
-            </Helmet>
-            
-            <Header />
-            <OfflineIndicator />
-            
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/modules" element={<Modules />} />
-                <Route path="/modules/:moduleId" element={<ModuleDetail />} />
-                <Route path="/video/:videoId" element={<VideoPlayer />} />
-                <Route path="/quiz/:moduleId" element={<Quiz />} />
-                <Route path="/progress" element={<Progress />} />
-              </Routes>
-            </main>
-            
-            <Footer />
-          </div>
-        </Router>
-      </ProgressProvider>
-    </OfflineProvider>
+    <LocaleProvider>
+      <OfflineProvider>
+        <ProgressProvider>
+          <Router>
+            <div className="min-h-screen bg-gray-50 flex flex-col">
+              <Helmet>
+                <title>First Aid Training PWA</title>
+                <meta name="description" content="Comprehensive first aid and emergency training for crisis zones" />
+              </Helmet>
+
+              <Header />
+              <OfflineIndicator />
+
+              <main className="flex-1">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/modules" element={<Modules />} />
+                  <Route path="/modules/:moduleId" element={<ModuleDetail />} />
+                  <Route path="/video/:videoId" element={<VideoPlayer />} />
+                  <Route path="/quiz/:moduleId" element={<Quiz />} />
+                  <Route path="/progress" element={<Progress />} />
+                </Routes>
+              </main>
+
+              <Footer />
+            </div>
+          </Router>
+        </ProgressProvider>
+      </OfflineProvider>
+    </LocaleProvider>
   );
 }
 
-export default App; 
+export default App;
