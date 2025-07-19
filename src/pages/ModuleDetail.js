@@ -79,36 +79,36 @@ const ModuleDetail = () => {
         </Link>
 
         {/* Module Header */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <div className="flex items-start justify-between mb-6">
-            <div className="flex items-center space-x-4">
-              <span className="text-4xl">{module.icon}</span>
+        <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
+            <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-0">
+              <span className="text-3xl sm:text-4xl">{module.icon}</span>
               <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">{module.title}</h1>
-                <p className="text-lg text-gray-600">{module.description}</p>
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{module.title}</h1>
+                <p className="text-base sm:text-lg text-gray-600">{module.description}</p>
               </div>
             </div>
-            <div className="text-right">
+            <div className="text-left sm:text-right">
               <div className="text-sm text-gray-500 mb-1">Duration</div>
               <div className="text-lg font-semibold text-gray-900">{module.duration}</div>
             </div>
           </div>
 
           {/* Module Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             <div className="bg-gray-50 rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-gray-900">{module.videos.length}</div>
-              <div className="text-sm text-gray-600">Training Videos</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">{module.videos.length}</div>
+              <div className="text-xs sm:text-sm text-gray-600">Training Videos</div>
             </div>
             <div className="bg-gray-50 rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-gray-900">{module.quiz.questions.length}</div>
-              <div className="text-sm text-gray-600">Quiz Questions</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">{module.quiz.questions.length}</div>
+              <div className="text-xs sm:text-sm text-gray-600">Quiz Questions</div>
             </div>
             <div className="bg-gray-50 rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-gray-900">
+              <div className="text-lg sm:text-2xl font-bold text-gray-900">
                 {isCompleted ? 'Complete' : 'In Progress'}
               </div>
-              <div className="text-sm text-gray-600">Status</div>
+              <div className="text-xs sm:text-sm text-gray-600">Status</div>
             </div>
           </div>
 
@@ -159,8 +159,8 @@ const ModuleDetail = () => {
         </div>
 
         {/* Videos Section */}
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Training Videos</h2>
+        <div className="bg-white rounded-lg shadow-md p-6 sm:p-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Training Videos</h2>
           
           <div className="space-y-4">
             {module.videos.map((video, index) => {
@@ -168,14 +168,14 @@ const ModuleDetail = () => {
               
               return (
                 <div key={video.id} className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div className="flex items-center space-x-4 flex-1 min-w-0">
+                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <span className="text-primary-600 font-bold">{index + 1}</span>
                       </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-900">{video.title}</h3>
-                        <p className="text-gray-600 text-sm">{video.description}</p>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-lg font-semibold text-gray-900 truncate">{video.title}</h3>
+                        <p className="text-gray-600 text-sm line-clamp-2">{video.description}</p>
                         <div className="flex items-center space-x-4 mt-1">
                           <span className="text-sm text-gray-500">{video.duration}</span>
                           {videoStatus === 'downloaded' && (
@@ -185,7 +185,7 @@ const ModuleDetail = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-2 flex-shrink-0">
                       {/* Download Button */}
                       {videoStatus === 'not-downloaded' && (
                         <button
@@ -213,7 +213,7 @@ const ModuleDetail = () => {
                       {/* Watch Button */}
                       <Link
                         to={`/video/${video.id}`}
-                        className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2"
+                        className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2 whitespace-nowrap"
                       >
                         <Play className="w-4 h-4" />
                         <span>Watch</span>
