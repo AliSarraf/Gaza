@@ -7,7 +7,7 @@ import { useProgress } from '../contexts/ProgressContext';
 const Modules = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const { isModuleCompleted, getQuizScore } = useProgress();
+  const { isModuleCompleted, getQuizScore, loading } = useProgress();
 
   const categories = [
     { id: 'all', name: 'All Modules' },
@@ -74,6 +74,14 @@ const Modules = () => {
         return <Play className="w-5 h-5" />;
     }
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <span className="text-lg text-gray-600">Loading progress...</span>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">

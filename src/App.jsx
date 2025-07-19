@@ -10,7 +10,7 @@ import VideoPlayer from './pages/VideoPlayer.jsx';
 import Quiz from './pages/Quiz.jsx';
 import Progress from './pages/Progress.jsx';
 import OfflineIndicator from './components/OfflineIndicator.jsx';
-import { ProgressProvider } from './contexts/ProgressContext.jsx';
+import { ProgressProvider, DebugProgressPanel } from './contexts/ProgressContext.jsx';
 import { OfflineProvider } from './contexts/OfflineContext.jsx';
 
 function App() {
@@ -39,6 +39,7 @@ function App() {
             </main>
             
             <Footer />
+            <DebugProgressPanel />
           </div>
         </Router>
       </ProgressProvider>

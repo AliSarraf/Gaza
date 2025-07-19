@@ -16,7 +16,7 @@ const Quiz = () => {
   const [timeSpent, setTimeSpent] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const { updateQuizScore, completeModule, isModuleCompleted, getQuizScore, downloadedVideos } = useProgress();
+  const { updateQuizScore, completeModule, isModuleCompleted, getQuizScore, downloadedVideos, loading, completedModules, quizScores } = useProgress();
 
   const module = getModuleById(moduleId);
   const questions = module?.quiz?.questions || [];
@@ -76,12 +76,12 @@ const Quiz = () => {
       const score = calculateScore();
       // Atomically update both quiz score and completion status
       const isPassing = score >= 70;
-      // Compute new quizScores and completedModules
-      const prevQuizScores = getQuizScore(moduleId) ? { ...getQuizScore(moduleId) } : {};
-      const newQuizScores = { ...prevQuizScores, [moduleId]: score };
-      const prevCompletedModules = isModuleCompleted(moduleId) ? [moduleId] : [];
-      const newCompletedModules = isPassing ? Array.from(new Set([...prevCompletedModules, moduleId])) : prevCompletedModules;
-      // Save both together
+      // Merge with all previously completed modules
+      const newCompletedModules = isPassing
+        ? Array.from(new Set([...(completedModules || []), moduleId]))
+        : completedModules || [];
+      // Merge with all previous quiz scores
+      const newQuizScores = { ...(quizScores || {}), [moduleId]: score };
       await updateQuizScore(moduleId, score, newCompletedModules, newQuizScores, downloadedVideos);
       setShowResults(true);
     } catch (error) {
@@ -125,6 +125,14 @@ const Quiz = () => {
             Back to Modules
           </Link>
         </div>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <span className="text-lg text-gray-600">Loading progress...</span>
       </div>
     );
   }

@@ -8,7 +8,7 @@ import { useOffline } from '../contexts/OfflineContext';
 const ModuleDetail = () => {
   const { moduleId } = useParams();
   const [downloadingVideos, setDownloadingVideos] = useState(new Set());
-  const { isModuleCompleted, getQuizScore, addDownloadedVideo, isVideoDownloaded } = useProgress();
+  const { isModuleCompleted, getQuizScore, addDownloadedVideo, isVideoDownloaded, loading } = useProgress();
   const { isOnline } = useOffline();
 
   const module = getModuleById(moduleId);
@@ -22,6 +22,14 @@ const ModuleDetail = () => {
             Back to Modules
           </Link>
         </div>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <span className="text-lg text-gray-600">Loading progress...</span>
       </div>
     );
   }
