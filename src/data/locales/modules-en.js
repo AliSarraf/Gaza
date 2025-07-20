@@ -76,7 +76,7 @@ export const trainingModules = [
           {
             step: 2,
             title: 'Position Patient Properly',
-            content: 'Keep patient lying flat. If conscious and no spinal injury, elevate legs 8-12 inches.',
+            content: 'Keep patient lying flat. If conscious and no spinal injury, elevate legs 20-30 cm.',
             tip: 'Do NOT give food or water - patient may need emergency surgery',
             image: '/images/flashcards/position-patient.jpg'
           },
@@ -105,7 +105,7 @@ export const trainingModules = [
           {
             step: 1,
             title: 'Stop Massive Bleeding',
-            content: 'Apply tourniquet 2-3 inches above amputation site. Tighten until bleeding stops completely.',
+            content: 'Apply tourniquet 5-8 cm above amputation site. Tighten until bleeding stops completely.',
             warning: 'Note the time tourniquet was applied - critical for medical team',
             image: '/images/flashcards/tourniquet-application.jpg'
           },
@@ -186,9 +186,9 @@ export const trainingModules = [
           id: 2,
           question: 'When applying a tourniquet for blast-related amputation, how far above the wound should it be placed?',
           options: [
-            '1 inch above the wound',
-            '2-3 inches above the wound',
-            '6 inches above the wound',
+            '2.5 cm above the wound',
+            '5-8 cm above the wound',
+            '15 cm above the wound',
             'As close to the wound as possible'
           ],
           correctAnswer: 1
@@ -571,7 +571,7 @@ export const trainingModules = [
           {
             step: 1,
             title: 'Suspect Spinal Injury',
-            content: 'High-risk mechanisms: falls >3 feet, high-speed impacts, head/neck trauma, unconscious patients, numbness/tingling in limbs.',
+            content: 'High-risk mechanisms: falls >1 meter, high-speed impacts, head/neck trauma, unconscious patients, numbness/tingling in limbs.',
             warning: 'When in doubt, treat as spinal injury - movement can cause permanent paralysis',
             image: '/images/flashcards/spinal-cord-trauma-1.jpg'
           },
@@ -639,7 +639,7 @@ export const trainingModules = [
           question: 'Which mechanism of injury should make you suspect spinal injury?',
           options: [
             'Minor cuts and scrapes',
-            'Falls greater than 3 feet or high-speed impacts',
+            'Falls greater than 1 meter or high-speed impacts',
             'Superficial burns',
             'Mild bruising'
           ],
@@ -758,7 +758,7 @@ export const trainingModules = [
           {
             step: 2,
             title: 'Position Tourniquet Correctly',
-            content: 'Place 2-3 inches above wound, higher on thigh/upper arm. Remove clothing first. Place over single bone, not joint.',
+            content: 'Place 5-8 cm above wound, higher on thigh/upper arm. Remove clothing first. Place over single bone, not joint.',
             tip: 'If first tourniquet doesn\'t stop bleeding, apply a second one above the first',
             image: '/images/flashcards/tourniquet-application.jpg'
           },
@@ -862,7 +862,7 @@ export const trainingModules = [
           question: 'Where should a tourniquet be placed for leg bleeding?',
           options: [
             'Directly over the wound',
-            '2-3 inches above the wound, high on the thigh',
+            '5-8 cm above the wound, high on the thigh',
             'Around the ankle',
             'Below the wound'
           ],
