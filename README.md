@@ -1,6 +1,6 @@
-# First Aid & Emergency Training PWA
+# Yeshfi
 
-A comprehensive Progressive Web Application (PWA) designed to provide accessible first aid and emergency training to individuals in crisis zones. This application empowers users with critical life-saving knowledge and skills through an intuitive, reliable, and offline-capable platform.
+A comprehensive Progressive Web Application (PWA) designed to provide accessible first aid and emergency training to individuals in crisis zones. Yeshfi empowers users with critical life-saving knowledge and skills through an intuitive, reliable, and offline-capable platform.
 
 ## 🌟 Features
 
@@ -40,7 +40,7 @@ A comprehensive Progressive Web Application (PWA) designed to provide accessible
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd first-aid-training-pwa
+   cd yeshfi
    ```
 
 2. **Install dependencies**
@@ -167,7 +167,7 @@ src/
 - Use Tailwind utility classes for component styling
 
 ### PWA Configuration
-- Update `public/manifest.json` for app metadata
+- Update `public/manifest.json` for app metadata (now branded as Yeshfi)
 - Modify `public/service-worker.js` for caching strategies
 - Test PWA features in production build
 
