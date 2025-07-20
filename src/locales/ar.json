@@ -32,22 +32,17 @@
     "View All Modules": "عرض جميع الوحدات",
     "Learn Offline": "تعلم دون اتصال بالإنترنت",
     "Download training videos to your device and access them without internet connection": "قم بتنزيل مقاطع فيديو التدريب على جهازك والوصول إليها دون اتصال بالإنترنت.",
-    "Perfect for areas with limited connectivity": "مثالي للمناطق ذات الاتصال المحدود.",
     "Offline Access": "الوصول دون اتصال بالإنترنت",
     "Life-Saving Skills": "مهارات إنقاذ الحياة",
     "Community Focused": "مركز على المجتمع",
     "Self-Paced Learning": "التعلم الذاتي",
-    "Download videos and access training content without internet connection": "قم بتنزيل مقاطع الفيديو والوصول إلى محتوى التدريب دون اتصال بالإنترنت",
     "Learn critical first aid techniques for emergency situations": "تعلم تقنيات الإسعافات الأولية الحرجة لحالات الطوارئ",
     "Designed specifically for crisis zones and community responders": "مصمم خصيصًا لمناطق الأزمات والمستجيبين المجتمعيين",
     "Learn at your own pace with comprehensive video tutorials": "تعلم بالسرعة التي تناسبك مع دروس الفيديو الشاملة",
     "Featured Training Modules": "وحدات التدريب المميزة",
     "Start with these essential life-saving skills": "ابدأ بهذه المهارات الأساسية لإنقاذ الحياة",
     "Start": "ابدأ",
-    "Download videos": "تنزيل مقاطع الفيديو",
-    "Access offline": "الوصول دون اتصال بالإنترنت",
-    "Ready to download content": "المحتوى جاهز للتنزيل",
-    "Currently offline - using downloaded content": "حاليًا غير متصل بالإنترنت - استخدام المحتوى الذي تم تنزيله"
+    "Download videos": "تنزيل مقاطع الفيديو"
   },
   "Modules": {
     "Training Modules": "وحدات التدريب",
