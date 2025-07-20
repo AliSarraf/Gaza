@@ -580,28 +580,28 @@ export const trainingModules = [
             title: 'Assess Consciousness Level',
             content: 'Check responsiveness: Alert, Voice, Pain, Unresponsive (AVPU). Note any confusion, disorientation, or memory loss.',
             warning: 'Unconsciousness or declining consciousness indicates severe TBI requiring immediate evacuation',
-            image: '/images/flashcards/consciousness-check.jpg'
+            image: '/images/flashcards/traumatic-brain-injury-1.jpg'
           },
           {
             step: 2,
             title: 'Check for Danger Signs',
             content: 'Look for: unequal pupils, severe headache, repeated vomiting, seizures, clear fluid from ears/nose, weakness on one side.',
             warning: 'Any of these signs indicate serious brain injury - call for immediate medical evacuation',
-            image: '/images/flashcards/tbi-danger-signs.jpg'
+            image: '/images/flashcards/traumatic-brain-injury-2.jpg'
           },
           {
             step: 3,
             title: 'Positioning and Airway',
             content: 'If conscious: sit upright or head elevated 30°. If unconscious: recovery position (if no spinal injury suspected). Monitor airway.',
             tip: 'Elevating the head can help reduce brain pressure if no spinal injury',
-            image: '/images/flashcards/head-positioning.jpg'
+            image: '/images/flashcards/traumatic-brain-injury-3.jpg'
           },
           {
             step: 4,
             title: 'Monitor and Document',
             content: 'Check consciousness every 15 minutes. Document changes in behavior, speech, movement. Keep patient calm and still.',
             warning: 'Any deterioration requires immediate medical attention - brain injuries can worsen rapidly',
-            image: '/images/flashcards/monitor-tbi.jpg'
+            image: '/images/flashcards/traumatic-brain-injury-4.jpg'
           }
         ]
       },
@@ -616,28 +616,28 @@ export const trainingModules = [
             title: 'Recognize Skull Fracture Signs',
             content: 'Look for: visible skull deformity, blood from ears/nose, bruising around eyes (raccoon eyes), bruising behind ears.',
             warning: 'Skull fractures often indicate underlying brain injury requiring immediate medical care',
-            image: '/images/flashcards/skull-fracture-signs.jpg'
+            image: '/images/flashcards/skull-fractures-1.jpg'
           },
           {
             step: 2,
             title: 'Control External Bleeding',
             content: 'Apply gentle pressure around (not on) the fracture site. Use bulky dressings to absorb blood. Do NOT push bone fragments.',
             warning: 'Never apply direct pressure to a depressed skull fracture - can push fragments into brain',
-            image: '/images/flashcards/skull-bleeding-control.jpg'
+            image: '/images/flashcards/skull-fractures-2.jpg'
           },
           {
             step: 3,
             title: 'Monitor for Brain Bleeding',
             content: 'Watch for: worsening headache, vomiting, confusion, weakness, seizures, unconsciousness. These indicate brain bleeding.',
             warning: 'Brain bleeding is life-threatening and requires immediate surgical intervention',
-            image: '/images/flashcards/brain-bleeding-signs.jpg'
+            image: '/images/flashcards/skull-fractures-3.jpg'
           },
           {
             step: 4,
             title: 'Immobilize and Transport',
             content: 'Keep head and neck still. Use cervical collar if available. Transport urgently to medical facility with neurosurgical capability.',
             tip: 'Assume spinal injury with any skull fracture until proven otherwise',
-            image: '/images/flashcards/skull-fracture-transport.jpg'
+            image: '/images/flashcards/skull-fractures-4.jpg'
           }
         ]
       },
