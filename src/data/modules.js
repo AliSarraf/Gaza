@@ -828,28 +828,27 @@ export const trainingModules = [
             title: 'Identify Life-Threatening Bleeding',
             content: 'Look for: spurting blood, rapidly expanding pools of blood, clothing soaked with blood, weak/absent pulse.',
             warning: 'Massive hemorrhage can cause death within 5-10 minutes - act immediately',
-            image: '/images/flashcards/identify-massive-bleeding.jpg'
           },
           {
             step: 2,
             title: 'Apply Direct Pressure',
             content: 'Use both hands to apply firm, continuous pressure directly on the wound. Use gauze, clothing, or bare hands if necessary.',
             tip: 'Don\'t lift pressure to check bleeding - maintain constant pressure for 10+ minutes',
-            image: '/images/flashcards/direct-pressure-massive.jpg'
+            image: '/images/flashcards/massive-hemorrhage-control-2.jpg'
           },
           {
             step: 3,
             title: 'Elevate if Possible',
             content: 'Raise the bleeding extremity above heart level while maintaining pressure. Do NOT elevate if fracture suspected.',
             warning: 'Never elevate potential spinal injuries or suspected fractures',
-            image: '/images/flashcards/elevate-bleeding-limb.jpg'
+            image: '/images/flashcards/massive-hemorrhage-control-3.jpg'
           },
           {
             step: 4,
             title: 'Prepare for Shock Treatment',
             content: 'Monitor pulse, breathing, consciousness. Keep patient warm. Prepare for immediate evacuation to trauma center.',
             warning: 'Massive blood loss leads to irreversible shock - evacuation time is critical',
-            image: '/images/flashcards/prepare-shock-treatment.jpg'
+            image: '/images/flashcards/massive-hemorrhage-control-4.jpg'
           }
         ]
       },
@@ -864,28 +863,28 @@ export const trainingModules = [
             title: 'Identify Need for Tourniquet',
             content: 'Use when: direct pressure fails, multiple casualties (triage), amputation, arterial bleeding that won\'t stop.',
             warning: 'Tourniquets should be applied high and tight - failure to stop bleeding can be fatal',
-            image: '/images/flashcards/tourniquet-indications.jpg'
+            image: '/images/flashcards/tourniquet-application-1.jpg'
           },
           {
             step: 2,
             title: 'Position Tourniquet Correctly',
             content: 'Place 2-3 inches above wound, higher on thigh/upper arm. Remove clothing first. Place over single bone, not joint.',
             tip: 'If first tourniquet doesn\'t stop bleeding, apply a second one above the first',
-            image: '/images/flashcards/tourniquet-positioning.jpg'
+            image: '/images/flashcards/tourniquet-application.jpg'
           },
           {
             step: 3,
             title: 'Tighten Until Bleeding Stops',
             content: 'Tighten windlass (stick) until bleeding completely stops. Secure windlass with clip or tape. Do not loosen.',
             warning: 'Must be tight enough to stop arterial flow - will be very painful but necessary',
-            image: '/images/flashcards/tourniquet-tightening.jpg'
+            image: '/images/flashcards/tourniquet-application-3.jpg'
           },
           {
             step: 4,
             title: 'Mark Time and Monitor',
             content: 'Write time of application on patient\'s forehead. Monitor for continued bleeding. Arrange immediate transport.',
             warning: 'Note exact time applied - critical information for medical team',
-            image: '/images/flashcards/tourniquet-documentation.jpg'
+            image: '/images/flashcards/tourniquet-application-4.jpg'
           }
         ]
       },
@@ -900,28 +899,21 @@ export const trainingModules = [
             title: 'Recognize Internal Bleeding Signs',
             content: 'Look for: rapid weak pulse, pale/clammy skin, dizziness, thirst, anxiety, abdominal rigidity, distension.',
             warning: 'Internal bleeding can be massive without external signs - monitor vital signs closely',
-            image: '/images/flashcards/internal-bleeding-recognition.jpg'
+            image: '/images/flashcards/internal-hemorrhage-1.jpg'
           },
           {
             step: 2,
-            title: 'Position Patient for Shock',
-            content: 'Lay flat, elevate legs 8-12 inches if no spinal injury. Do NOT give food or water. Monitor airway.',
-            tip: 'If patient vomits, turn to side to prevent aspiration',
-            image: '/images/flashcards/shock-positioning.jpg'
-          },
-          {
-            step: 3,
             title: 'Monitor Vital Signs',
             content: 'Check pulse, breathing, consciousness every 5 minutes. Watch for rapid deterioration. Keep patient calm.',
             warning: 'Rapid pulse >120 with weak pulse indicates severe blood loss requiring immediate surgery',
-            image: '/images/flashcards/vital-signs-monitoring.jpg'
+            image: '/images/flashcards/internal-hemorrhage-2.jpg'
           },
           {
-            step: 4,
+            step: 3,
             title: 'Urgent Medical Evacuation',
             content: 'Call for immediate transport to trauma center with blood bank. Document all findings and vital sign changes.',
             warning: 'Internal bleeding often requires emergency surgery and blood transfusion',
-            image: '/images/flashcards/urgent-evacuation.jpg'
+            image: '/images/flashcards/evacuation-prep.jpg'
           }
         ]
       },
@@ -936,28 +928,28 @@ export const trainingModules = [
             title: 'Classify Shock Severity',
             content: 'Class I: <15% blood loss, normal vitals. Class II: 15-30%, fast pulse. Class III: 30-40%, very fast weak pulse. Class IV: >40%, critical.',
             warning: 'Class III and IV shock require immediate blood transfusion to survive',
-            image: '/images/flashcards/shock-classification.jpg'
+            image: '/images/flashcards/hemorrhagic-shock-1.jpg'
           },
           {
             step: 2,
             title: 'Control All Bleeding Sources',
             content: 'Stop all visible bleeding with pressure, tourniquets, hemostatic agents. Look for hidden bleeding sites.',
             tip: 'Control bleeding first - IV fluids cannot replace lost blood',
-            image: '/images/flashcards/control-all-bleeding.jpg'
+            image: '/images/flashcards/hemorrhagic-shock-2.jpg'
           },
           {
             step: 3,
             title: 'Prevent Further Heat Loss',
             content: 'Wrap in blankets, remove wet clothing, cover head. Hypothermia worsens bleeding and shock.',
             warning: 'Cold patients cannot clot blood effectively - keeping warm is life-saving',
-            image: '/images/flashcards/prevent-hypothermia.jpg'
+            image: '/images/flashcards/hemorrhagic-shock-3.jpg'
           },
           {
             step: 4,
             title: 'Rapid Transport to Blood Bank',
             content: 'Arrange helicopter or fastest transport to Level 1 trauma center with blood bank. Call ahead with blood type if known.',
             warning: 'Time to blood transfusion determines survival - every minute counts',
-            image: '/images/flashcards/rapid-transport-blood.jpg'
+            image: '/images/flashcards/hemorrhagic-shock-4.jpg'
           }
         ]
       }
