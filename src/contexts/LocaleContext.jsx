@@ -14,7 +14,7 @@ export const useLocale = () => {
 export const LocaleProvider = ({ children }) => {
   // Get initial locale from localStorage or default to 'en'
   const [currentLocale, setCurrentLocale] = useState(() => {
-    return localStorage.getItem('locale') || 'en';
+    return localStorage.getItem('locale') || 'ar';
   });
 
   // Add a version counter to force re-renders when locale changes
