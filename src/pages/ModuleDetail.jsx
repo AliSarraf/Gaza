@@ -182,7 +182,7 @@ const ModuleDetail = () => {
                     {/* Watch Button */}
                     <Link
                       to={`/video/${video.id}`}
-                      className="btn btn-primary px-3 py-2 text-xs sm:text-sm"
+                      className="bg-primary-600 text-white px-3 py-2 rounded-lg hover:bg-primary-700 transition-colors text-xs sm:text-sm font-medium flex items-center justify-center"
                     >
                       {i18n.t(['ModuleDetail', 'Watch'])}
                     </Link>
