@@ -1,169 +1,169 @@
 export const trainingModules = [
   {
     id: 'traumatic-injuries',
-    title: 'Blast Injuries',
-    description: 'Comprehensive guidance on managing blast injuries, shrapnel wounds, internal bleeding, limb amputations, fractures, and crush injuries.',
+    title: 'إصابات الانفجار',
+    description: 'إرشادات شاملة لإدارة إصابات الانفجار، جروح الشظايا، النزيف الداخلي، بتر الأطراف، الكسور، وإصابات السحق.',
     icon: '💥',
     color: 'red',
-    duration: '60 min',
+    duration: '٦٠ دقيقة',
     videos: [
       {
         id: 'blast-1',
-        title: 'How to treat blast injuries',
+        title: 'كيفية علاج إصابات الانفجار',
         videoUrl: 'https://www.youtube.com/embed/7p9JYXGSoQg'
       },
       {
         id: 'blast-2',
-        title: 'How to make a sling',
+        title: 'كيفية صنع حمالة',
         videoUrl: 'https://www.youtube.com/embed/PwfBGkBXkFA'
       },
       {
         id: 'blast-3',
-        title: 'How to treat a fracture',
+        title: 'كيفية علاج الكسر',
         videoUrl: 'https://www.youtube.com/embed/2v8vlXgGXwE'
       },
     ],
     flashcards: [
       {
         id: 'shrapnel-wounds',
-        title: 'Shrapnel Wounds',
-        description: 'Step-by-step first aid for shrapnel and fragment injuries',
+        title: 'جروح الشظايا',
+        description: 'الإسعافات الأولية خطوة بخطوة لإصابات الشظايا والشظايا',
         icon: '🔸',
         steps: [
           {
             step: 1,
-            title: 'Assess and Control Bleeding',
-            content: 'Apply direct pressure with clean cloth or sterile gauze. Do NOT remove visible shrapnel or debris.',
-            warning: 'Never remove embedded objects - they may be plugging blood vessels',
+            title: 'تقييم النزيف والسيطرة عليه',
+            content: 'اضغط مباشرة بقطعة قماش نظيفة أو شاش معقم. لا تزيل الشظايا أو الحطام المرئي.',
+            warning: 'لا تزيل الأجسام المغروسة أبداً - قد تكون تسد الأوعية الدموية',
             image: '/images/flashcards/direct-pressure.jpg'
           },
           {
             step: 2,
-            title: 'Stabilize Embedded Objects',
-            content: 'Build up bulky dressings around embedded shrapnel. Tape dressings in place without moving the object.',
-            tip: 'Use rolled bandages or cloth to create a protective barrier around the object',
+            title: 'تثبيت الأجسام المغروسة',
+            content: 'ضع ضمادات كبيرة حول الشظايا المغروسة. ثبت الضمادات بالشريط اللاصق دون تحريك الجسم.',
+            tip: 'استخدم الضمادات الملفوفة أو القماش لإنشاء حاجز واقي حول الجسم',
             image: '/images/flashcards/stabilize-object.jpg'
           },
           {
             step: 3,
-            title: 'Treat for Shock',
-            content: 'Keep patient warm, elevate legs if no spinal injury suspected. Monitor breathing and pulse.',
-            warning: 'Watch for signs of shock: rapid pulse, pale skin, weakness',
+            title: 'علاج الصدمة',
+            content: 'حافظ على دفء المريض، ارفع الساقين إذا لم تكن هناك إصابة في العمود الفقري. راقب التنفس والنبض.',
+            warning: 'انتبه لعلامات الصدمة: النبض السريع، الجلد الشاحب، الضعف',
             image: '/images/flashcards/treat-shock.jpg'
           },
           {
             step: 4,
-            title: 'Prepare for Transport',
-            content: 'Immobilize the injured area. Document location and size of wounds. Call for immediate evacuation.',
-            tip: 'Take photos if possible for medical team preparation',
+            title: 'التحضير للنقل',
+            content: 'ثبت المنطقة المصابة. وثق موقع وحجم الجروح. اطلب الإخلاء الفوري.',
+            tip: 'التقط صوراً إن أمكن لتحضير الفريق الطبي',
             image: '/images/flashcards/prepare-transport.jpg'
           }
         ]
       },
       {
         id: 'internal-bleeding',
-        title: 'Internal Bleeding',
-        description: 'Recognizing and managing internal bleeding from blast injuries',
+        title: 'النزيف الداخلي',
+        description: 'التعرف على النزيف الداخلي من إصابات الانفجار وإدارته',
         icon: '🩸',
         steps: [
           {
             step: 1,
-            title: 'Recognize the Signs',
-            content: 'Look for: rigid/distended abdomen, rapid weak pulse, pale/clammy skin, dizziness, thirst.',
-            warning: 'Internal bleeding can be life-threatening even without external wounds',
+            title: 'التعرف على العلامات',
+            content: 'ابحث عن: بطن صلب/منتفخ، نبض سريع ضعيف، جلد شاحب/رطب، دوار، عطش.',
+            warning: 'النزيف الداخلي يمكن أن يكون مهدداً للحياة حتى بدون جروح خارجية',
             image: '/images/flashcards/internal-bleeding-signs.jpg'
           },
           {
             step: 2,
-            title: 'Position Patient Properly',
-            content: 'Keep patient lying flat. If conscious and no spinal injury, elevate legs 8-12 inches.',
-            tip: 'Do NOT give food or water - patient may need emergency surgery',
+            title: 'وضع المريض بشكل صحيح',
+            content: 'أبقِ المريض مستلقياً. إذا كان واعياً ولا توجد إصابة في العمود الفقري، ارفع الساقين ٨-١٢ بوصة.',
+            tip: 'لا تعطِ طعاماً أو ماء - قد يحتاج المريض لجراحة طارئة',
             image: '/images/flashcards/position-patient.jpg'
           },
           {
             step: 3,
-            title: 'Monitor Vital Signs',
-            content: 'Check pulse and breathing every 5 minutes. Watch for worsening shock symptoms.',
-            warning: 'Rapid deterioration requires immediate evacuation',
+            title: 'مراقبة العلامات الحيوية',
+            content: 'افحص النبض والتنفس كل ٥ دقائق. راقب تفاقم أعراض الصدمة.',
+            warning: 'التدهور السريع يتطلب إخلاء فوري',
             image: '/images/flashcards/monitor-vitals.jpg'
           },
           {
             step: 4,
-            title: 'Prepare for Evacuation',
-            content: 'Keep patient warm with blankets. Record all observations and vital signs. Call for urgent medical transport.',
-            tip: 'Document time of injury and progression of symptoms',
+            title: 'التحضير للإخلاء',
+            content: 'حافظ على دفء المريض بالبطانيات. سجل جميع الملاحظات والعلامات الحيوية. اطلب النقل الطبي العاجل.',
+            tip: 'وثق وقت الإصابة وتطور الأعراض',
             image: '/images/flashcards/evacuation-prep.jpg'
           }
         ]
       },
       {
         id: 'limb-amputations',
-        title: 'Limb Amputations',
-        description: 'Emergency care for traumatic limb loss from blast injuries',
+        title: 'بتر الأطراف',
+        description: 'الرعاية الطارئة لفقدان الأطراف الرضحي من إصابات الانفجار',
         icon: '🦴',
         steps: [
           {
             step: 1,
-            title: 'Stop Massive Bleeding',
-            content: 'Apply tourniquet 2-3 inches above amputation site. Tighten until bleeding stops completely.',
-            warning: 'Note the time tourniquet was applied - critical for medical team',
+            title: 'إيقاف النزيف الشديد',
+            content: 'ضع عاصبة ٢-٣ بوصات فوق موقع البتر. شد حتى يتوقف النزيف تماماً.',
+            warning: 'سجل وقت وضع العاصبة - معلومة حرجة للفريق الطبي',
             image: '/images/flashcards/tourniquet-application.jpg'
           },
           {
             step: 2,
-            title: 'Treat the Amputation Site',
-            content: 'Cover stump with sterile dressing. Apply pressure bandage over dressing. Do NOT use direct pressure on bone.',
-            tip: 'If tourniquet fails, apply direct pressure above the wound',
+            title: 'علاج موقع البتر',
+            content: 'غطِ الجذمة بضماد معقم. ضع ضماد ضغط فوق الضماد. لا تستخدم ضغطاً مباشراً على العظم.',
+            tip: 'إذا فشلت العاصبة، اضغط مباشرة فوق الجرح',
             image: '/images/flashcards/amputation-dressing.jpg'
           },
           {
             step: 3,
-            title: 'Preserve the Amputated Part',
-            content: 'Wrap in clean, moist cloth. Place in plastic bag. Put bag on ice - do NOT let part touch ice directly.',
-            warning: 'Do NOT use dry ice or put part directly in water',
+            title: 'حفظ الجزء المبتور',
+            content: 'لفه بقماش نظيف رطب. ضعه في كيس بلاستيكي. ضع الكيس على الثلج - لا تدع الجزء يلمس الثلج مباشرة.',
+            warning: 'لا تستخدم الثلج الجاف أو تضع الجزء مباشرة في الماء',
             image: '/images/flashcards/preserve-limb.jpg'
           },
           {
             step: 4,
-            title: 'Treat for Severe Shock',
-            content: 'Keep patient warm, elevate legs, monitor breathing. Give reassurance. Arrange immediate evacuation.',
-            tip: 'Psychological support is crucial - patient may be conscious and aware',
+            title: 'علاج الصدمة الشديدة',
+            content: 'حافظ على دفء المريض، ارفع الساقين، راقب التنفس. قدم الطمأنينة. رتب للإخلاء الفوري.',
+            tip: 'الدعم النفسي ضروري - قد يكون المريض واعياً ومدركاً',
             image: '/images/flashcards/shock-treatment.jpg'
           }
         ]
       },
       {
         id: 'fractures-crush-injuries',
-        title: 'Fractures & Crush Injuries',
-        description: 'Managing bone fractures and crush injuries from blast trauma',
+        title: 'الكسور وإصابات السحق',
+        description: 'إدارة كسور العظام وإصابات السحق من صدمة الانفجار',
         icon: '🦴',
         steps: [
           {
             step: 1,
-            title: 'Check Circulation, Sensation, Movement',
-            content: 'Check pulse below injury. Test sensation with light touch. Ask patient to move fingers/toes if possible.',
-            warning: 'Loss of pulse, sensation, or movement indicates serious injury',
+            title: 'فحص الدورة الدموية والإحساس والحركة',
+            content: 'افحص النبض أسفل الإصابة. اختبر الإحساس باللمس الخفيف. اطلب من المريض تحريك الأصابع إن أمكن.',
+            warning: 'فقدان النبض أو الإحساس أو الحركة يشير إلى إصابة خطيرة',
             image: '/images/flashcards/csi-check.jpg'
           },
           {
             step: 2,
-            title: 'Immobilize the Fracture',
-            content: 'Splint above and below the fracture. Use rigid materials (boards, magazines). Pad splint for comfort.',
-            tip: 'Splint in position found - do not try to straighten deformed limbs',
+            title: 'تثبيت الكسر',
+            content: 'ضع جبيرة فوق وتحت الكسر. استخدم مواد صلبة (ألواح، مجلات). بطن الجبيرة للراحة.',
+            tip: 'ثبت في الوضع الموجود - لا تحاول تقويم الأطراف المشوهة',
             image: '/images/flashcards/splinting.jpg'
           },
           {
             step: 3,
-            title: 'Prevent Crush Syndrome',
-            content: 'If limb was crushed >15 minutes, do NOT elevate. Monitor for kidney problems. Prepare for rapid transport.',
-            warning: 'Crush syndrome can cause kidney failure hours after injury',
+            title: 'منع متلازمة السحق',
+            content: 'إذا سُحق الطرف لأكثر من ١٥ دقيقة، لا ترفعه. راقب مشاكل الكلى. استعد للنقل السريع.',
+            warning: 'متلازمة السحق يمكن أن تسبب فشل كلوي بعد ساعات من الإصابة',
             image: '/images/flashcards/crush-syndrome.jpg'
           },
           {
             step: 4,
-            title: 'Monitor and Transport',
-            content: 'Recheck circulation every 15 minutes. Loosen splint if swelling occurs. Arrange medical evacuation.',
-            tip: 'Mark time of injury and splint application on patient or splint',
+            title: 'المراقبة والنقل',
+            content: 'أعد فحص الدورة الدموية كل ١٥ دقيقة. أرخِ الجبيرة إذا حدث تورم. رتب للإخلاء الطبي.',
+            tip: 'اكتب وقت الإصابة ووضع الجبيرة على المريض أو الجبيرة',
             image: '/images/flashcards/monitor-fracture.jpg'
           }
         ]
@@ -173,56 +173,56 @@ export const trainingModules = [
       questions: [
         {
           id: 1,
-          question: 'What should you NEVER do when treating a victim with embedded shrapnel?',
+          question: 'ما الذي يجب ألا تفعله أبداً عند علاج ضحية بها شظايا مغروسة؟',
           options: [
-            'Apply direct pressure around the object',
-            'Remove the embedded object',
-            'Stabilize the object with bulky dressings',
-            'Call for medical evacuation'
+            'الضغط المباشر حول الجسم',
+            'إزالة الجسم المغروس',
+            'تثبيت الجسم بضمادات كبيرة',
+            'طلب الإخلاء الطبي'
           ],
           correctAnswer: 1
         },
         {
           id: 2,
-          question: 'When applying a tourniquet for blast-related amputation, how far above the wound should it be placed?',
+          question: 'عند وضع عاصبة لبتر متعلق بالانفجار، كم يجب أن تكون بعيدة فوق الجرح؟',
           options: [
-            '1 inch above the wound',
-            '2-3 inches above the wound',
-            '6 inches above the wound',
-            'As close to the wound as possible'
+            'بوصة واحدة فوق الجرح',
+            '٢-٣ بوصات فوق الجرح',
+            '٦ بوصات فوق الجرح',
+            'أقرب ما يمكن من الجرح'
           ],
           correctAnswer: 1
         },
         {
           id: 3,
-          question: 'Which is a key sign of internal bleeding from blast injuries?',
+          question: 'ما هي العلامة الرئيسية للنزيف الداخلي من إصابات الانفجار؟',
           options: [
-            'External visible wounds only',
-            'Rigid or distended abdomen',
-            'Normal pulse rate',
-            'Pink, warm skin'
+            'جروح خارجية مرئية فقط',
+            'بطن صلب أو منتفخ',
+            'معدل نبض طبيعي',
+            'جلد وردي دافئ'
           ],
           correctAnswer: 1
         },
         {
           id: 4,
-          question: 'What is the biggest risk of crush syndrome?',
+          question: 'ما هو أكبر خطر لمتلازمة السحق؟',
           options: [
-            'External bleeding',
-            'Broken bones',
-            'Kidney failure',
-            'Skin infections'
+            'النزيف الخارجي',
+            'العظام المكسورة',
+            'الفشل الكلوي',
+            'التهابات الجلد'
           ],
           correctAnswer: 2
         },
         {
           id: 5,
-          question: 'How should an amputated limb be preserved?',
+          question: 'كيف يجب حفظ الطرف المبتور؟',
           options: [
-            'Place directly on ice',
-            'Wrap in clean, moist cloth and place in plastic bag on ice',
-            'Keep at room temperature',
-            'Submerge in cold water'
+            'وضعه مباشرة على الثلج',
+            'لفه بقماش نظيف رطب ووضعه في كيس بلاستيكي على الثلج',
+            'الاحتفاظ به في درجة حرارة الغرفة',
+            'غمره في الماء البارد'
           ],
           correctAnswer: 1
         }
@@ -231,159 +231,159 @@ export const trainingModules = [
   },
   {
     id: 'burns-management',
-    title: 'Explosion & Chemical Burns',
-    description: 'Comprehensive protocols for blast burns, white phosphorus exposure, first to third-degree burns, and infection prevention in crisis zones.',
+    title: 'حروق الانفجار والكيميائية',
+    description: 'بروتوكولات شاملة لحروق الانفجار، التعرض للفسفور الأبيض، الحروق من الدرجة الأولى إلى الثالثة، والوقاية من العدوى في مناطق الأزمات.',
     icon: '🔥',
     color: 'orange',
-    duration: '55 min',
+    duration: '٥٥ دقيقة',
     videos: [
       {
         id: 'burns-1',
-        title: 'How to treat burns and scalds',
+        title: 'كيفية علاج الحروق والسمط',
         videoUrl: 'https://www.youtube.com/embed/TLr2qsEhpC8'
       }
     ],
     flashcards: [
       {
         id: 'first-second-degree-burns',
-        title: 'First & Second-Degree Burns',
-        description: 'Treatment protocols for superficial and partial-thickness burns from explosions',
+        title: 'حروق الدرجة الأولى والثانية',
+        description: 'بروتوكولات العلاج للحروق السطحية وذات السماكة الجزئية من الانفجارات',
         icon: '🔥',
         steps: [
           {
             step: 1,
-            title: 'Cool the Burn Immediately',
-            content: 'Run cool (not cold) water over the burn for 10-20 minutes. Remove from heat source and any non-stuck clothing.',
-            warning: 'Do NOT use ice water or ice - this can cause further tissue damage',
+            title: 'تبريد الحرق فوراً',
+            content: 'اسكب ماء بارد (ليس مثلج) على الحرق لمدة ١٠-٢٠ دقيقة. أزل من مصدر الحرارة وأي ملابس غير ملتصقة.',
+            warning: 'لا تستخدم الماء المثلج أو الثلج - يمكن أن يسبب مزيداً من تلف الأنسجة',
             image: '/images/flashcards/cool-burn.jpg'
           },
           {
             step: 2,
-            title: 'Assess Burn Severity',
-            content: 'First-degree: red, painful, no blisters. Second-degree: red, painful, with blisters. Check body surface area affected.',
-            tip: 'Use patient\'s palm = 1% of body surface area for quick assessment',
+            title: 'تقييم شدة الحرق',
+            content: 'الدرجة الأولى: أحمر، مؤلم، بدون بثور. الدرجة الثانية: أحمر، مؤلم، مع بثور. افحص مساحة سطح الجسم المتأثرة.',
+            tip: 'استخدم كف المريض = ١٪ من مساحة سطح الجسم للتقييم السريع',
             image: '/images/flashcards/assess-burn.jpg'
           },
           {
             step: 3,
-            title: 'Clean and Protect',
-            content: 'Gently clean with sterile saline if available. Apply sterile, non-adherent dressing. Do NOT break blisters.',
-            warning: 'Avoid cotton or fluffy materials that can stick to burn',
+            title: 'التنظيف والحماية',
+            content: 'نظف بلطف بمحلول ملحي معقم إن توفر. ضع ضماداً معقماً غير لاصق. لا تفقع البثور.',
+            warning: 'تجنب القطن أو المواد الناعمة التي يمكن أن تلتصق بالحرق',
             image: '/images/flashcards/dress-burn.jpg'
           },
           {
             step: 4,
-            title: 'Pain Management and Monitoring',
-            content: 'Give pain relief if available. Monitor for signs of infection: increased pain, fever, pus, red streaking.',
-            tip: 'Elevate burned limbs to reduce swelling',
+            title: 'إدارة الألم والمراقبة',
+            content: 'أعطِ مسكن الألم إن توفر. راقب علامات العدوى: زيادة الألم، الحمى، القيح، الخطوط الحمراء.',
+            tip: 'ارفع الأطراف المحروقة لتقليل التورم',
             image: '/images/flashcards/monitor-burn.jpg'
           }
         ]
       },
       {
         id: 'third-degree-burns',
-        title: 'Third-Degree Burns',
-        description: 'Critical care for full-thickness burns from explosions and severe heat exposure',
+        title: 'حروق الدرجة الثالثة',
+        description: 'الرعاية الحرجة للحروق كاملة السماكة من الانفجارات والتعرض الشديد للحرارة',
         icon: '🚨',
         steps: [
           {
             step: 1,
-            title: 'Recognize Third-Degree Burns',
-            content: 'Waxy white, leathery, or charred appearance. May be painless due to nerve damage. All skin layers destroyed.',
-            warning: 'Third-degree burns always require immediate medical evacuation',
+            title: 'التعرف على حروق الدرجة الثالثة',
+            content: 'مظهر شمعي أبيض، جلدي، أو متفحم. قد تكون غير مؤلمة بسبب تلف الأعصاب. جميع طبقات الجلد مدمرة.',
+            warning: 'حروق الدرجة الثالثة تتطلب دائماً إخلاء طبي فوري',
             image: '/images/flashcards/third-degree-recognition.jpg'
           },
           {
             step: 2,
-            title: 'Do NOT Cool Large Burns',
-            content: 'For burns >20% body surface, do NOT use water cooling - risk of hypothermia. Remove from heat source only.',
-            warning: 'Large burns can cause life-threatening heat and fluid loss',
+            title: 'لا تبرد الحروق الكبيرة',
+            content: 'للحروق التي تغطي أكثر من ٢٠٪ من سطح الجسم، لا تستخدم التبريد بالماء - خطر انخفاض الحرارة. أزل من مصدر الحرارة فقط.',
+            warning: 'الحروق الكبيرة يمكن أن تسبب فقدان حرارة وسوائل مهدد للحياة',
             image: '/images/flashcards/large-burn-care.jpg'
           },
           {
             step: 3,
-            title: 'Cover and Protect',
-            content: 'Cover with clean, dry cloth or sterile sheets. Do NOT remove stuck clothing. Wrap each burned finger/toe separately.',
-            tip: 'Use plastic wrap for temporary protection if sterile dressings unavailable',
+            title: 'التغطية والحماية',
+            content: 'غطِ بقماش نظيف جاف أو ملاءات معقمة. لا تزيل الملابس الملتصقة. لف كل إصبع/إصبع قدم محروق منفصلاً.',
+            tip: 'استخدم غلاف بلاستيكي للحماية المؤقتة إذا لم تتوفر ضمادات معقمة',
             image: '/images/flashcards/protect-severe-burn.jpg'
           },
           {
             step: 4,
-            title: 'Treat for Shock',
-            content: 'Monitor airway, breathing, circulation. Give fluids if conscious and no vomiting. Arrange immediate evacuation.',
-            warning: 'Watch for airway burns - look for singed facial hair, soot in mouth/nose',
+            title: 'علاج الصدمة',
+            content: 'راقب مجرى الهواء والتنفس والدورة الدموية. أعطِ سوائل إذا كان واعياً ولا يتقيأ. رتب للإخلاء الفوري.',
+            warning: 'انتبه لحروق مجرى الهواء - ابحث عن شعر الوجه المحترق، السخام في الفم/الأنف',
             image: '/images/flashcards/burn-shock.jpg'
           }
         ]
       },
       {
         id: 'white-phosphorus-burns',
-        title: 'White Phosphorus Exposure',
-        description: 'Emergency response to white phosphorus chemical burns',
+        title: 'التعرض للفسفور الأبيض',
+        description: 'الاستجابة الطارئة لحروق الفسفور الأبيض الكيميائية',
         icon: '☣️',
         steps: [
           {
             step: 1,
-            title: 'Immediate Decontamination',
-            content: 'Flush with large amounts of water for 15-20 minutes. Remove all contaminated clothing while flushing.',
-            warning: 'White phosphorus ignites on contact with air - keep wet at all times',
+            title: 'إزالة التلوث الفوري',
+            content: 'اشطف بكميات كبيرة من الماء لمدة ١٥-٢٠ دقيقة. أزل جميع الملابس الملوثة أثناء الشطف.',
+            warning: 'الفسفور الأبيض يشتعل عند ملامسة الهواء - أبقه رطباً في جميع الأوقات',
             image: '/images/flashcards/phosphorus-decon.jpg'
           },
           {
             step: 2,
-            title: 'Remove Visible Particles',
-            content: 'Use forceps or tweezers to remove visible white phosphorus particles while keeping area wet. Work under water if possible.',
-            warning: 'Do NOT use fingers - phosphorus will burn your hands',
+            title: 'إزالة الجزيئات المرئية',
+            content: 'استخدم ملقطاً لإزالة جزيئات الفسفور الأبيض المرئية مع إبقاء المنطقة رطبة. اعمل تحت الماء إن أمكن.',
+            warning: 'لا تستخدم أصابعك - سيحرق الفسفور يديك',
             image: '/images/flashcards/remove-phosphorus.jpg'
           },
           {
             step: 3,
-            title: 'Cover with Wet Dressings',
-            content: 'Apply wet, sterile dressings. Keep dressings moist - dry air will cause phosphorus to re-ignite.',
-            tip: 'If no sterile dressings available, use clean wet cloth',
+            title: 'تغطية بضمادات رطبة',
+            content: 'ضع ضمادات معقمة رطبة. حافظ على الضمادات رطبة - الهواء الجاف سيجعل الفسفور يشتعل مجدداً.',
+            tip: 'إذا لم تتوفر ضمادات معقمة، استخدم قماشاً نظيفاً رطباً',
             image: '/images/flashcards/wet-dressing.jpg'
           },
           {
             step: 4,
-            title: 'Continuous Monitoring',
-            content: 'Monitor for re-ignition - look for smoke or renewed burning. Keep all affected areas wet until medical evacuation.',
-            warning: 'Phosphorus can continue burning for hours if allowed to dry',
+            title: 'المراقبة المستمرة',
+            content: 'راقب إعادة الاشتعال - ابحث عن دخان أو احتراق متجدد. أبقِ جميع المناطق المتأثرة رطبة حتى الإخلاء الطبي.',
+            warning: 'يمكن للفسفور أن يستمر في الاحتراق لساعات إذا سُمح له بالجفاف',
             image: '/images/flashcards/monitor-phosphorus.jpg'
           }
         ]
       },
       {
         id: 'infection-prevention',
-        title: 'Burn Infection Prevention',
-        description: 'Preventing deadly infections in burn wounds when medical supplies are limited',
+        title: 'الوقاية من عدوى الحروق',
+        description: 'منع العدوى القاتلة في جروح الحروق عندما تكون الإمدادات الطبية محدودة',
         icon: '🦠',
         steps: [
           {
             step: 1,
-            title: 'Hand Hygiene First',
-            content: 'Wash hands thoroughly with soap and water or use hand sanitizer before any burn care. Wear gloves if available.',
-            warning: 'Dirty hands are the #1 source of burn wound infections',
+            title: 'نظافة اليدين أولاً',
+            content: 'اغسل اليدين جيداً بالصابون والماء أو استخدم معقم اليدين قبل أي رعاية للحروق. ارتدِ قفازات إن توفرت.',
+            warning: 'الأيدي القذرة هي المصدر الأول لعدوى جروح الحروق',
             image: '/images/flashcards/hand-hygiene.jpg'
           },
           {
             step: 2,
-            title: 'Clean the Wound',
-            content: 'Rinse gently with clean water or sterile saline. Remove loose debris with sterile tweezers. Do NOT scrub.',
-            tip: 'Boiled and cooled water can substitute for sterile saline if needed',
+            title: 'تنظيف الجرح',
+            content: 'اشطف بلطف بماء نظيف أو محلول ملحي معقم. أزل الحطام السائب بملقط معقم. لا تفرك.',
+            tip: 'يمكن أن يحل الماء المغلي والمبرد محل المحلول الملحي المعقم إذا لزم الأمر',
             image: '/images/flashcards/clean-burn-wound.jpg'
           },
           {
             step: 3,
-            title: 'Apply Clean Dressings',
-            content: 'Use sterile dressings if available, or clean cloth. Change dressings daily or when soiled. Keep wound moist but not wet.',
-            warning: 'Dry wounds heal slower and are more prone to infection',
+            title: 'وضع ضمادات نظيفة',
+            content: 'استخدم ضمادات معقمة إن توفرت، أو قماش نظيف. غير الضمادات يومياً أو عند اتساخها. حافظ على الجرح رطباً لكن ليس مبللاً.',
+            warning: 'الجروح الجافة تشفى أبطأ وأكثر عرضة للعدوى',
             image: '/images/flashcards/sterile-dressing.jpg'
           },
           {
             step: 4,
-            title: 'Monitor for Infection Signs',
-            content: 'Watch for: increased pain, fever, pus, bad smell, red streaking, green/yellow drainage. Seek medical help immediately.',
-            tip: 'Take photos to document progression if medical help is delayed',
+            title: 'مراقبة علامات العدوى',
+            content: 'انتبه لـ: زيادة الألم، الحمى، القيح، الرائحة الكريهة، الخطوط الحمراء، الإفرازات الخضراء/الصفراء. اطلب المساعدة الطبية فوراً.',
+            tip: 'التقط صوراً لتوثيق التقدم إذا تأخرت المساعدة الطبية',
             image: '/images/flashcards/infection-signs.jpg'
           }
         ]
@@ -393,78 +393,78 @@ export const trainingModules = [
       questions: [
         {
           id: 1,
-          question: 'What should you NEVER use to cool a burn?',
+          question: 'ما الذي يجب ألا تستخدمه أبداً لتبريد الحرق؟',
           options: [
-            'Cool running water',
-            'Ice or ice water',
-            'Room temperature water',
-            'Sterile saline'
+            'الماء الجاري البارد',
+            'الثلج أو الماء المثلج',
+            'الماء بدرجة حرارة الغرفة',
+            'المحلول الملحي المعقم'
           ],
           correctAnswer: 1
         },
         {
           id: 2,
-          question: 'How can you quickly estimate burn percentage on a patient?',
+          question: 'كيف يمكنك تقدير نسبة الحرق بسرعة على المريض؟',
           options: [
-            'Count the blisters',
-            'Use the patient\'s palm = 1% body surface area',
-            'Measure with a ruler',
-            'Guess based on appearance'
+            'عد البثور',
+            'استخدم كف المريض = ١٪ من مساحة سطح الجسم',
+            'قس بالمسطرة',
+            'خمن بناءً على المظهر'
           ],
           correctAnswer: 1
         },
         {
           id: 3,
-          question: 'What is the most critical action for white phosphorus burns?',
+          question: 'ما هو الإجراء الأكثر أهمية لحروق الفسفور الأبيض؟',
           options: [
-            'Apply dry dressings',
-            'Remove particles with bare hands',
-            'Keep the affected area constantly wet',
-            'Apply ice immediately'
+            'وضع ضمادات جافة',
+            'إزالة الجزيئات بالأيدي العارية',
+            'إبقاء المنطقة المتأثرة رطبة باستمرار',
+            'وضع الثلج فوراً'
           ],
           correctAnswer: 2
         },
         {
           id: 4,
-          question: 'Which describes a third-degree burn?',
+          question: 'أي مما يلي يصف حرق الدرجة الثالثة؟',
           options: [
-            'Red and painful with blisters',
-            'Waxy white, leathery, or charred - may be painless',
-            'Red and painful without blisters',
-            'Always very painful'
+            'أحمر ومؤلم مع بثور',
+            'شمعي أبيض، جلدي، أو متفحم - قد يكون غير مؤلم',
+            'أحمر ومؤلم بدون بثور',
+            'دائماً مؤلم جداً'
           ],
           correctAnswer: 1
         },
         {
           id: 5,
-          question: 'What is the #1 cause of burn wound infections?',
+          question: 'ما هو السبب الأول لعدوى جروح الحروق؟',
           options: [
-            'Dirty bandages',
-            'Poor wound cleaning',
-            'Dirty hands during treatment',
-            'Not using antibiotics'
+            'الضمادات القذرة',
+            'سوء تنظيف الجروح',
+            'الأيدي القذرة أثناء العلاج',
+            'عدم استخدام المضادات الحيوية'
           ],
           correctAnswer: 2
         },
         {
           id: 6,
-          question: 'For large burns (>20% body surface), what should you avoid?',
+          question: 'للحروق الكبيرة (>٢٠٪ من سطح الجسم)، ما الذي يجب تجنبه؟',
           options: [
-            'Calling for help',
-            'Removing from heat source',
-            'Cooling with water (hypothermia risk)',
-            'Monitoring vital signs'
+            'طلب المساعدة',
+            'الإبعاد عن مصدر الحرارة',
+            'التبريد بالماء (خطر انخفاض الحرارة)',
+            'مراقبة العلامات الحيوية'
           ],
           correctAnswer: 2
         },
         {
           id: 7,
-          question: 'Which is a sign of burn wound infection?',
+          question: 'أي مما يلي علامة على عدوى جرح الحرق؟',
           options: [
-            'Initial pain and redness',
-            'Clear fluid drainage',
-            'Green/yellow pus and bad smell',
-            'Normal healing pain'
+            'الألم والاحمرار الأولي',
+            'إفراز سائل صافٍ',
+            'قيح أخضر/أصفر ورائحة كريهة',
+            'ألم الشفاء الطبيعي'
           ],
           correctAnswer: 2
         }
@@ -473,128 +473,128 @@ export const trainingModules = [
   },
   {
     id: 'head-spinal-trauma',
-    title: 'Head & Spinal Injuries',
-    description: 'Comprehensive training on traumatic brain injury (TBI), skull fractures, and spinal cord trauma with paralysis management.',
+    title: 'إصابات الرأس والعمود الفقري',
+    description: 'تدريب شامل على إصابات الدماغ الرضحية (TBI)، كسور الجمجمة، وصدمات الحبل الشوكي مع إدارة الشلل.',
     icon: '🧠',
     color: 'purple',
-    duration: '50 min',
+    duration: '٥٠ دقيقة',
     videos: [
       {
         id: 'tbi-1',
-        title: 'Head injury symptoms and advice',
+        title: 'أعراض إصابة الرأس والنصائح',
         videoUrl: 'https://www.youtube.com/embed/a4cIFZx1f2E'
       },
       {
         id: 'tbi-2',
-        title: 'What to do if someone has a spinal cord injury',
+        title: 'ماذا تفعل إذا كان شخص ما لديه إصابة في الحبل الشوكي',
         videoUrl: 'https://www.youtube.com/embed/Uqy2IUhYkVA'
       }
     ],
     flashcards: [
       {
         id: 'traumatic-brain-injury',
-        title: 'Traumatic Brain Injury (TBI)',
-        description: 'Assessment and management of brain injuries from blasts, impacts, and penetrating trauma',
+        title: 'إصابة الدماغ الرضحية (TBI)',
+        description: 'تقييم وإدارة إصابات الدماغ من الانفجارات والصدمات والصدمات النافذة',
         icon: '🧠',
         steps: [
           {
             step: 1,
-            title: 'Assess Consciousness Level',
-            content: 'Check responsiveness: Alert, Voice, Pain, Unresponsive (AVPU). Note any confusion, disorientation, or memory loss.',
-            warning: 'Unconsciousness or declining consciousness indicates severe TBI requiring immediate evacuation',
+            title: 'تقييم مستوى الوعي',
+            content: 'افحص الاستجابة: يقظ، صوت، ألم، غير مستجيب (AVPU). لاحظ أي ارتباك أو توهان أو فقدان ذاكرة.',
+            warning: 'فقدان الوعي أو تدهور الوعي يشير إلى إصابة دماغية شديدة تتطلب إخلاء فوري',
             image: '/images/flashcards/traumatic-brain-injury-1.jpg'
           },
           {
             step: 2,
-            title: 'Check for Danger Signs',
-            content: 'Look for: unequal pupils, severe headache, repeated vomiting, seizures, clear fluid from ears/nose, weakness on one side.',
-            warning: 'Any of these signs indicate serious brain injury - call for immediate medical evacuation',
+            title: 'تحقق من علامات الخطر',
+            content: 'ابحث عن: حدقات غير متساوية، صداع شديد، قيء متكرر، نوبات، سائل صافٍ من الأذنين/الأنف، ضعف في جانب واحد.',
+            warning: 'أي من هذه العلامات تشير إلى إصابة دماغية خطيرة - اطلب الإخلاء الطبي الفوري',
             image: '/images/flashcards/traumatic-brain-injury-2.jpg'
           },
           {
             step: 3,
-            title: 'Positioning and Airway',
-            content: 'If conscious: sit upright or head elevated 30°. If unconscious: recovery position (if no spinal injury suspected). Monitor airway.',
-            tip: 'Elevating the head can help reduce brain pressure if no spinal injury',
+            title: 'الوضعية ومجرى الهواء',
+            content: 'إذا كان واعياً: اجلس منتصباً أو ارفع الرأس ٣٠°. إذا كان فاقد الوعي: وضعية الإنعاش (إذا لم تكن هناك إصابة في العمود الفقري مشتبه بها). راقب مجرى الهواء.',
+            tip: 'رفع الرأس يمكن أن يساعد في تقليل ضغط الدماغ إذا لم تكن هناك إصابة في العمود الفقري',
             image: '/images/flashcards/traumatic-brain-injury-3.jpg'
           },
           {
             step: 4,
-            title: 'Monitor and Document',
-            content: 'Check consciousness every 15 minutes. Document changes in behavior, speech, movement. Keep patient calm and still.',
-            warning: 'Any deterioration requires immediate medical attention - brain injuries can worsen rapidly',
+            title: 'المراقبة والتوثيق',
+            content: 'افحص الوعي كل ١٥ دقيقة. وثق التغييرات في السلوك والكلام والحركة. أبقِ المريض هادئاً وساكناً.',
+            warning: 'أي تدهور يتطلب عناية طبية فورية - إصابات الدماغ يمكن أن تتفاقم بسرعة',
             image: '/images/flashcards/traumatic-brain-injury-4.jpg'
           }
         ]
       },
       {
         id: 'skull-fractures',
-        title: 'Skull Fractures',
-        description: 'Recognition and management of skull fractures and potential brain bleeding',
+        title: 'كسور الجمجمة',
+        description: 'التعرف على كسور الجمجمة وإدارتها والنزيف الدماغي المحتمل',
         icon: '💀',
         steps: [
           {
             step: 1,
-            title: 'Recognize Skull Fracture Signs',
-            content: 'Look for: visible skull deformity, blood from ears/nose, bruising around eyes (raccoon eyes), bruising behind ears.',
-            warning: 'Skull fractures often indicate underlying brain injury requiring immediate medical care',
+            title: 'التعرف على علامات كسر الجمجمة',
+            content: 'ابحث عن: تشوه الجمجمة المرئي، دم من الأذنين/الأنف، كدمات حول العينين (عيون الراكون)، كدمات خلف الأذنين.',
+            warning: 'كسور الجمجمة غالباً ما تشير إلى إصابة دماغية كامنة تتطلب رعاية طبية فورية',
             image: '/images/flashcards/skull-fractures-1.jpg'
           },
           {
             step: 2,
-            title: 'Control External Bleeding',
-            content: 'Apply gentle pressure around (not on) the fracture site. Use bulky dressings to absorb blood. Do NOT push bone fragments.',
-            warning: 'Never apply direct pressure to a depressed skull fracture - can push fragments into brain',
+            title: 'السيطرة على النزيف الخارجي',
+            content: 'اضغط بلطف حول (وليس على) موقع الكسر. استخدم ضمادات كبيرة لامتصاص الدم. لا تدفع شظايا العظام.',
+            warning: 'لا تضغط مباشرة على كسر الجمجمة المنخسف - يمكن أن يدفع الشظايا إلى الدماغ',
             image: '/images/flashcards/skull-fractures-2.jpg'
           },
           {
             step: 3,
-            title: 'Monitor for Brain Bleeding',
-            content: 'Watch for: worsening headache, vomiting, confusion, weakness, seizures, unconsciousness. These indicate brain bleeding.',
-            warning: 'Brain bleeding is life-threatening and requires immediate surgical intervention',
+            title: 'مراقبة نزيف الدماغ',
+            content: 'انتبه لـ: تفاقم الصداع، القيء، الارتباك، الضعف، النوبات، فقدان الوعي. هذه تشير إلى نزيف الدماغ.',
+            warning: 'نزيف الدماغ مهدد للحياة ويتطلب تدخل جراحي فوري',
             image: '/images/flashcards/skull-fractures-3.jpg'
           },
           {
             step: 4,
-            title: 'Immobilize and Transport',
-            content: 'Keep head and neck still. Use cervical collar if available. Transport urgently to medical facility with neurosurgical capability.',
-            tip: 'Assume spinal injury with any skull fracture until proven otherwise',
+            title: 'التثبيت والنقل',
+            content: 'أبقِ الرأس والرقبة ثابتين. استخدم طوق عنق إن توفر. انقل بشكل عاجل إلى منشأة طبية لديها قدرة جراحة أعصاب.',
+            tip: 'افترض إصابة العمود الفقري مع أي كسر في الجمجمة حتى يثبت خلاف ذلك',
             image: '/images/flashcards/skull-fractures-4.jpg'
           }
         ]
       },
       {
         id: 'spinal-cord-trauma',
-        title: 'Spinal Cord Trauma & Paralysis',
-        description: 'Assessment and immobilization of spinal injuries to prevent permanent paralysis',
+        title: 'صدمة الحبل الشوكي والشلل',
+        description: 'تقييم وتثبيت إصابات العمود الفقري لمنع الشلل الدائم',
         icon: '🦴',
         steps: [
           {
             step: 1,
-            title: 'Suspect Spinal Injury',
-            content: 'High-risk mechanisms: falls >3 feet, high-speed impacts, head/neck trauma, unconscious patients, numbness/tingling in limbs.',
-            warning: 'When in doubt, treat as spinal injury - movement can cause permanent paralysis',
+            title: 'الاشتباه بإصابة العمود الفقري',
+            content: 'آليات عالية الخطورة: السقوط من أكثر من ٣ أقدام، الصدمات عالية السرعة، صدمة الرأس/الرقبة، المرضى فاقدو الوعي، خدر/وخز في الأطراف.',
+            warning: 'عند الشك، عالج كإصابة في العمود الفقري - الحركة يمكن أن تسبب شللاً دائماً',
             image: '/images/flashcards/spinal-cord-trauma-1.jpg'
           },
           {
             step: 2,
-            title: 'Test Sensation and Movement',
-            content: 'Ask patient to wiggle fingers/toes. Test light touch on hands and feet. Check for numbness, tingling, or weakness.',
-            warning: 'Loss of sensation or movement indicates spinal cord damage - immobilize immediately',
+            title: 'اختبار الإحساس والحركة',
+            content: 'اطلب من المريض تحريك الأصابع. اختبر اللمس الخفيف على اليدين والقدمين. تحقق من الخدر أو الوخز أو الضعف.',
+            warning: 'فقدان الإحساس أو الحركة يشير إلى تلف الحبل الشوكي - ثبت فوراً',
             image: '/images/flashcards/spinal-cord-trauma-2.jpg'
           },
           {
             step: 3,
-            title: 'Immobilize the Spine',
-            content: 'Hold head/neck in neutral position. Use cervical collar if available. Log-roll patient as one unit if must move. Keep spine straight.',
-            tip: 'Use towels, blankets, or boards to maintain spinal alignment during transport',
+            title: 'تثبيت العمود الفقري',
+            content: 'امسك الرأس/الرقبة في وضع محايد. استخدم طوق عنق إن توفر. دحرج المريض كوحدة واحدة إذا كان يجب تحريكه. حافظ على استقامة العمود الفقري.',
+            tip: 'استخدم المناشف أو البطانيات أو الألواح للحفاظ على محاذاة العمود الفقري أثناء النقل',
             image: '/images/flashcards/spinal-cord-trauma-3.jpg'
           },
           {
             step: 4,
-            title: 'Manage Complications',
-            content: 'Monitor breathing (spinal injuries can affect breathing muscles). Watch for spinal shock: low blood pressure, slow pulse.',
-            warning: 'High spinal injuries can cause breathing failure - be prepared to assist ventilation',
+            title: 'إدارة المضاعفات',
+            content: 'راقب التنفس (إصابات العمود الفقري يمكن أن تؤثر على عضلات التنفس). انتبه للصدمة الشوكية: انخفاض ضغط الدم، نبض بطيء.',
+            warning: 'إصابات العمود الفقري العالية يمكن أن تسبب فشل التنفس - كن مستعداً لمساعدة التهوية',
             image: '/images/flashcards/spinal-cord-trauma-4.jpg'
           }
         ]
@@ -604,89 +604,89 @@ export const trainingModules = [
       questions: [
         {
           id: 1,
-          question: 'Which assessment method should you use to check consciousness level in a TBI patient?',
+          question: 'أي طريقة تقييم يجب استخدامها لفحص مستوى الوعي في مريض TBI؟',
           options: [
-            'Glasgow Coma Scale only',
-            'AVPU (Alert, Voice, Pain, Unresponsive)',
-            'Pupil response only',
-            'Blood pressure measurement'
+            'مقياس غلاسكو للغيبوبة فقط',
+            'AVPU (يقظ، صوت، ألم، غير مستجيب)',
+            'استجابة الحدقة فقط',
+            'قياس ضغط الدم'
           ],
           correctAnswer: 1
         },
         {
           id: 2,
-          question: 'What is a critical danger sign of severe brain injury?',
+          question: 'ما هي علامة الخطر الحرجة لإصابة الدماغ الشديدة؟',
           options: [
-            'Mild headache',
-            'Slight dizziness',
-            'Unequal pupils and repeated vomiting',
-            'Normal speech'
+            'صداع خفيف',
+            'دوار طفيف',
+            'حدقات غير متساوية وقيء متكرر',
+            'كلام طبيعي'
           ],
           correctAnswer: 2
         },
         {
           id: 3,
-          question: 'How should you control bleeding from a skull fracture?',
+          question: 'كيف يجب السيطرة على النزيف من كسر الجمجمة؟',
           options: [
-            'Apply direct pressure on the fracture site',
-            'Apply gentle pressure around (not on) the fracture',
-            'Push bone fragments back into place',
-            'Use ice directly on the wound'
+            'الضغط المباشر على موقع الكسر',
+            'الضغط اللطيف حول (وليس على) الكسر',
+            'دفع شظايا العظام مرة أخرى إلى مكانها',
+            'استخدام الثلج مباشرة على الجرح'
           ],
           correctAnswer: 1
         },
         {
           id: 4,
-          question: 'Which mechanism of injury should make you suspect spinal injury?',
+          question: 'أي آلية إصابة يجب أن تجعلك تشك في إصابة العمود الفقري؟',
           options: [
-            'Minor cuts and scrapes',
-            'Falls greater than 3 feet or high-speed impacts',
-            'Superficial burns',
-            'Mild bruising'
+            'جروح وخدوش طفيفة',
+            'السقوط من أكثر من ٣ أقدام أو الصدمات عالية السرعة',
+            'حروق سطحية',
+            'كدمات خفيفة'
           ],
           correctAnswer: 1
         },
         {
           id: 5,
-          question: 'What indicates possible spinal cord damage?',
+          question: 'ما الذي يشير إلى تلف محتمل في الحبل الشوكي؟',
           options: [
-            'Normal movement in all limbs',
-            'Loss of sensation or inability to move fingers/toes',
-            'Normal reflexes',
-            'No numbness or tingling'
+            'حركة طبيعية في جميع الأطراف',
+            'فقدان الإحساس أو عدم القدرة على تحريك الأصابع',
+            'ردود فعل طبيعية',
+            'لا خدر أو وخز'
           ],
           correctAnswer: 1
         },
         {
           id: 6,
-          question: 'How should you move a patient with suspected spinal injury?',
+          question: 'كيف يجب تحريك مريض مع اشتباه إصابة في العمود الفقري؟',
           options: [
-            'Move quickly to avoid further injury',
-            'Log-roll as one unit keeping spine straight',
-            'Bend and twist the spine as needed',
-            'Move head and body separately'
+            'تحرك بسرعة لتجنب مزيد من الإصابة',
+            'دحرج كوحدة واحدة مع الحفاظ على استقامة العمود الفقري',
+            'ثني ولف العمود الفقري حسب الحاجة',
+            'حرك الرأس والجسم بشكل منفصل'
           ],
           correctAnswer: 1
         },
         {
           id: 7,
-          question: 'What position is best for a conscious TBI patient?',
+          question: 'ما هو أفضل وضع لمريض TBI واعٍ؟',
           options: [
-            'Flat on back',
-            'Face down',
-            'Head elevated 30° (if no spinal injury)',
-            'Any comfortable position'
+            'مستلقٍ على الظهر',
+            'الوجه لأسفل',
+            'رفع الرأس ٣٠° (إذا لم تكن هناك إصابة في العمود الفقري)',
+            'أي وضع مريح'
           ],
           correctAnswer: 2
         },
         {
           id: 8,
-          question: 'Clear fluid draining from the ears or nose after head trauma indicates:',
+          question: 'تصريف سائل صافٍ من الأذنين أو الأنف بعد صدمة الرأس يشير إلى:',
           options: [
-            'Normal response to injury',
-            'Possible skull fracture with brain fluid leak',
-            'Simple nosebleed',
-            'Dehydration'
+            'استجابة طبيعية للإصابة',
+            'كسر محتمل في الجمجمة مع تسرب سائل الدماغ',
+            'نزيف أنف بسيط',
+            'الجفاف'
           ],
           correctAnswer: 1
         }
@@ -695,151 +695,151 @@ export const trainingModules = [
   },
   {
     id: 'severe-bleeding',
-    title: 'Severe Bleeding',
-    description: 'Life-threatening blood loss from bomb fragments and building collapses requiring urgent transfusion and advanced hemorrhage control.',
+    title: 'النزيف الشديد',
+    description: 'فقدان الدم المهدد للحياة من شظايا القنابل وانهيار المباني التي تتطلب نقل دم عاجل والسيطرة المتقدمة على النزيف.',
     icon: '🩸',
     color: 'red',
-    duration: '45 min',
+    duration: '٤٥ دقيقة',
     videos: [
       {
         id: 'bleeding-1',
-        title: 'How to treat severe bleeding',
+        title: 'كيفية علاج النزيف الشديد',
         videoUrl: 'https://www.youtube.com/embed/NxO5LvgqZe0'
       }
     ],
     flashcards: [
       {
         id: 'massive-hemorrhage-control',
-        title: 'Massive Hemorrhage Control',
-        description: 'Immediate life-saving interventions for catastrophic bleeding from fragments and debris',
+        title: 'السيطرة على النزيف الشديد',
+        description: 'التدخلات المنقذة للحياة الفورية للنزيف الكارثي من الشظايا والحطام',
         icon: '🩸',
         steps: [
           {
             step: 1,
-            title: 'Identify Life-Threatening Bleeding',
-            content: 'Look for: spurting blood, rapidly expanding pools of blood, clothing soaked with blood, weak/absent pulse.',
-            warning: 'Massive hemorrhage can cause death within 5-10 minutes - act immediately',
+            title: 'تحديد النزيف المهدد للحياة',
+            content: 'ابحث عن: دم متدفق، برك دم متوسعة بسرعة، ملابس مبللة بالدم، نبض ضعيف/غائب.',
+            warning: 'النزيف الشديد يمكن أن يسبب الوفاة خلال ٥-١٠ دقائق - تصرف فوراً',
           },
           {
             step: 2,
-            title: 'Apply Direct Pressure',
-            content: 'Use both hands to apply firm, continuous pressure directly on the wound. Use gauze, clothing, or bare hands if necessary.',
-            tip: 'Don\'t lift pressure to check bleeding - maintain constant pressure for 10+ minutes',
+            title: 'الضغط المباشر',
+            content: 'استخدم كلتا يديك للضغط بقوة ومستمر مباشرة على الجرح. استخدم الشاش أو الملابس أو الأيدي العارية إذا لزم الأمر.',
+            tip: 'لا ترفع الضغط للتحقق من النزيف - حافظ على ضغط مستمر لأكثر من ١٠ دقائق',
             image: '/images/flashcards/massive-hemorrhage-control-2.jpg'
           },
           {
             step: 3,
-            title: 'Elevate if Possible',
-            content: 'Raise the bleeding extremity above heart level while maintaining pressure. Do NOT elevate if fracture suspected.',
-            warning: 'Never elevate potential spinal injuries or suspected fractures',
+            title: 'الرفع إن أمكن',
+            content: 'ارفع الطرف النازف فوق مستوى القلب مع الحفاظ على الضغط. لا ترفع إذا كان هناك اشتباه بكسر.',
+            warning: 'لا ترفع أبداً إصابات العمود الفقري المحتملة أو الكسور المشتبه بها',
             image: '/images/flashcards/massive-hemorrhage-control-3.jpg'
           },
           {
             step: 4,
-            title: 'Prepare for Shock Treatment',
-            content: 'Monitor pulse, breathing, consciousness. Keep patient warm. Prepare for immediate evacuation to trauma center.',
-            warning: 'Massive blood loss leads to irreversible shock - evacuation time is critical',
+            title: 'التحضير لعلاج الصدمة',
+            content: 'راقب النبض والتنفس والوعي. حافظ على دفء المريض. استعد للإخلاء الفوري إلى مركز الصدمات.',
+            warning: 'فقدان الدم الشديد يؤدي إلى صدمة لا رجعة فيها - وقت الإخلاء حرج',
             image: '/images/flashcards/massive-hemorrhage-control-4.jpg'
           }
         ]
       },
       {
         id: 'tourniquet-application',
-        title: 'Tourniquet Application',
-        description: 'Life-saving tourniquet techniques for extremity arterial bleeding',
+        title: 'وضع العاصبة',
+        description: 'تقنيات العاصبة المنقذة للحياة لنزيف الشرايين في الأطراف',
         icon: '🔴',
         steps: [
           {
             step: 1,
-            title: 'Identify Need for Tourniquet',
-            content: 'Use when: direct pressure fails, multiple casualties (triage), amputation, arterial bleeding that won\'t stop.',
-            warning: 'Tourniquets should be applied high and tight - failure to stop bleeding can be fatal',
+            title: 'تحديد الحاجة للعاصبة',
+            content: 'استخدم عند: فشل الضغط المباشر، إصابات متعددة (الفرز)، البتر، نزيف شرياني لا يتوقف.',
+            warning: 'يجب وضع العواصب عالياً ومحكمة - الفشل في وقف النزيف يمكن أن يكون قاتلاً',
             image: '/images/flashcards/tourniquet-application-1.jpg'
           },
           {
             step: 2,
-            title: 'Position Tourniquet Correctly',
-            content: 'Place 2-3 inches above wound, higher on thigh/upper arm. Remove clothing first. Place over single bone, not joint.',
-            tip: 'If first tourniquet doesn\'t stop bleeding, apply a second one above the first',
+            title: 'وضع العاصبة بشكل صحيح',
+            content: 'ضع ٢-٣ بوصات فوق الجرح، أعلى على الفخذ/أعلى الذراع. أزل الملابس أولاً. ضع فوق عظم واحد، ليس المفصل.',
+            tip: 'إذا لم توقف العاصبة الأولى النزيف، ضع ثانية فوق الأولى',
             image: '/images/flashcards/tourniquet-application.jpg'
           },
           {
             step: 3,
-            title: 'Tighten Until Bleeding Stops',
-            content: 'Tighten windlass (stick) until bleeding completely stops. Secure windlass with clip or tape. Do not loosen.',
-            warning: 'Must be tight enough to stop arterial flow - will be very painful but necessary',
+            title: 'شد حتى يتوقف النزيف',
+            content: 'شد البكرة (العصا) حتى يتوقف النزيف تماماً. ثبت البكرة بمشبك أو شريط لاصق. لا ترخِ.',
+            warning: 'يجب أن تكون محكمة بما يكفي لوقف تدفق الشرايين - ستكون مؤلمة جداً لكن ضرورية',
             image: '/images/flashcards/tourniquet-application-3.jpg'
           },
           {
             step: 4,
-            title: 'Mark Time and Monitor',
-            content: 'Write time of application on patient\'s forehead. Monitor for continued bleeding. Arrange immediate transport.',
-            warning: 'Note exact time applied - critical information for medical team',
+            title: 'سجل الوقت وراقب',
+            content: 'اكتب وقت الوضع على جبهة المريض. راقب استمرار النزيف. رتب للنقل الفوري.',
+            warning: 'سجل الوقت الدقيق للوضع - معلومة حرجة للفريق الطبي',
             image: '/images/flashcards/tourniquet-application-4.jpg'
           }
         ]
       },
       {
         id: 'internal-hemorrhage',
-        title: 'Internal Hemorrhage Recognition',
-        description: 'Detecting and managing internal bleeding from building collapse and bomb fragments',
+        title: 'التعرف على النزيف الداخلي',
+        description: 'اكتشاف وإدارة النزيف الداخلي من انهيار المباني وشظايا القنابل',
         icon: '🫀',
         steps: [
           {
             step: 1,
-            title: 'Recognize Internal Bleeding Signs',
-            content: 'Look for: rapid weak pulse, pale/clammy skin, dizziness, thirst, anxiety, abdominal rigidity, distension.',
-            warning: 'Internal bleeding can be massive without external signs - monitor vital signs closely',
+            title: 'التعرف على علامات النزيف الداخلي',
+            content: 'ابحث عن: نبض سريع ضعيف، جلد شاحب/رطب، دوار، عطش، قلق، صلابة البطن، انتفاخ.',
+            warning: 'النزيف الداخلي يمكن أن يكون هائلاً بدون علامات خارجية - راقب العلامات الحيوية عن كثب',
             image: '/images/flashcards/internal-hemorrhage-1.jpg'
           },
           {
             step: 2,
-            title: 'Monitor Vital Signs',
-            content: 'Check pulse, breathing, consciousness every 5 minutes. Watch for rapid deterioration. Keep patient calm.',
-            warning: 'Rapid pulse >120 with weak pulse indicates severe blood loss requiring immediate surgery',
+            title: 'مراقبة العلامات الحيوية',
+            content: 'افحص النبض والتنفس والوعي كل ٥ دقائق. انتبه للتدهور السريع. أبقِ المريض هادئاً.',
+            warning: 'النبض السريع >١٢٠ مع نبض ضعيف يشير إلى فقدان دم شديد يتطلب جراحة فورية',
             image: '/images/flashcards/internal-hemorrhage-2.jpg'
           },
           {
             step: 3,
-            title: 'Urgent Medical Evacuation',
-            content: 'Call for immediate transport to trauma center with blood bank. Document all findings and vital sign changes.',
-            warning: 'Internal bleeding often requires emergency surgery and blood transfusion',
+            title: 'الإخلاء الطبي العاجل',
+            content: 'اطلب النقل الفوري إلى مركز صدمات مع بنك دم. وثق جميع النتائج وتغييرات العلامات الحيوية.',
+            warning: 'النزيف الداخلي غالباً ما يتطلب جراحة طارئة ونقل دم',
             image: '/images/flashcards/evacuation-prep.jpg'
           }
         ]
       },
       {
         id: 'hemorrhagic-shock',
-        title: 'Hemorrhagic Shock Management',
-        description: 'Pre-hospital care for shock from massive blood loss requiring transfusion',
+        title: 'إدارة الصدمة النزفية',
+        description: 'الرعاية قبل المستشفى للصدمة من فقدان الدم الشديد التي تتطلب نقل دم',
         icon: '💔',
         steps: [
           {
             step: 1,
-            title: 'Classify Shock Severity',
-            content: 'Class I: <15% blood loss, normal vitals. Class II: 15-30%, fast pulse. Class III: 30-40%, very fast weak pulse. Class IV: >40%, critical.',
-            warning: 'Class III and IV shock require immediate blood transfusion to survive',
+            title: 'تصنيف شدة الصدمة',
+            content: 'الفئة الأولى: <١٥٪ فقدان دم، علامات حيوية طبيعية. الفئة الثانية: ١٥-٣٠٪، نبض سريع. الفئة الثالثة: ٣٠-٤٠٪، نبض سريع جداً ضعيف. الفئة الرابعة: >٤٠٪، حرج.',
+            warning: 'الفئة الثالثة والرابعة من الصدمة تتطلب نقل دم فوري للبقاء على قيد الحياة',
             image: '/images/flashcards/hemorrhagic-shock-1.jpg'
           },
           {
             step: 2,
-            title: 'Control All Bleeding Sources',
-            content: 'Stop all visible bleeding with pressure, tourniquets, hemostatic agents. Look for hidden bleeding sites.',
-            tip: 'Control bleeding first - IV fluids cannot replace lost blood',
+            title: 'السيطرة على جميع مصادر النزيف',
+            content: 'أوقف جميع النزيف المرئي بالضغط والعواصب والعوامل المرقئة. ابحث عن مواقع النزيف المخفية.',
+            tip: 'السيطرة على النزيف أولاً - السوائل الوريدية لا يمكنها استبدال الدم المفقود',
             image: '/images/flashcards/hemorrhagic-shock-2.jpg'
           },
           {
             step: 3,
-            title: 'Prevent Further Heat Loss',
-            content: 'Wrap in blankets, remove wet clothing, cover head. Hypothermia worsens bleeding and shock.',
-            warning: 'Cold patients cannot clot blood effectively - keeping warm is life-saving',
+            title: 'منع فقدان المزيد من الحرارة',
+            content: 'لف بالبطانيات، أزل الملابس الرطبة، غطِ الرأس. انخفاض الحرارة يزيد النزيف والصدمة سوءاً.',
+            warning: 'المرضى الباردون لا يمكنهم تجلط الدم بفعالية - الحفاظ على الدفء منقذ للحياة',
             image: '/images/flashcards/hemorrhagic-shock-3.jpg'
           },
           {
             step: 4,
-            title: 'Rapid Transport to Blood Bank',
-            content: 'Arrange helicopter or fastest transport to Level 1 trauma center with blood bank. Call ahead with blood type if known.',
-            warning: 'Time to blood transfusion determines survival - every minute counts',
+            title: 'النقل السريع إلى بنك الدم',
+            content: 'رتب للمروحية أو أسرع نقل إلى مركز صدمات المستوى الأول مع بنك دم. اتصل مسبقاً بفصيلة الدم إن كانت معروفة.',
+            warning: 'الوقت لنقل الدم يحدد البقاء على قيد الحياة - كل دقيقة مهمة',
             image: '/images/flashcards/hemorrhagic-shock-4.jpg'
           }
         ]
@@ -849,78 +849,78 @@ export const trainingModules = [
       questions: [
         {
           id: 1,
-          question: 'How quickly can massive hemorrhage cause death?',
+          question: 'كم بسرعة يمكن للنزيف الشديد أن يسبب الوفاة؟',
           options: [
-            'Within 30-60 minutes',
-            'Within 5-10 minutes',
-            'Within several hours',
-            'It takes at least a day'
+            'خلال ٣٠-٦٠ دقيقة',
+            'خلال ٥-١٠ دقائق',
+            'خلال عدة ساعات',
+            'يستغرق يوماً على الأقل'
           ],
           correctAnswer: 1
         },
         {
           id: 2,
-          question: 'Where should a tourniquet be placed for leg bleeding?',
+          question: 'أين يجب وضع العاصبة لنزيف الساق؟',
           options: [
-            'Directly over the wound',
-            '2-3 inches above the wound, high on the thigh',
-            'Around the ankle',
-            'Below the wound'
+            'مباشرة فوق الجرح',
+            '٢-٣ بوصات فوق الجرح، عالياً على الفخذ',
+            'حول الكاحل',
+            'تحت الجرح'
           ],
           correctAnswer: 1
         },
         {
           id: 3,
-          question: 'What indicates Class III or IV hemorrhagic shock?',
+          question: 'ما الذي يشير إلى صدمة نزفية من الفئة الثالثة أو الرابعة؟',
           options: [
-            'Normal pulse and blood pressure',
-            'Slightly elevated pulse',
-            'Very fast, weak pulse with >30% blood loss',
-            'No symptoms'
+            'نبض وضغط دم طبيعيان',
+            'نبض مرتفع قليلاً',
+            'نبض سريع جداً وضعيف مع فقدان دم >٣٠٪',
+            'لا أعراض'
           ],
           correctAnswer: 2
         },
         {
           id: 4,
-          question: 'What should you do if a tourniquet doesn\'t stop the bleeding?',
+          question: 'ماذا يجب أن تفعل إذا لم توقف العاصبة النزيف؟',
           options: [
-            'Loosen it and try again',
-            'Apply a second tourniquet above the first one',
-            'Remove it completely',
-            'Apply it below the wound'
+            'أرخها وحاول مرة أخرى',
+            'ضع عاصبة ثانية فوق الأولى',
+            'أزلها تماماً',
+            'ضعها تحت الجرح'
           ],
           correctAnswer: 1
         },
         {
           id: 5,
-          question: 'Which is a sign of internal bleeding?',
+          question: 'أي مما يلي علامة على النزيف الداخلي؟',
           options: [
-            'Normal skin color and temperature',
-            'Rapid weak pulse and pale, clammy skin',
-            'Slow, strong pulse',
-            'No abdominal pain'
+            'لون وحرارة الجلد طبيعيان',
+            'نبض سريع ضعيف وجلد شاحب رطب',
+            'نبض بطيء قوي',
+            'لا ألم في البطن'
           ],
           correctAnswer: 1
         },
         {
           id: 6,
-          question: 'What worsens bleeding and shock in trauma patients?',
+          question: 'ما الذي يزيد النزيف والصدمة سوءاً في مرضى الصدمات؟',
           options: [
-            'Keeping the patient warm',
-            'Hypothermia (getting cold)',
-            'Normal body temperature',
-            'Slight fever'
+            'الحفاظ على دفء المريض',
+            'انخفاض الحرارة (البرد)',
+            'درجة حرارة الجسم الطبيعية',
+            'حمى طفيفة'
           ],
           correctAnswer: 1
         },
         {
           id: 7,
-          question: 'What is most critical for survival in massive hemorrhage?',
+          question: 'ما هو الأكثر أهمية للبقاء على قيد الحياة في النزيف الشديد؟',
           options: [
-            'IV fluids only',
-            'Pain medication',
-            'Time to blood transfusion',
-            'Antibiotics'
+            'السوائل الوريدية فقط',
+            'مسكنات الألم',
+            'الوقت لنقل الدم',
+            'المضادات الحيوية'
           ],
           correctAnswer: 2
         }
@@ -929,159 +929,159 @@ export const trainingModules = [
   },
   {
     id: 'chest-abdominal-trauma',
-    title: 'Chest & Abdominal Trauma',
-    description: 'Critical care for lung punctures, pneumothorax, internal organ damage, and respiratory failure from blast and penetrating injuries.',
+    title: 'صدمات الصدر والبطن',
+    description: 'الرعاية الحرجة لثقوب الرئة، استرواح الصدر، تلف الأعضاء الداخلية، وفشل الجهاز التنفسي من الانفجار والإصابات النافذة.',
     icon: '🫁',
     color: 'blue',
-    duration: '55 min',
+    duration: '٥٥ دقيقة',
     videos: [
       {
         id: 'chest-abd-1',
-        title: 'What to do if someone is unresponsive and not breathing',
+        title: 'ماذا تفعل إذا كان شخص ما غير مستجيب ولا يتنفس',
         videoUrl: 'https://www.youtube.com/embed/dlkgjYvHx-U'
       }
     ],
     flashcards: [
       {
         id: 'lung-punctures-pneumothorax',
-        title: 'Lung Punctures & Pneumothorax',
-        description: 'Emergency treatment for collapsed lungs and penetrating chest wounds',
+        title: 'ثقوب الرئة واسترواح الصدر',
+        description: 'العلاج الطارئ للرئات المنهارة وجروح الصدر النافذة',
         icon: '🫁',
         steps: [
           {
             step: 1,
-            title: 'Recognize Pneumothorax Signs',
-            content: 'Look for: sudden chest pain, difficulty breathing, decreased breath sounds on one side, tracheal deviation (tension pneumothorax).',
-            warning: 'Tension pneumothorax can cause death within minutes - requires immediate decompression',
+            title: 'التعرف على علامات استرواح الصدر',
+            content: 'ابحث عن: ألم صدر مفاجئ، صعوبة في التنفس، انخفاض أصوات التنفس على جانب واحد، انحراف القصبة الهوائية (استرواح الصدر الضاغط).',
+            warning: 'استرواح الصدر الضاغط يمكن أن يسبب الوفاة خلال دقائق - يتطلب تخفيف ضغط فوري',
             image: '/images/flashcards/pneumothorax-signs.jpg'
           },
           {
             step: 2,
-            title: 'Seal Penetrating Chest Wounds',
-            content: 'Cover with airtight seal (plastic, foil) taped on 3 sides only. Leave one side open to allow air escape but prevent entry.',
-            warning: 'Never fully seal a chest wound - can create life-threatening tension pneumothorax',
+            title: 'إغلاق جروح الصدر النافذة',
+            content: 'غطِ بإحكام هوائي (بلاستيك، رقائق) ملصق على ٣ جوانب فقط. اترك جانباً واحداً مفتوحاً للسماح بخروج الهواء ولكن منع دخوله.',
+            warning: 'لا تغلق جرح الصدر بالكامل أبداً - يمكن أن يخلق استرواح صدر ضاغط مهدد للحياة',
             image: '/images/flashcards/chest-seal.jpg'
           },
           {
             step: 3,
-            title: 'Position for Breathing',
-            content: 'Sit patient upright or lean toward injured side if conscious. Support breathing, monitor for deterioration.',
-            tip: 'Upright position helps the uninjured lung work more effectively',
+            title: 'الوضعية للتنفس',
+            content: 'أجلس المريض منتصباً أو مائلاً نحو الجانب المصاب إذا كان واعياً. ادعم التنفس، راقب التدهور.',
+            tip: 'الوضع المستقيم يساعد الرئة غير المصابة على العمل بفعالية أكثر',
             image: '/images/flashcards/breathing-position.jpg'
           },
           {
             step: 4,
-            title: 'Monitor and Evacuate',
-            content: 'Watch for signs of tension pneumothorax: worsening breathing, weak pulse, blue skin. Arrange immediate transport.',
-            warning: 'If signs of tension pneumothorax develop, may need emergency needle decompression',
+            title: 'المراقبة والإخلاء',
+            content: 'انتبه لعلامات استرواح الصدر الضاغط: تفاقم التنفس، نبض ضعيف، جلد أزرق. رتب للنقل الفوري.',
+            warning: 'إذا ظهرت علامات استرواح الصدر الضاغط، قد تحتاج لتخفيف ضغط طارئ بالإبرة',
             image: '/images/flashcards/pneumothorax-evacuation.jpg'
           }
         ]
       },
       {
         id: 'internal-organ-damage',
-        title: 'Internal Organ Damage',
-        description: 'Assessment and management of liver, spleen, and kidney injuries',
+        title: 'تلف الأعضاء الداخلية',
+        description: 'تقييم وإدارة إصابات الكبد والطحال والكلى',
         icon: '🫘',
         steps: [
           {
             step: 1,
-            title: 'Assess for Internal Bleeding',
-            content: 'Check for: abdominal pain/tenderness, rigid or distended abdomen, signs of shock, bruising patterns.',
-            warning: 'Internal organ damage can cause massive bleeding with minimal external signs',
+            title: 'تقييم النزيف الداخلي',
+            content: 'افحص: ألم/حساسية البطن، بطن صلب أو منتفخ، علامات الصدمة، أنماط الكدمات.',
+            warning: 'تلف الأعضاء الداخلية يمكن أن يسبب نزيفاً هائلاً مع علامات خارجية قليلة',
             image: '/images/flashcards/internal-organ-assessment.jpg'
           },
           {
             step: 2,
-            title: 'Position and Stabilize',
-            content: 'Keep patient lying flat, knees bent for comfort. Do NOT give food, water, or pain medication by mouth.',
-            tip: 'Bent knees help relax abdominal muscles and reduce pain',
+            title: 'الوضعية والتثبيت',
+            content: 'أبقِ المريض مستلقياً، الركبتان مثنيتان للراحة. لا تعطِ طعاماً أو ماءً أو مسكنات ألم عن طريق الفم.',
+            tip: 'الركبتان المثنيتان تساعدان على إرخاء عضلات البطن وتقليل الألم',
             image: '/images/flashcards/abdominal-positioning.jpg'
           },
           {
             step: 3,
-            title: 'Monitor for Shock',
-            content: 'Check pulse, blood pressure, consciousness every 5 minutes. Watch for rapid weak pulse, pale skin, confusion.',
-            warning: 'Rapid deterioration indicates severe internal bleeding requiring immediate surgery',
+            title: 'مراقبة الصدمة',
+            content: 'افحص النبض وضغط الدم والوعي كل ٥ دقائق. انتبه للنبض السريع الضعيف والجلد الشاحب والارتباك.',
+            warning: 'التدهور السريع يشير إلى نزيف داخلي شديد يتطلب جراحة فورية',
             image: '/images/flashcards/shock-monitoring.jpg'
           },
           {
             step: 4,
-            title: 'Prepare for Surgery',
-            content: 'Note mechanism of injury, vital sign changes, pain location. Arrange immediate transport to trauma center.',
-            warning: 'Internal organ injuries often require emergency surgery - time is critical',
+            title: 'التحضير للجراحة',
+            content: 'سجل آلية الإصابة وتغيرات العلامات الحيوية وموقع الألم. رتب للنقل الفوري إلى مركز الصدمات.',
+            warning: 'إصابات الأعضاء الداخلية غالباً ما تتطلب جراحة طارئة - الوقت حرج',
             image: '/images/flashcards/surgery-preparation.jpg'
           }
         ]
       },
       {
         id: 'respiratory-failure',
-        title: 'Respiratory Failure Management',
-        description: 'Managing severe breathing difficulties and airway compromise',
+        title: 'إدارة فشل الجهاز التنفسي',
+        description: 'إدارة صعوبات التنفس الشديدة وتسوية مجرى الهواء',
         icon: '😷',
         steps: [
           {
             step: 1,
-            title: 'Assess Breathing Adequacy',
-            content: 'Check: respiratory rate, depth, effort, skin color, oxygen saturation if available. Look for accessory muscle use.',
-            warning: 'Blue lips/fingernails indicate severe oxygen deficiency requiring immediate intervention',
+            title: 'تقييم كفاية التنفس',
+            content: 'افحص: معدل التنفس، العمق، الجهد، لون الجلد، تشبع الأكسجين إن توفر. ابحث عن استخدام العضلات المساعدة.',
+            warning: 'الشفاه/الأظافر الزرقاء تشير إلى نقص أكسجين شديد يتطلب تدخلاً فورياً',
             image: '/images/flashcards/breathing-assessment.jpg'
           },
           {
             step: 2,
-            title: 'Open and Clear Airway',
-            content: 'Head-tilt, chin-lift (if no spinal injury). Remove visible obstructions. Consider jaw-thrust if spinal injury suspected.',
-            tip: 'If foreign body visible, try finger sweeps or back blows to dislodge',
+            title: 'فتح وتنظيف مجرى الهواء',
+            content: 'إمالة الرأس، رفع الذقن (إذا لم تكن هناك إصابة في العمود الفقري). أزل العوائق المرئية. فكر في دفع الفك إذا كان هناك اشتباه بإصابة العمود الفقري.',
+            tip: 'إذا كان الجسم الغريب مرئياً، جرب مسح الإصبع أو الضربات على الظهر لإزاحته',
             image: '/images/flashcards/airway-management.jpg'
           },
           {
             step: 3,
-            title: 'Assist Ventilation',
-            content: 'If breathing is inadequate: provide rescue breathing or bag-mask ventilation. Give oxygen if available.',
-            warning: 'If patient stops breathing, begin immediate rescue breathing - brain damage occurs within 4-6 minutes',
+            title: 'مساعدة التهوية',
+            content: 'إذا كان التنفس غير كافٍ: قدم التنفس الإنقاذي أو التهوية بالكيس والقناع. أعطِ الأكسجين إن توفر.',
+            warning: 'إذا توقف المريض عن التنفس، ابدأ التنفس الإنقاذي فوراً - يحدث تلف الدماغ خلال ٤-٦ دقائق',
             image: '/images/flashcards/assisted-ventilation.jpg'
           },
           {
             step: 4,
-            title: 'Continuous Monitoring',
-            content: 'Recheck breathing every 2-3 minutes. Be prepared to perform CPR if breathing stops completely.',
-            warning: 'Respiratory failure can rapidly progress to cardiac arrest',
+            title: 'المراقبة المستمرة',
+            content: 'أعد فحص التنفس كل ٢-٣ دقائق. كن مستعداً لإجراء الإنعاش القلبي الرئوي إذا توقف التنفس تماماً.',
+            warning: 'فشل الجهاز التنفسي يمكن أن يتطور بسرعة إلى توقف القلب',
             image: '/images/flashcards/continuous-monitoring.jpg'
           }
         ]
       },
       {
         id: 'chest-abdominal-assessment',
-        title: 'Chest & Abdominal Assessment',
-        description: 'Systematic evaluation of chest and abdominal trauma',
+        title: 'تقييم الصدر والبطن',
+        description: 'التقييم المنهجي لصدمات الصدر والبطن',
         icon: '🔍',
         steps: [
           {
             step: 1,
-            title: 'Look for Obvious Injuries',
-            content: 'Inspect for: penetrating wounds, bruising patterns, deformities, paradoxical chest movement, distension.',
-            tip: 'Remove clothing to fully assess - injuries can be hidden under garments',
+            title: 'البحث عن الإصابات الواضحة',
+            content: 'افحص: الجروح النافذة، أنماط الكدمات، التشوهات، حركة الصدر المتناقضة، الانتفاخ.',
+            tip: 'أزل الملابس للتقييم الكامل - يمكن إخفاء الإصابات تحت الملابس',
             image: '/images/flashcards/visual-inspection.jpg'
           },
           {
             step: 2,
-            title: 'Listen to Breathing',
-            content: 'Listen for: decreased breath sounds, wheezing, gurgling, stridor. Compare both sides of chest.',
-            warning: 'Absent breath sounds on one side may indicate pneumothorax or hemothorax',
+            title: 'الاستماع للتنفس',
+            content: 'استمع لـ: انخفاض أصوات التنفس، الصفير، الغرغرة، الصرير. قارن كلا جانبي الصدر.',
+            warning: 'غياب أصوات التنفس على جانب واحد قد يشير إلى استرواح الصدر أو تدمي الصدر',
             image: '/images/flashcards/breath-sounds.jpg'
           },
           {
             step: 3,
-            title: 'Feel for Abnormalities',
-            content: 'Gently palpate for: tenderness, rigidity, instability, crepitus (air under skin), pulse quality.',
-            warning: 'Avoid deep palpation of abdomen - can worsen internal bleeding',
+            title: 'الشعور بالشذوذ',
+            content: 'تحسس بلطف لـ: الحساسية، الصلابة، عدم الاستقرار، الفرقعة (هواء تحت الجلد)، جودة النبض.',
+            warning: 'تجنب الجس العميق للبطن - يمكن أن يزيد النزيف الداخلي سوءاً',
             image: '/images/flashcards/palpation-technique.jpg'
           },
           {
             step: 4,
-            title: 'Prioritize and Document',
-            content: 'Identify life-threatening injuries first. Document findings, mechanism of injury, vital signs for medical team.',
-            tip: 'Use ABCDE approach: Airway, Breathing, Circulation, Disability, Exposure',
+            title: 'تحديد الأولويات والتوثيق',
+            content: 'حدد الإصابات المهددة للحياة أولاً. وثق النتائج وآلية الإصابة والعلامات الحيوية للفريق الطبي.',
+            tip: 'استخدم نهج ABCDE: مجرى الهواء، التنفس، الدورة الدموية، الإعاقة، التعرض',
             image: '/images/flashcards/documentation.jpg'
           }
         ]
@@ -1091,100 +1091,100 @@ export const trainingModules = [
       questions: [
         {
           id: 1,
-          question: 'How should you seal a penetrating chest wound?',
+          question: 'كيف يجب إغلاق جرح الصدر النافذ؟',
           options: [
-            'Cover completely with airtight seal',
-            'Leave wound open to drain',
-            'Tape plastic on 3 sides only, leaving one side open',
-            'Apply pressure bandage only'
+            'تغطية كاملة بإحكام هوائي',
+            'ترك الجرح مفتوحاً للتصريف',
+            'لصق البلاستيك على ٣ جوانب فقط، مع ترك جانب واحد مفتوح',
+            'وضع ضماد ضغط فقط'
           ],
           correctAnswer: 2
         },
         {
           id: 2,
-          question: 'What is a sign of tension pneumothorax requiring immediate intervention?',
+          question: 'ما هي علامة استرواح الصدر الضاغط التي تتطلب تدخلاً فورياً؟',
           options: [
-            'Mild chest pain',
-            'Tracheal deviation and severe breathing difficulty',
-            'Slight cough',
-            'Normal breathing'
+            'ألم صدر خفيف',
+            'انحراف القصبة الهوائية وصعوبة شديدة في التنفس',
+            'سعال طفيف',
+            'تنفس طبيعي'
           ],
           correctAnswer: 1
         },
         {
           id: 3,
-          question: 'Which position is best for a conscious patient with breathing difficulties?',
+          question: 'ما هو أفضل وضع لمريض واعٍ يعاني من صعوبات في التنفس؟',
           options: [
-            'Flat on back',
-            'Face down',
-            'Upright or leaning toward injured side',
-            'On the uninjured side'
+            'مستلقٍ على الظهر',
+            'الوجه لأسفل',
+            'منتصب أو مائل نحو الجانب المصاب',
+            'على الجانب غير المصاب'
           ],
           correctAnswer: 2
         },
         {
           id: 4,
-          question: 'What indicates possible internal organ damage in abdominal trauma?',
+          question: 'ما الذي يشير إلى تلف محتمل في الأعضاء الداخلية في صدمة البطن؟',
           options: [
-            'Normal abdomen with no pain',
-            'Rigid or distended abdomen with shock signs',
-            'Soft abdomen with normal vitals',
-            'No external bruising'
+            'بطن طبيعي بدون ألم',
+            'بطن صلب أو منتفخ مع علامات الصدمة',
+            'بطن ناعم مع علامات حيوية طبيعية',
+            'لا كدمات خارجية'
           ],
           correctAnswer: 1
         },
         {
           id: 5,
-          question: 'What should you NOT give to a patient with suspected internal abdominal injuries?',
+          question: 'ما الذي يجب ألا تعطيه لمريض مع اشتباه إصابات بطنية داخلية؟',
           options: [
-            'Oxygen',
-            'Emotional support',
-            'Food, water, or oral pain medication',
-            'Blankets for warmth'
+            'الأكسجين',
+            'الدعم العاطفي',
+            'الطعام أو الماء أو مسكنات الألم عن طريق الفم',
+            'البطانيات للدفء'
           ],
           correctAnswer: 2
         },
         {
           id: 6,
-          question: 'Blue lips and fingernails in a trauma patient indicate:',
+          question: 'الشفاه والأظافر الزرقاء في مريض الصدمة تشير إلى:',
           options: [
-            'Normal circulation',
-            'Severe oxygen deficiency requiring immediate intervention',
-            'Mild bruising',
-            'Good oxygen levels'
+            'دورة دموية طبيعية',
+            'نقص أكسجين شديد يتطلب تدخلاً فورياً',
+            'كدمات خفيفة',
+            'مستويات أكسجين جيدة'
           ],
           correctAnswer: 1
         },
         {
           id: 7,
-          question: 'How often should you recheck breathing in a patient with respiratory failure?',
+          question: 'كم مرة يجب إعادة فحص التنفس في مريض يعاني من فشل الجهاز التنفسي؟',
           options: [
-            'Every 30 minutes',
-            'Every 15 minutes',
-            'Every 2-3 minutes',
-            'Once per hour'
+            'كل ٣٠ دقيقة',
+            'كل ١٥ دقيقة',
+            'كل ٢-٣ دقائق',
+            'مرة واحدة في الساعة'
           ],
           correctAnswer: 2
         },
         {
           id: 8,
-          question: 'When palpating the abdomen for trauma assessment, you should:',
+          question: 'عند جس البطن لتقييم الصدمة، يجب عليك:',
           options: [
-            'Apply deep pressure to find all injuries',
-            'Use gentle palpation to avoid worsening internal bleeding',
-            'Press as hard as possible',
-            'Avoid touching the abdomen completely'
+            'الضغط بعمق للعثور على جميع الإصابات',
+            'استخدام الجس اللطيف لتجنب تفاقم النزيف الداخلي',
+            'الضغط بأقصى قوة ممكنة',
+            'تجنب لمس البطن تماماً'
           ],
           correctAnswer: 1
         },
         {
           id: 9,
-          question: 'Absent breath sounds on one side of the chest may indicate:',
+          question: 'غياب أصوات التنفس على جانب واحد من الصدر قد يشير إلى:',
           options: [
-            'Normal breathing',
-            'Pneumothorax or hemothorax',
-            'Good lung function',
-            'No significant injury'
+            'تنفس طبيعي',
+            'استرواح الصدر أو تدمي الصدر',
+            'وظيفة رئة جيدة',
+            'لا إصابة كبيرة'
           ],
           correctAnswer: 1
         }
@@ -1203,4 +1203,4 @@ export const getVideoById = (videoId) => {
     if (video) return video;
   }
   return null;
-}; 
+};
