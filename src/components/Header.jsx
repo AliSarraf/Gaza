@@ -70,8 +70,8 @@ const Header = () => {
           {/* Logo and Title */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FA</span>
+              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/logo192.png" alt="First Aid Logo" className="w-8 h-8 object-cover" />
               </div>
               <span className="text-lg sm:text-xl font-bold text-gray-900">{t(['Header', 'First Aid Training'])}</span>
             </Link>
