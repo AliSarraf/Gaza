@@ -114,7 +114,7 @@ const ModuleDetail = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             {!isCompleted ? (
               <Link
-                to={`/video/${module.videos[0].id}`}
+                to={`/flashcards/${moduleId}`}
                 className="flex-1 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors flex items-center justify-center space-x-2"
               >
                 <Play className="w-5 h-5" />
@@ -122,7 +122,7 @@ const ModuleDetail = () => {
               </Link>
             ) : (
               <Link
-                to={`/video/${module.videos[0].id}`}
+                to={`/flashcards/${moduleId}`}
                 className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center space-x-2"
               >
                 <CheckCircle className="w-5 h-5" />
