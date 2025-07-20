@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {ChevronLeft, ChevronRight, AlertTriangle, Lightbulb, X} from 'lucide-react';
+import { getFlashcardImage } from '../data/modules';
 import {useLocale} from '../contexts/LocaleContext';
 
 const FlashcardViewer = ({flashcardSet, onClose}) => {
@@ -130,7 +131,10 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
                         {/* Image Placeholder */}
                         {step.image && (
                             <div className={'flex justify-center'}>
-                                <img src={step.image} alt={step.title || t(['Flashcards', 'Flashcard Image'], 'Flashcard Image')} />
+                                <picture>
+                                    <source srcSet={getFlashcardImage(step.image, 'webp')} type="image/webp" />
+                                    <img src={getFlashcardImage(step.image, 'jpg')} alt={step.title} />
+                                </picture>
                             </div>
                         )}
                     </div>
