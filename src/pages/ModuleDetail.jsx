@@ -198,55 +198,32 @@ const ModuleDetail = () => {
           </div>
         )}
 
-        {/* Videos Section */}
-        <div className="bg-white rounded-lg shadow-md p-6 sm:p-8">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">{t(['ModuleDetail', 'Training Videos'])}</h2>
-
-          <div className="space-y-4">
-            {module.videos.map((video, index) => {
-              const videoStatus = getVideoStatus(video.id);
-
-              return (
-                <div key={video.id} className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <div className="flex items-center space-x-4 flex-1 min-w-0">
-                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-primary-600 font-bold">{index + 1}</span>
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-lg font-semibold text-gray-900 truncate">{video.title}</h3>
-                        <p className="text-gray-600 text-sm line-clamp-2">{video.description}</p>
-                        <div className="flex items-center space-x-4 mt-1">
-                          <span className="text-sm text-gray-500">{video.duration}</span>
-                          {videoStatus === 'downloaded' && (
-                            <span className="text-sm text-green-600 font-medium">✓ {t(['ModuleDetail', 'Downloaded'])}</span>
-                          )}
-                        </div>
-                      </div>
+        {/* Training Videos */}
+        {isOnline && module.videos && module.videos.length > 0 && (
+          <div className="mt-6">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
+              <PlayCircle className="w-6 h-6 text-primary-600" />
+              {i18n.t(['ModuleDetail', 'Training Videos'])}
+            </h3>
+            <ul className="divide-y divide-gray-200">
+              {module.videos.map((video) => (
+                <li key={video.id} className="py-4 flex items-center justify-between">
+                  <div className="flex items-center gap-4 min-w-0 flex-1">
+                    <div className="flex-shrink-0 w-16 h-10 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+                      <PlayCircle className="w-8 h-8 text-primary-400" />
                     </div>
-
-                    <div className="flex items-center space-x-2 flex-shrink-0">
-                      {/* Download Button */}
-                      {/* Removed download button */}
-                      {videoStatus === 'downloading' && (
-                        <div className="p-2 text-primary-600">
-                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-600"></div>
-                        </div>
-                      )}
-                      {videoStatus === 'downloaded' && (
-                        <div className="p-2 text-green-600">
-                          <CheckCircle className="w-5 h-5" />
-                        </div>
-                      )}
-                      {/* Watch Button */}
-                      <Link
-                        to={`/video/${video.id}`}
-                        className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2 whitespace-nowrap"
-                      >
-                        <Play className="w-4 h-4" />
-                        <span>{t(['ModuleDetail', 'Watch'])}</span>
-                      </Link>
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-semibold text-base truncate text-gray-900">{video.title}</h4>
                     </div>
+                  </div>
+                  <div className="flex items-center space-x-2 flex-shrink-0">
+                    {/* Watch Button */}
+                    <Link
+                      to={`/video/${video.id}`}
+                      className="bg-primary-600 text-white px-3 py-2 rounded-lg hover:bg-primary-700 transition-colors text-xs sm:text-sm font-medium flex items-center justify-center"
+                    >
+                      {i18n.t(['ModuleDetail', 'Watch'])}
+                    </Link>
                   </div>
                 </li>
               ))}
