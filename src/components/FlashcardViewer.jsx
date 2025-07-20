@@ -158,14 +158,23 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
                         <ChevronLeft className="w-5 h-5 sm:w-4 sm:h-4"/>
                         <span className="truncate">{t(['Flashcards', 'Previous'], 'Previous')}</span>
                     </button>
-                    <button
-                        onClick={nextStep}
-                        disabled={currentStep === steps.length - 1}
-                        className="flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-2 sm:px-4 py-3 rounded bg-green-500 text-white hover:bg-green-800 hover:text-gray-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-base sm:text-base whitespace-normal"
-                    >
-                        <span className="truncate">{t(['Flashcards', 'Next'], 'Next')}</span>
-                        <ChevronRight className="w-5 h-5 sm:w-4 sm:h-4"/>
-                    </button>
+                    {currentStep === steps.length - 1 ? (
+                        <button
+                            onClick={onClose}
+                            className="flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-2 sm:px-4 py-3 rounded bg-green-600 text-white hover:bg-green-800 transition-colors text-base sm:text-base whitespace-normal"
+                        >
+                            <span className="truncate">{t(['Flashcards', 'Finish'], 'Finish')}</span>
+                        </button>
+                    ) : (
+                        <button
+                            onClick={nextStep}
+                            className="flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-2 sm:px-4 py-3 rounded bg-green-500 text-white hover:bg-green-800 hover:text-gray-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-base sm:text-base whitespace-normal"
+                            disabled={currentStep === steps.length - 1}
+                        >
+                            <span className="truncate">{t(['Flashcards', 'Next'], 'Next')}</span>
+                            <ChevronRight className="w-5 h-5 sm:w-4 sm:h-4"/>
+                        </button>
+                    )}
                 </div>
                 {/* Complete Message */}
                 {currentStep === steps.length - 1 && (
