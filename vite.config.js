@@ -10,7 +10,14 @@ export default defineConfig({
       srcDir: 'src',
       filename: 'service-worker.js',
       manifest: 'public/manifest.json',
-      includeAssets: ['favicon.ico', 'logo192.png', 'logo512.png'],
+      includeAssets: [
+        'favicon.ico',
+        'favicon.svg',
+        'favicon-96x96.png',
+        'apple-touch-icon.png',
+        'web-app-manifest-192x192.png',
+        'web-app-manifest-512x512.png',
+      ],
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
       },
