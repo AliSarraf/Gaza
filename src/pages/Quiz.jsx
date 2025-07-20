@@ -27,12 +27,17 @@ const Quiz = () => {
       return;
     }
 
+    // Don't start timer if results are already shown
+    if (showResults) {
+      return;
+    }
+
     const timer = setInterval(() => {
       setTimeSpent(prev => prev + 1);
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [module, navigate]);
+  }, [module, navigate, showResults]);
 
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
@@ -447,4 +452,5 @@ const Quiz = () => {
   );
 };
 
-export default Quiz; 
+export default Quiz;
+
