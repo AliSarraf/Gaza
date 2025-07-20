@@ -1,11 +1,4 @@
 // Use Vite's import.meta.glob to dynamically import all flashcard images
-const flashcardImages = import.meta.glob("../assets/flashcards/*.{jpg,webp}", {
-  eager: true,
-  import: "default",
-});
-export function getFlashcardImage(baseName, ext) {
-  return flashcardImages[`../assets/flashcards/${baseName}.${ext}`];
-}
 
 export const trainingModules = [
   {
@@ -209,7 +202,8 @@ export const trainingModules = [
       questions: [
         {
           id: 1,
-          question: 'What should you NEVER do when treating a victim with embedded shrapnel?',
+          question:
+            "What should you NEVER do when treating a victim with embedded shrapnel?",
           options: [
             "Apply direct pressure around the object",
             "Remove the embedded object",
@@ -220,7 +214,8 @@ export const trainingModules = [
         },
         {
           id: 2,
-          question: 'When applying a tourniquet for blast-related amputation, how far above the wound should it be placed?',
+          question:
+            "When applying a tourniquet for blast-related amputation, how far above the wound should it be placed?",
           options: [
             "1 inch above the wound",
             "2-3 inches above the wound",
@@ -231,7 +226,8 @@ export const trainingModules = [
         },
         {
           id: 3,
-          question: 'Which is a key sign of internal bleeding from blast injuries?',
+          question:
+            "Which is a key sign of internal bleeding from blast injuries?",
           options: [
             "External visible wounds only",
             "Rigid or distended abdomen",
@@ -242,7 +238,7 @@ export const trainingModules = [
         },
         {
           id: 4,
-          question: 'What is the biggest risk of crush syndrome?',
+          question: "What is the biggest risk of crush syndrome?",
           options: [
             "External bleeding",
             "Broken bones",
@@ -253,7 +249,7 @@ export const trainingModules = [
         },
         {
           id: 5,
-          question: 'How should an amputated limb be preserved?',
+          question: "How should an amputated limb be preserved?",
           options: [
             "Place directly on ice",
             "Wrap in clean, moist cloth and place in plastic bag on ice",
@@ -290,33 +286,38 @@ export const trainingModules = [
         steps: [
           {
             step: 1,
-            title: 'Cool the Burn Immediately',
-            content: 'Run cool (not cold) water over the burn for 10-20 minutes. Remove from heat source and any non-stuck clothing.',
-            warning: 'Do NOT use ice water or ice - this can cause further tissue damage',
-              image: 'cool-burn',
+            title: "Cool the Burn Immediately",
+            content:
+              "Run cool (not cold) water over the burn for 10-20 minutes. Remove from heat source and any non-stuck clothing.",
+            warning:
+              "Do NOT use ice water or ice - this can cause further tissue damage",
+            image: "cool-burn",
           },
           {
             step: 2,
-            title: 'Assess Burn Severity',
-            content: 'First-degree: red, painful, no blisters. Second-degree: red, painful, with blisters. Check body surface area affected.',
-            tip: 'Use patient\'s palm = 1% of body surface area for quick assessment',
-              image: 'assess-burn',
+            title: "Assess Burn Severity",
+            content:
+              "First-degree: red, painful, no blisters. Second-degree: red, painful, with blisters. Check body surface area affected.",
+            tip: "Use patient's palm = 1% of body surface area for quick assessment",
+            image: "assess-burn",
           },
           {
             step: 3,
-            title: 'Clean and Protect',
-            content: 'Gently clean with sterile saline if available. Apply sterile, non-adherent dressing. Do NOT break blisters.',
-            warning: 'Avoid cotton or fluffy materials that can stick to burn',
-              image: 'dress-burn',
+            title: "Clean and Protect",
+            content:
+              "Gently clean with sterile saline if available. Apply sterile, non-adherent dressing. Do NOT break blisters.",
+            warning: "Avoid cotton or fluffy materials that can stick to burn",
+            image: "dress-burn",
           },
           {
             step: 4,
-            title: 'Pain Management and Monitoring',
-            content: 'Give pain relief if available. Monitor for signs of infection: increased pain, fever, pus, red streaking.',
-            tip: 'Elevate burned limbs to reduce swelling',
-              image: 'monitor-burn',
-          }
-        ]
+            title: "Pain Management and Monitoring",
+            content:
+              "Give pain relief if available. Monitor for signs of infection: increased pain, fever, pus, red streaking.",
+            tip: "Elevate burned limbs to reduce swelling",
+            image: "monitor-burn",
+          },
+        ],
       },
       {
         id: "third-degree-burns",
@@ -327,33 +328,40 @@ export const trainingModules = [
         steps: [
           {
             step: 1,
-            title: 'Recognize Third-Degree Burns',
-            content: 'Waxy white, leathery, or charred appearance. May be painless due to nerve damage. All skin layers destroyed.',
-            warning: 'Third-degree burns always require immediate medical evacuation',
-            image: 'third-degree-burns-1'
+            title: "Recognize Third-Degree Burns",
+            content:
+              "Waxy white, leathery, or charred appearance. May be painless due to nerve damage. All skin layers destroyed.",
+            warning:
+              "Third-degree burns always require immediate medical evacuation",
+            image: "third-degree-burns-1",
           },
           {
             step: 2,
-            title: 'Do NOT Cool Large Burns',
-            content: 'For burns >20% body surface, do NOT use water cooling - risk of hypothermia. Remove from heat source only.',
-            warning: 'Large burns can cause life-threatening heat and fluid loss',
-            image: 'third-degree-burns-2'
+            title: "Do NOT Cool Large Burns",
+            content:
+              "For burns >20% body surface, do NOT use water cooling - risk of hypothermia. Remove from heat source only.",
+            warning:
+              "Large burns can cause life-threatening heat and fluid loss",
+            image: "third-degree-burns-2",
           },
           {
             step: 3,
-            title: 'Cover and Protect',
-            content: 'Cover with clean, dry cloth or sterile sheets. Do NOT remove stuck clothing. Wrap each burned finger/toe separately.',
-            tip: 'Use plastic wrap for temporary protection if sterile dressings unavailable',
-            image: 'third-degree-burns-3'
+            title: "Cover and Protect",
+            content:
+              "Cover with clean, dry cloth or sterile sheets. Do NOT remove stuck clothing. Wrap each burned finger/toe separately.",
+            tip: "Use plastic wrap for temporary protection if sterile dressings unavailable",
+            image: "third-degree-burns-3",
           },
           {
             step: 4,
-            title: 'Treat for Shock',
-            content: 'Monitor airway, breathing, circulation. Give fluids if conscious and no vomiting. Arrange immediate evacuation.',
-            warning: 'Watch for airway burns - look for singed facial hair, soot in mouth/nose',
-            image: 'third-degree-burns-4'
-          }
-        ]
+            title: "Treat for Shock",
+            content:
+              "Monitor airway, breathing, circulation. Give fluids if conscious and no vomiting. Arrange immediate evacuation.",
+            warning:
+              "Watch for airway burns - look for singed facial hair, soot in mouth/nose",
+            image: "third-degree-burns-4",
+          },
+        ],
       },
       {
         id: "white-phosphorus-burns",
@@ -363,33 +371,39 @@ export const trainingModules = [
         steps: [
           {
             step: 1,
-            title: 'Immediate Decontamination',
-            content: 'Flush with large amounts of water for 15-20 minutes. Remove all contaminated clothing while flushing.',
-            warning: 'White phosphorus ignites on contact with air - keep wet at all times',
-            image: 'white-phosphorus-1'
+            title: "Immediate Decontamination",
+            content:
+              "Flush with large amounts of water for 15-20 minutes. Remove all contaminated clothing while flushing.",
+            warning:
+              "White phosphorus ignites on contact with air - keep wet at all times",
+            image: "white-phosphorus-1",
           },
           {
             step: 2,
-            title: 'Remove Visible Particles',
-            content: 'Use forceps or tweezers to remove visible white phosphorus particles while keeping area wet. Work under water if possible.',
-            warning: 'Do NOT use fingers - phosphorus will burn your hands',
-            image: 'white-phosphorus-2'
+            title: "Remove Visible Particles",
+            content:
+              "Use forceps or tweezers to remove visible white phosphorus particles while keeping area wet. Work under water if possible.",
+            warning: "Do NOT use fingers - phosphorus will burn your hands",
+            image: "white-phosphorus-2",
           },
           {
             step: 3,
-            title: 'Cover with Wet Dressings',
-            content: 'Apply wet, sterile dressings. Keep dressings moist - dry air will cause phosphorus to re-ignite.',
-            tip: 'If no sterile dressings available, use clean wet cloth',
-            image: 'white-phosphorus-3'
+            title: "Cover with Wet Dressings",
+            content:
+              "Apply wet, sterile dressings. Keep dressings moist - dry air will cause phosphorus to re-ignite.",
+            tip: "If no sterile dressings available, use clean wet cloth",
+            image: "white-phosphorus-3",
           },
           {
             step: 4,
-            title: 'Continuous Monitoring',
-            content: 'Monitor for re-ignition - look for smoke or renewed burning. Keep all affected areas wet until medical evacuation.',
-            warning: 'Phosphorus can continue burning for hours if allowed to dry',
-            image: 'white-phosphorus-4'
-          }
-        ]
+            title: "Continuous Monitoring",
+            content:
+              "Monitor for re-ignition - look for smoke or renewed burning. Keep all affected areas wet until medical evacuation.",
+            warning:
+              "Phosphorus can continue burning for hours if allowed to dry",
+            image: "white-phosphorus-4",
+          },
+        ],
       },
       {
         id: "infection-prevention",
@@ -400,34 +414,38 @@ export const trainingModules = [
         steps: [
           {
             step: 1,
-            title: 'Hand Hygiene First',
-            content: 'Wash hands thoroughly with soap and water or use hand sanitizer before any burn care. Wear gloves if available.',
-            warning: 'Dirty hands are the #1 source of burn wound infections',
-            image: 'infection-prevention-1'
+            title: "Hand Hygiene First",
+            content:
+              "Wash hands thoroughly with soap and water or use hand sanitizer before any burn care. Wear gloves if available.",
+            warning: "Dirty hands are the #1 source of burn wound infections",
+            image: "infection-prevention-1",
           },
           {
             step: 2,
-            title: 'Clean the Wound',
-            content: 'Rinse gently with clean water or sterile saline. Remove loose debris with sterile tweezers. Do NOT scrub.',
-            tip: 'Boiled and cooled water can substitute for sterile saline if needed',
-            image: 'infection-prevention-2'
+            title: "Clean the Wound",
+            content:
+              "Rinse gently with clean water or sterile saline. Remove loose debris with sterile tweezers. Do NOT scrub.",
+            tip: "Boiled and cooled water can substitute for sterile saline if needed",
+            image: "infection-prevention-2",
           },
           {
             step: 3,
-            title: 'Apply Clean Dressings',
-            content: 'Use sterile dressings if available, or clean cloth. Change dressings daily or when soiled. Keep wound moist but not wet.',
-            warning: 'Dry wounds heal slower and are more prone to infection',
-            image: 'infection-prevention-3'
+            title: "Apply Clean Dressings",
+            content:
+              "Use sterile dressings if available, or clean cloth. Change dressings daily or when soiled. Keep wound moist but not wet.",
+            warning: "Dry wounds heal slower and are more prone to infection",
+            image: "infection-prevention-3",
           },
           {
             step: 4,
-            title: 'Monitor for Infection Signs',
-            content: 'Watch for: increased pain, fever, pus, bad smell, red streaking, green/yellow drainage. Seek medical help immediately.',
-            tip: 'Take photos to document progression if medical help is delayed',
-            image: 'infection-prevention-4'
-          }
-        ]
-      }
+            title: "Monitor for Infection Signs",
+            content:
+              "Watch for: increased pain, fever, pus, bad smell, red streaking, green/yellow drainage. Seek medical help immediately.",
+            tip: "Take photos to document progression if medical help is delayed",
+            image: "infection-prevention-4",
+          },
+        ],
+      },
     ],
     quiz: {
       questions: [
@@ -1205,18 +1223,21 @@ export const trainingModules = [
           },
           {
             step: 3,
-            title: 'Feel for Abnormalities',
-            content: 'Gently palpate for: tenderness, rigidity, instability, crepitus (air under skin), pulse quality.',
-            warning: 'Avoid deep palpation of abdomen - can worsen internal bleeding',
+            title: "Feel for Abnormalities",
+            content:
+              "Gently palpate for: tenderness, rigidity, instability, crepitus (air under skin), pulse quality.",
+            warning:
+              "Avoid deep palpation of abdomen - can worsen internal bleeding",
           },
           {
             step: 4,
-            title: 'Prioritize and Document',
-            content: 'Identify life-threatening injuries first. Document findings, mechanism of injury, vital signs for medical team.',
-            tip: 'Use ABCDE approach: Airway, Breathing, Circulation, Disability, Exposure',
-          }
-        ]
-      }
+            title: "Prioritize and Document",
+            content:
+              "Identify life-threatening injuries first. Document findings, mechanism of injury, vital signs for medical team.",
+            tip: "Use ABCDE approach: Airway, Breathing, Circulation, Disability, Exposure",
+          },
+        ],
+      },
     ],
     quiz: {
       questions: [

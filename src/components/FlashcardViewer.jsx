@@ -1,7 +1,15 @@
 import React, {useState} from 'react';
 import {ChevronLeft, ChevronRight, AlertTriangle, Lightbulb, X} from 'lucide-react';
-import { getFlashcardImage } from '../data/modules';
 import {useLocale} from '../contexts/LocaleContext';
+
+const flashcardImages = import.meta.glob("../assets/flashcards/*.{jpg,webp}", {
+    eager: true,
+    import: "default",
+  });
+
+function getFlashcardImage(baseName, ext) {
+    return flashcardImages[`../assets/flashcards/${baseName}.${ext}`];
+  }
 
 const FlashcardViewer = ({flashcardSet, onClose}) => {
     const [currentStep, setCurrentStep] = useState(0);
