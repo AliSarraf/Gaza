@@ -17,7 +17,7 @@ const Home = () => {
     const features = [{
         icon: Shield,
         title: t(['Home', 'Offline Access']),
-        description: t(['Home', 'Download videos and access training content without internet connection'])
+        description: t(['Home', 'Download content and access it without internet connection'])
     }, {
         icon: Heart,
         title: t(['Home', 'Life-Saving Skills']),
