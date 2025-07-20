@@ -172,12 +172,6 @@ const ModuleDetail = () => {
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-bold text-gray-900">First Aid Flashcards</h2>
-              <Link
-                to={`/flashcards/${moduleId}`}
-                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors flex items-center space-x-2"
-              >
-                <span>View All</span>
-              </Link>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -199,7 +193,7 @@ const ModuleDetail = () => {
               to={`/flashcards/${moduleId}`}
               className="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center space-x-2"
             >
-              <span>Start Flashcard Training</span>
+              <span>View all</span>
             </Link>
           </div>
         )}
