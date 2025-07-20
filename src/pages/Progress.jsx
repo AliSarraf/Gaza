@@ -114,10 +114,6 @@ const Progress = () => {
                 <span className="text-gray-600">{t(['Progress', 'Average Quiz Score'])}</span>
                 <span className="font-semibold text-gray-900">{averageQuizScore}%</span>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-gray-600">{t(['Progress', 'Downloaded Videos'])}</span>
-                <span className="font-semibold text-gray-900">{downloadedVideos.length}</span>
-              </div>
             </div>
           </div>
         </div>
@@ -316,24 +312,6 @@ const Progress = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900">{t(['Progress', 'High Achiever'])}</h3>
                   <p className="text-sm text-gray-600">{t(['Progress', 'Average quiz score ≥ 80%'])}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className={`p-4 rounded-lg border-2 ${
-              downloadedVideos.length >= 5 
-                ? 'border-green-200 bg-green-50' 
-                : 'border-gray-200 bg-gray-50'
-            }`}>
-              <div className="flex items-center space-x-3">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                  downloadedVideos.length >= 5 ? 'bg-green-600' : 'bg-gray-400'
-                }`}>
-                  <Clock className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">{t(['Progress', 'Offline Learner'])}</h3>
-                  <p className="text-sm text-gray-600">{t(['Progress', 'Download 5 videos'])}</p>
                 </div>
               </div>
             </div>

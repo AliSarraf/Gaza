@@ -7,7 +7,6 @@ A comprehensive Progressive Web Application (PWA) designed to provide accessible
 ### Core Functionality
 - **Comprehensive Training Modules**: 8 specialized modules covering critical first aid scenarios
 - **High-Quality Video Content**: Instructional videos with Arabic transcripts
-- **Offline Video Download**: Download videos for offline viewing
 - **Interactive Quizzes**: Test comprehension with scored assessments
 - **Progress Tracking**: Monitor learning progress and achievements
 - **PWA Capabilities**: Installable app with offline functionality
@@ -124,15 +123,9 @@ src/
 
 ### Offline Functionality
 - **Service Worker**: Caches app shell and static assets
-- **IndexedDB**: Stores user progress, quiz scores, and downloaded videos
+- **IndexedDB**: Stores user progress and quiz scores
 - **Offline Detection**: Real-time connection status monitoring
 - **Graceful Degradation**: App works offline with downloaded content
-
-### Video Management
-- **Custom Video Player**: Full-featured HTML5 video player
-- **Download System**: Users can download videos for offline viewing
-- **Progress Tracking**: Video completion status
-- **Transcript Support**: Text transcripts for accessibility
 
 ### Quiz System
 - **Interactive Questions**: Multiple choice with immediate feedback
