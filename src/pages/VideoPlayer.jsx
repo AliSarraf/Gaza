@@ -4,9 +4,9 @@ import {
   Play, Pause, Volume2, VolumeX, Maximize, Minimize, 
   SkipBack, SkipForward, ArrowLeft, FileText 
 } from 'lucide-react';
-import { getVideoById, trainingModules } from '../data/modules';
 import { useProgress } from '../contexts/ProgressContext';
 import { useOffline } from '../contexts/OfflineContext';
+import {useModuleData} from "../contexts/ModuleDataContext";
 
 const VideoPlayer = () => {
   const { videoId } = useParams();
@@ -19,7 +19,7 @@ const VideoPlayer = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showTranscript, setShowTranscript] = useState(false);
   const [buffering, setBuffering] = useState(false);
-  
+  const { modules, getVideoById } = useModuleData();
   const { isVideoDownloaded } = useProgress();
   const { isOnline } = useOffline();
 
@@ -27,7 +27,7 @@ const VideoPlayer = () => {
   const isDownloaded = isVideoDownloaded(videoId);
 
   // Find the module this video belongs to
-  const module = trainingModules.find(m => m.videos.some(v => v.id === videoId));
+  const module = modules.find(m => m.videos.some(v => v.id === videoId));
 
   useEffect(() => {
     const videoElement = videoRef.current;

@@ -1,25 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Play, Download, CheckCircle, Clock, FileText, Award, ArrowLeft, PlayCircle } from 'lucide-react';
-import { getModuleById } from '../data/modules';
+import { Play, CheckCircle, Clock, FileText, Award, ArrowLeft, PlayCircle } from 'lucide-react';
 import { useProgress } from '../contexts/ProgressContext';
 import { useOffline } from '../contexts/OfflineContext';
-import { i18n } from '../i18n';
+import {useLocale} from "../contexts/LocaleContext";
+import {useModuleData} from "../contexts/ModuleDataContext";
 
 const ModuleDetail = () => {
   const { moduleId } = useParams();
   const { isModuleCompleted, getQuizScore, addDownloadedVideo, isVideoDownloaded, loading } = useProgress();
   const { isOnline } = useOffline();
-
+  const {t} = useLocale();
+  const {getModuleById} = useModuleData();
   const module = getModuleById(moduleId);
 
   if (!module) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">{i18n.t(['ModuleDetail', 'Module Not Found'])}</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">{t(['ModuleDetail', 'Module Not Found'])}</h1>
           <Link to="/modules" className="text-primary-600 hover:text-primary-700">
-            {i18n.t(['ModuleDetail', 'Back to Modules'])}
+            {t(['ModuleDetail', 'Back to Modules'])}
           </Link>
         </div>
       </div>
@@ -37,6 +38,43 @@ const ModuleDetail = () => {
   const isCompleted = isModuleCompleted(moduleId);
   const quizScore = getQuizScore(moduleId);
 
+  const handleDownloadVideo = async (videoId) => {
+    if (!isOnline) {
+      alert(t(['ModuleDetail', 'You need to be online to download videos.']));
+      return;
+    }
+
+    setDownloadingVideos(prev => new Set(prev).add(videoId));
+
+    try {
+      // Simulate download process
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      // Add to downloaded videos
+      await addDownloadedVideo(videoId);
+
+      alert(t(['ModuleDetail', 'Video downloaded successfully! You can now watch it offline.']));
+    } catch (error) {
+      alert(t(['ModuleDetail', 'Failed to download video. Please try again.']));
+    } finally {
+      setDownloadingVideos(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(videoId);
+        return newSet;
+      });
+    }
+  };
+
+  const getVideoStatus = (videoId) => {
+    if (isVideoDownloaded(videoId)) {
+      return 'downloaded';
+    }
+    if (downloadingVideos.has(videoId)) {
+      return 'downloading';
+    }
+    return 'not-downloaded';
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +84,7 @@ const ModuleDetail = () => {
           className="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900 mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>{i18n.t(['ModuleDetail', 'Back to Modules'])}</span>
+          <span>{t(['ModuleDetail', 'Back to Modules'])}</span>
         </Link>
 
         {/* Module Header */}
@@ -60,7 +98,7 @@ const ModuleDetail = () => {
               </div>
             </div>
             <div className="text-left sm:text-right">
-              <div className="text-sm text-gray-500 mb-1">{i18n.t(['ModuleDetail', 'Duration'])}</div>
+              <div className="text-sm text-gray-500 mb-1">{t(['ModuleDetail', 'Duration'])}</div>
               <div className="text-lg font-semibold text-gray-900">{module.duration}</div>
             </div>
           </div>
@@ -69,17 +107,17 @@ const ModuleDetail = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             <div className="bg-gray-50 rounded-lg p-4 text-center">
               <div className="text-xl sm:text-2xl font-bold text-gray-900">{module.videos.length}</div>
-              <div className="text-xs sm:text-sm text-gray-600">{i18n.t(['ModuleDetail', 'Training Videos'])}</div>
+              <div className="text-xs sm:text-sm text-gray-600">{t(['ModuleDetail', 'Training Videos'])}</div>
             </div>
             <div className="bg-gray-50 rounded-lg p-4 text-center">
               <div className="text-xl sm:text-2xl font-bold text-gray-900">{module.quiz.questions.length}</div>
-              <div className="text-xs sm:text-sm text-gray-600">{i18n.t(['ModuleDetail', 'Quiz Questions'])}</div>
+              <div className="text-xs sm:text-sm text-gray-600">{t(['ModuleDetail', 'Quiz Questions'])}</div>
             </div>
             <div className="bg-gray-50 rounded-lg p-4 text-center">
               <div className="text-lg sm:text-2xl font-bold text-gray-900">
-                {isCompleted ? i18n.t(['ModuleDetail', 'Complete']) : i18n.t(['ModuleDetail', 'In Progress'])}
+                {isCompleted ? t(['ModuleDetail', 'Complete']) : t(['ModuleDetail', 'In Progress'])}
               </div>
-              <div className="text-xs sm:text-sm text-gray-600">{i18n.t(['ModuleDetail', 'Status'])}</div>
+              <div className="text-xs sm:text-sm text-gray-600">{t(['ModuleDetail', 'Status'])}</div>
             </div>
           </div>
 
@@ -89,11 +127,11 @@ const ModuleDetail = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <Award className="w-5 h-5 text-green-600" />
-                  <span className="font-semibold text-green-800">{i18n.t(['ModuleDetail', 'Quiz Completed'])}</span>
+                  <span className="font-semibold text-green-800">{t(['ModuleDetail', 'Quiz Completed'])}</span>
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-green-600">{quizScore}%</div>
-                  <div className="text-sm text-green-700">{i18n.t(['ModuleDetail', 'Score'])}</div>
+                  <div className="text-sm text-green-700">{t(['ModuleDetail', 'Score'])}</div>
                 </div>
               </div>
             </div>
@@ -107,7 +145,7 @@ const ModuleDetail = () => {
                 className="flex-1 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors flex items-center justify-center space-x-2"
               >
                 <Play className="w-5 h-5" />
-                <span>{i18n.t(['ModuleDetail', 'Start Module'])}</span>
+                <span>{t(['ModuleDetail', 'Start Module'])}</span>
               </Link>
             ) : (
               <Link
@@ -115,7 +153,7 @@ const ModuleDetail = () => {
                 className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center space-x-2"
               >
                 <CheckCircle className="w-5 h-5" />
-                <span>{i18n.t(['ModuleDetail', 'Review Module'])}</span>
+                <span>{t(['ModuleDetail', 'Review Module'])}</span>
               </Link>
             )}
             
@@ -124,7 +162,7 @@ const ModuleDetail = () => {
               className="flex-1 bg-secondary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary-700 transition-colors flex items-center justify-center space-x-2"
             >
               <FileText className="w-5 h-5" />
-              <span>{i18n.t(['ModuleDetail', 'Take Quiz'])}</span>
+              <span>{t(['ModuleDetail', 'Take Quiz'])}</span>
             </Link>
           </div>
         </div>
@@ -133,7 +171,7 @@ const ModuleDetail = () => {
         {module.flashcards && module.flashcards.length > 0 && (
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">First Aid Flashcards</h2>
+              <h2 className="text-2xl font-bold text-gray-900">{t(['ModuleDetail', 'First Aid Flashcards'])}</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -155,7 +193,7 @@ const ModuleDetail = () => {
               to={`/flashcards/${moduleId}`}
               className="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center space-x-2"
             >
-              <span>View all</span>
+              <span>{t(['ModuleDetail', 'View all'])}</span>
             </Link>
           </div>
         )}
@@ -165,7 +203,7 @@ const ModuleDetail = () => {
           <div className="mt-6">
             <h3 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
               <PlayCircle className="w-6 h-6 text-primary-600" />
-              {i18n.t(['ModuleDetail', 'Training Videos'])}
+              {t(['ModuleDetail', 'Training Videos'])}
             </h3>
             <ul className="divide-y divide-gray-200">
               {module.videos.map((video) => (
@@ -184,7 +222,7 @@ const ModuleDetail = () => {
                       to={`/video/${video.id}`}
                       className="bg-primary-600 text-white px-3 py-2 rounded-lg hover:bg-primary-700 transition-colors text-xs sm:text-sm font-medium flex items-center justify-center"
                     >
-                      {i18n.t(['ModuleDetail', 'Watch'])}
+                      {t(['ModuleDetail', 'Watch'])}
                     </Link>
                   </div>
                 </li>
@@ -198,10 +236,10 @@ const ModuleDetail = () => {
           <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
             <div className="flex items-center space-x-2">
               <Clock className="w-5 h-5 text-yellow-600" />
-              <span className="text-yellow-800 font-medium">{i18n.t(['ModuleDetail', 'You\'re currently offline'])}</span>
+              <span className="text-yellow-800 font-medium">{t(['ModuleDetail', 'You\'re currently offline'])}</span>
             </div>
             <p className="text-yellow-700 text-sm mt-1">
-              {i18n.t(['ModuleDetail', 'You\'re currently offline description'])}
+              {t(['ModuleDetail', 'You\'re currently offline description'])}
             </p>
           </div>
         )}

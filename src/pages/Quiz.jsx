@@ -4,8 +4,8 @@ import {
   CheckCircle, XCircle, ArrowRight, ArrowLeft, 
   Award, Clock, FileText, Home 
 } from 'lucide-react';
-import { getModuleById } from '../data/modules';
 import { useProgress } from '../contexts/ProgressContext';
+import {useModuleData} from "../contexts/ModuleDataContext";
 
 const Quiz = () => {
   const { moduleId } = useParams();
@@ -15,7 +15,7 @@ const Quiz = () => {
   const [showResults, setShowResults] = useState(false);
   const [timeSpent, setTimeSpent] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+  const {getModuleById } = useModuleData();
   const { updateQuizScore, completeModule, isModuleCompleted, getQuizScore, downloadedVideos, loading, completedModules, quizScores } = useProgress();
 
   const module = getModuleById(moduleId);
