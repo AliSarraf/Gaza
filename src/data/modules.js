@@ -255,28 +255,27 @@ export const trainingModules = [
             title: 'Cool the Burn Immediately',
             content: 'Run cool (not cold) water over the burn for 10-20 minutes. Remove from heat source and any non-stuck clothing.',
             warning: 'Do NOT use ice water or ice - this can cause further tissue damage',
-            image: '/images/flashcards/cool-burn.jpg'
+            image: '/images/flashcards/first-second-degree-burns-1.jpg'
           },
           {
             step: 2,
             title: 'Assess Burn Severity',
             content: 'First-degree: red, painful, no blisters. Second-degree: red, painful, with blisters. Check body surface area affected.',
             tip: 'Use patient\'s palm = 1% of body surface area for quick assessment',
-            image: '/images/flashcards/assess-burn.jpg'
+            image: '/images/flashcards/first-second-degree-burns-2.jpg'
           },
           {
             step: 3,
             title: 'Clean and Protect',
             content: 'Gently clean with sterile saline if available. Apply sterile, non-adherent dressing. Do NOT break blisters.',
             warning: 'Avoid cotton or fluffy materials that can stick to burn',
-            image: '/images/flashcards/dress-burn.jpg'
           },
           {
             step: 4,
             title: 'Pain Management and Monitoring',
             content: 'Give pain relief if available. Monitor for signs of infection: increased pain, fever, pus, red streaking.',
             tip: 'Elevate burned limbs to reduce swelling',
-            image: '/images/flashcards/monitor-burn.jpg'
+            image: '/images/flashcards/first-second-degree-burns-3.jpg'
           }
         ]
       },
