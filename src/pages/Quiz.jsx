@@ -402,7 +402,7 @@ const Quiz = () => {
             ) : (
               <button
                 onClick={handleNextQuestion}
-                disabled={!selectedAnswers[currentQ.id]}
+                disabled={!selectedAnswers.hasOwnProperty(currentQ.id)}
                 className="flex items-center space-x-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <span>Next</span>
