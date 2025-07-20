@@ -252,18 +252,6 @@ const VideoPlayer = () => {
           </div>
         </div>
 
-        {/* Video Info Panel */}
-        <div className="absolute top-4 right-4 bg-black bg-opacity-75 text-white p-3 sm:p-4 rounded-lg max-w-xs sm:max-w-sm">
-          <h2 className="text-sm sm:text-lg font-semibold mb-2">{video.title}</h2>
-          <p className="text-xs sm:text-sm text-gray-300 mb-2">{video.description}</p>
-          <div className="flex items-center justify-between text-xs sm:text-sm">
-            <span>Duration: {video.duration}</span>
-            {isDownloaded && (
-              <span className="text-green-400">✓ Downloaded</span>
-            )}
-          </div>
-        </div>
-
         {/* Back Button */}
         <Link
           to={module ? `/modules/${module.id}` : '/modules'}
