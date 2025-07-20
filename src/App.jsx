@@ -25,7 +25,7 @@ function App() {
             <Router>
               <div className="min-h-screen bg-gray-50 flex flex-col">
                 <Helmet>
-                  <title>First Aid Training PWA</title>
+                  <title>Yeshfi</title>
                   <meta name="description" content="Comprehensive first aid and emergency training for crisis zones" />
                 </Helmet>
 
