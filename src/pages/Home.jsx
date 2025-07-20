@@ -1,17 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Play, BookOpen, Award, Download, Shield, Heart, Users, Clock} from 'lucide-react';
-import {trainingModules} from '../data/modules';
 import {useProgress} from '../contexts/ProgressContext';
 import {useOffline} from '../contexts/OfflineContext';
 import {useLocale} from '../contexts/LocaleContext';
+import {useModuleData} from "../contexts/ModuleDataContext";
 
 const Home = () => {
     const {getProgressPercentage, completedModules} = useProgress();
-    const {isOnline} = useOffline();
     const {t} = useLocale();
+    const {modules} = useModuleData();
 
-    const featuredModules = trainingModules.slice(0, 3);
+    const featuredModules = modules.slice(0, 3);
     const progressPercentage = getProgressPercentage();
 
     const features = [{
@@ -86,8 +86,8 @@ const Home = () => {
                             ></div>
                         </div>
                         <div className="flex justify-between text-sm text-gray-600">
-                            <span>{completedModules.length}/{trainingModules.length} {t(['Home', 'Modules Completed'])}</span>
-                            <span>{trainingModules.length - completedModules.length} {t(['Home', 'Remaining'])}</span>
+                            <span>{completedModules.length}/{modules.length} {t(['Home', 'Modules Completed'])}</span>
+                            <span>{modules.length - completedModules.length} {t(['Home', 'Remaining'])}</span>
                         </div>
                     </div>
                 </div>

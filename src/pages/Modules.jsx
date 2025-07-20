@@ -1,15 +1,16 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Play, CheckCircle, Clock, Filter } from 'lucide-react';
-import { trainingModules } from '../data/modules';
 import { useProgress } from '../contexts/ProgressContext';
 import { useLocale } from '../contexts/LocaleContext';
+import {useModuleData} from "../contexts/ModuleDataContext";
 
 const Modules = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const { isModuleCompleted, getQuizScore, loading } = useProgress();
   const { t } = useLocale();
+  const { modules, getVideoById } = useModuleData();
 
   const categories = [
     { id: 'all', name: t(['Modules', 'All Modules']) },
@@ -29,7 +30,7 @@ const Modules = () => {
   };
 
   const filteredModules = useMemo(() => {
-    return trainingModules.filter(module => {
+    return modules.filter(module => {
       const matchesSearch = module.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           module.description.toLowerCase().includes(searchQuery.toLowerCase());
       
@@ -131,7 +132,7 @@ const Modules = () => {
         {/* Results Count */}
         <div className="mb-6">
           <p className="text-gray-600">
-            {t(['Modules', 'Showing X of Y modules']).replace('{count}', filteredModules.length).replace('{total}', trainingModules.length)}
+            {t(['Modules', 'Showing X of Y modules']).replace('{count}', filteredModules.length).replace('{total}', modules.length)}
           </p>
         </div>
 

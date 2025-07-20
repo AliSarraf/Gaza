@@ -127,7 +127,9 @@
     "Failed to download video. Please try again.": "فشل في تحميل الفيديو. يرجى المحاولة مرة أخرى.",
     "You need to be online to download videos.": "تحتاج إلى اتصال بالإنترنت لتحميل مقاطع الفيديو.",
     "You're currently offline": "أنت حاليًا غير متصل بالإنترنت",
-    "You're currently offline description": "فقط مقاطع الفيديو المحملة متاحة. اتصل بالإنترنت لتحميل المزيد من المحتوى."
+    "You're currently offline description": "فقط مقاطع الفيديو المحملة متاحة. اتصل بالإنترنت لتحميل المزيد من المحتوى.",
+    "First Aid Flashcards": "بطاقات الإسعافات الأولية",
+    "View all": "عرض الكل"
   },
   "Footer": {
     "First Aid Training": "تدريب الإسعافات الأولية",
@@ -146,5 +148,39 @@
     "Designed for crisis zones and emergency response": "مصمم لمناطق الأزمات والاستجابة للطوارئ",
     "Made with ❤\uFE0F for communities in need": "مصنوع مع ❤\uFE0F للمجتمعات المحتاجة",
     "Version": "الإصدار"
+  },
+  "Flashcards": {
+    "Start Training": "ابدأ التدريب",
+    "First Aid Flashcards": "بطاقات الإسعافات الأولية",
+    "Interactive step-by-step training for emergency situations": "تدريب تفاعلي خطوة بخطوة لحالات الطوارئ",
+    "No Flashcards Available": "لا توجد بطاقات متاحة",
+    "This module doesn't have flashcard content yet": "هذه الوحدة لا تحتوي على محتوى بطاقات حتى الآن.",
+    "Flashcard Sets": "مجموعات البطاقات",
+    "Total Steps": "إجمالي الخطوات",
+    "Training Time": "مدة التدريب",
+    "Steps": "خطوات",
+    "min": "دقيقة",
+    "Emergency Response": "الاستجابة للطوارئ",
+    "Training Steps": "خطوات التدريب",
+    "Training Tips": "نصائح التدريب",
+    "Practice each flashcard set multiple times to build muscle memory": "تدرب على كل مجموعة بطاقات عدة مرات لبناء ذاكرة عضلية",
+    "Pay special attention to warnings - they highlight critical safety information": "انتبه بشكل خاص للتحذيرات - فهي تبرز معلومات السلامة الهامة",
+    "Use the tips provided to improve your technique and efficiency": "استخدم النصائح المقدمة لتحسين تقنيتك وكفاءتك",
+    "Review regularly to maintain your emergency response skills": "راجع بانتظام للحفاظ على مهارات الاستجابة للطوارئ",
+    "Emergency Context": "سياق الطوارئ",
+    "These flashcards are designed for blast injury scenarios where immediate action can save lives": "تم تصميم هذه البطاقات لسيناريوهات إصابات الانفجار حيث يمكن أن تنقذ الإجراءات الفورية الأرواح",
+    "In real emergencies, always call for professional medical help while providing first aid": "في حالات الطوارئ الحقيقية، اتصل دائمًا بالمساعدة الطبية المهنية أثناء تقديم الإسعافات الأولية",
+    "These techniques are meant to stabilize patients until advanced medical care arrives": "تهدف هذه التقنيات إلى استقرار المرضى حتى وصول الرعاية الطبية المتقدمة.",
+    "Critical Warning": "تحذير هام",
+    "Pro Tip": "نصيحة احترافية",
+    "Previous": "السابق",
+    "Next": "التالي",
+    "Training Complete": "اكتمل التدريب!",
+    "You have completed all steps for": "لقد أكملت جميع الخطوات لـ",
+    "Review as needed": "راجع حسب الحاجة.",
+    "Step": "الخطوة",
+    "of": "من",
+    "Complete": "مكتمل",
+    "Flashcard Image": "صورة البطاقة"
   }
 }

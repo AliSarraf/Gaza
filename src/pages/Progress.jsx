@@ -4,9 +4,9 @@ import {
   Award, Trophy, Clock, BookOpen, CheckCircle, 
   TrendingUp, Target, Star 
 } from 'lucide-react';
-import { trainingModules } from '../data/modules';
 import { useProgress } from '../contexts/ProgressContext';
 import { useLocale } from '../contexts/LocaleContext';
+import {useModuleData} from "../contexts/ModuleDataContext";
 
 const Progress = () => {
   const { 
@@ -17,11 +17,11 @@ const Progress = () => {
     loading 
   } = useProgress();
   const { t } = useLocale();
-
+  const {modules} = useModuleData();
   const progressPercentage = getProgressPercentage();
-  const totalModules = trainingModules.length;
-  const totalVideos = trainingModules.reduce((sum, module) => sum + module.videos.length, 0);
-  const totalQuestions = trainingModules.reduce((sum, module) => sum + module.quiz.questions.length, 0);
+  const totalModules = modules.length;
+  const totalVideos = modules.reduce((sum, module) => sum + module.videos.length, 0);
+  const totalQuestions = modules.reduce((sum, module) => sum + module.quiz.questions.length, 0);
 
   const averageQuizScore = completedModules.length > 0 
     ? Math.round(completedModules.reduce((sum, moduleId) => {
@@ -162,7 +162,7 @@ const Progress = () => {
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">{t(['Progress', 'Module Progress'])}</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {trainingModules.map((module) => {
+            {modules.map((module) => {
               const progress = getModuleProgress(module.id);
               
               return (

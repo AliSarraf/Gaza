@@ -127,7 +127,9 @@
     "Failed to download video. Please try again.": "Failed to download video. Please try again.",
     "You need to be online to download videos.": "You need to be online to download videos.",
     "You're currently offline": "You're currently offline",
-    "You're currently offline description": "Only downloaded content is available. Connect to the internet to watch related videos"
+    "You're currently offline description": "Only downloaded content is available. Connect to the internet to watch related videos",
+    "First Aid Flashcards": "First Aid Flashcards",
+    "View all": "View all"
   },
   "Footer": {
     "First Aid Training": "First Aid Training",
@@ -146,5 +148,39 @@
     "Designed for crisis zones and emergency response": "Designed for crisis zones and emergency response",
     "Made with ❤\uFE0F for communities in need": "Made with ❤\uFE0F for communities in need",
     "Version": "Version"
+  },
+  "Flashcards": {
+    "Start Training": "Start Training",
+    "First Aid Flashcards": "First Aid Flashcards",
+    "Interactive step-by-step training for emergency situations": "Interactive step-by-step training for emergency situations",
+    "No Flashcards Available": "No flashcards available",
+    "This module doesn't have flashcard content yet": "This module doesn't have flashcard content yet.",
+    "Flashcard Sets": "Flashcard Sets",
+    "Total Steps": "Total Steps",
+    "Training Time": "Training Time",
+    "Steps": "Steps",
+    "min": "min",
+    "Emergency Response": "Emergency Response",
+    "Training Steps": "Training Steps",
+    "Training Tips": "Training Tips",
+    "Practice each flashcard set multiple times to build muscle memory": "Practice each flashcard set multiple times to build muscle memory",
+    "Pay special attention to warnings - they highlight critical safety information": "Pay special attention to warnings - they highlight critical safety information",
+    "Use the tips provided to improve your technique and efficiency": "Use the tips provided to improve your technique and efficiency",
+    "Review regularly to maintain your emergency response skills": "Review regularly to maintain your emergency response skills",
+    "Emergency Context": "Emergency Context",
+    "These flashcards are designed for blast injury scenarios where immediate action can save lives": "These flashcards are designed for blast injury scenarios where immediate action can save lives",
+    "In real emergencies, always call for professional medical help while providing first aid": "In real emergencies, always call for professional medical help while providing first aid",
+    "These techniques are meant to stabilize patients until advanced medical care arrives": "These techniques are meant to stabilize patients until advanced medical care arrives",
+    "Critical Warning": "Critical Warning",
+    "Pro Tip": "Pro Tip",
+    "Previous": "Previous",
+    "Next": "Next",
+    "Training Complete": "Training Complete!",
+    "You have completed all steps for": "You've completed all steps for",
+    "Review as needed": "Review as needed.",
+    "Step": "Step",
+    "of": "of",
+    "Complete": "Complete",
+    "Flashcard Image": "Flashcard Image"
   }
 }

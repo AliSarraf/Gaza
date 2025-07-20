@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import {ChevronLeft, ChevronRight, AlertTriangle, Lightbulb, X} from 'lucide-react';
+import {useLocale} from '../contexts/LocaleContext';
 
 const FlashcardViewer = ({flashcardSet, onClose}) => {
     const [currentStep, setCurrentStep] = useState(0);
+    const { t } = useLocale();
 
     if (!flashcardSet || !flashcardSet.steps || flashcardSet.steps.length === 0) {
         return null;
@@ -54,10 +56,10 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
                 <div className="px-4 sm:px-6 sm:pt-4">
                     <div className="flex items-center justify-between mb-3">
               <span className="text-sm font-medium text-gray-600">
-                Step {currentStep + 1} of {steps.length}
+                {t(['Flashcards', 'Step'])} {currentStep + 1} {t(['Flashcards', 'of'])} {steps.length}
               </span>
                         <span className="text-sm text-gray-500">
-                {Math.round(((currentStep + 1) / steps.length) * 100)}% Complete
+                {Math.round(((currentStep + 1) / steps.length) * 100)}% {t(['Flashcards', 'Complete'])}
               </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
@@ -107,8 +109,7 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
                                 <div className="flex items-start space-x-2 sm:space-x-3">
                                     <AlertTriangle className="w-5 h-5 sm:w-6 sm:h-6 text-red-600 flex-shrink-0 mt-0.5"/>
                                     <div>
-                                        <h4 className="font-semibold text-red-800 mb-1 text-xs sm:text-base">⚠️ Critical
-                                            Warning</h4>
+                                        <h4 className="font-semibold text-red-800 mb-1 text-xs sm:text-base">⚠️ {t(['Flashcards', 'Critical Warning'], 'Critical Warning')}</h4>
                                         <p className="text-red-700 text-xs sm:text-base">{step.warning}</p>
                                     </div>
                                 </div>
@@ -120,8 +121,7 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
                                 <div className="flex items-start space-x-2 sm:space-x-3">
                                     <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 mt-0.5"/>
                                     <div>
-                                        <h4 className="font-semibold text-blue-800 mb-1 text-xs sm:text-base">💡 Pro
-                                            Tip</h4>
+                                        <h4 className="font-semibold text-blue-800 mb-1 text-xs sm:text-base">💡 {t(['Flashcards', 'Pro Tip'], 'Pro Tip')}</h4>
                                         <p className="text-blue-700 text-xs sm:text-base">{step.tip}</p>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
                         {/* Image Placeholder */}
                         {step.image && (
                             <div className={'flex justify-center'}>
-                                <img src={step.image}/>
+                                <img src={step.image} alt={step.title || t(['Flashcards', 'Flashcard Image'], 'Flashcard Image')} />
                             </div>
                         )}
                     </div>
@@ -144,14 +144,14 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
                         className="flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-2 sm:px-4 py-3  rounded bg-red-500 text-white hover:bg-red-800 hover:text-gray-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-base sm:text-base whitespace-normal"
                     >
                         <ChevronLeft className="w-5 h-5 sm:w-4 sm:h-4"/>
-                        <span className="truncate">Previous</span>
+                        <span className="truncate">{t(['Flashcards', 'Previous'], 'Previous')}</span>
                     </button>
                     <button
                         onClick={nextStep}
                         disabled={currentStep === steps.length - 1}
                         className="flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-2 sm:px-4 py-3 rounded bg-green-500 text-white hover:bg-green-800 hover:text-gray-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-base sm:text-base whitespace-normal"
                     >
-                        <span className="truncate">Next</span>
+                        <span className="truncate">{t(['Flashcards', 'Next'], 'Next')}</span>
                         <ChevronRight className="w-5 h-5 sm:w-4 sm:h-4"/>
                     </button>
                 </div>
@@ -160,10 +160,9 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
                     <div className="px-4 sm:px-6 pb-2 sm:pb-4">
                         <div className="bg-green-50 border border-green-200 rounded-lg p-3 sm:p-4 text-center">
                             <div className="text-green-600 text-xl sm:text-2xl mb-2">✅</div>
-                            <h4 className="font-semibold text-green-800 mb-1 text-base sm:text-lg">Training
-                                Complete!</h4>
+                            <h4 className="font-semibold text-green-800 mb-1 text-base sm:text-lg">{t(['Flashcards', 'Training Complete'], 'Training Complete!')}</h4>
                             <p className="text-green-700 text-xs sm:text-sm">
-                                You've completed all steps for {title.toLowerCase()}. Review as needed.
+                                {t(['Flashcards', 'You have completed all steps for'], "You've completed all steps for")} {title.toLowerCase()}. {t(['Flashcards', 'Review as needed'], 'Review as needed.')}
                             </p>
                         </div>
                     </div>
@@ -173,4 +172,4 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
     );
 };
 
-export default FlashcardViewer; 
+export default FlashcardViewer;

@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Play, Download, CheckCircle, Clock, FileText, Award, ArrowLeft, PlayCircle } from 'lucide-react';
-import { getModuleById } from '../data/modules';
+import { Play, CheckCircle, Clock, FileText, Award, ArrowLeft, PlayCircle } from 'lucide-react';
 import { useProgress } from '../contexts/ProgressContext';
 import { useOffline } from '../contexts/OfflineContext';
 import {useLocale} from "../contexts/LocaleContext";
+import {useModuleData} from "../contexts/ModuleDataContext";
 
 const ModuleDetail = () => {
   const { moduleId } = useParams();
   const { isModuleCompleted, getQuizScore, addDownloadedVideo, isVideoDownloaded, loading } = useProgress();
   const { isOnline } = useOffline();
   const {t} = useLocale();
-
+  const {getModuleById} = useModuleData();
   const module = getModuleById(moduleId);
 
   if (!module) {
@@ -171,7 +171,7 @@ const ModuleDetail = () => {
         {module.flashcards && module.flashcards.length > 0 && (
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">First Aid Flashcards</h2>
+              <h2 className="text-2xl font-bold text-gray-900">{t(['ModuleDetail', 'First Aid Flashcards'])}</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -193,7 +193,7 @@ const ModuleDetail = () => {
               to={`/flashcards/${moduleId}`}
               className="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center space-x-2"
             >
-              <span>View all</span>
+              <span>{t(['ModuleDetail', 'View all'])}</span>
             </Link>
           </div>
         )}
