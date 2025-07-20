@@ -10,6 +10,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// Register service worker for PWA functionality
-i18n.locale = 'ar'; // Set default locale
