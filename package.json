@@ -1,7 +1,7 @@
 {
-  "name": "first-aid-training-pwa",
+  "name": "yeshfi",
   "version": "1.0.0",
-  "description": "First Aid & Emergency Training Progressive Web Application",
+  "description": "Yeshfi: Comprehensive first aid and emergency training progressive web application",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

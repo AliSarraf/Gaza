@@ -201,7 +201,7 @@ const ModuleDetail = () => {
               <span className="text-yellow-800 font-medium">{i18n.t(['ModuleDetail', 'You\'re currently offline'])}</span>
             </div>
             <p className="text-yellow-700 text-sm mt-1">
-              {i18n.t(['ModuleDetail', 'You\'re currently offline'])}
+              {i18n.t(['ModuleDetail', 'You\'re currently offline description'])}
             </p>
           </div>
         )}
