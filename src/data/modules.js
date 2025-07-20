@@ -1330,49 +1330,6 @@ export const trainingModules = [
         }
       ]
     }
-  },
-  {
-    id: 'chemical-injuries',
-    title: 'Chemical Injuries',
-    description: 'Protocols for exposure to hazardous substances like white phosphorus, focusing on severe skin burns and respiratory distress.',
-    icon: '☣️',
-    color: 'yellow',
-    duration: '40 min',
-    videos: [
-      {
-        id: 'chemical-1',
-        title: 'White Phosphorus Exposure',
-        description: 'Specific treatment protocols for white phosphorus burns.',
-        duration: '10:15',
-        thumbnail: '/thumbnails/white-phosphorus.jpg',
-        videoUrl: '/videos/white-phosphorus.mp4',
-        transcript: 'White phosphorus burns require immediate and specific treatment...'
-      },
-      {
-        id: 'chemical-2',
-        title: 'Chemical Exposure Decontamination',
-        description: 'Proper decontamination procedures for chemical exposure.',
-        duration: '9:30',
-        thumbnail: '/thumbnails/decontamination.jpg',
-        videoUrl: '/videos/decontamination.mp4',
-        transcript: 'Decontamination is crucial for chemical exposure...'
-      }
-    ],
-    quiz: {
-      questions: [
-        {
-          id: 1,
-          question: 'How should white phosphorus burns be treated?',
-          options: [
-            'Cover with oil',
-            'Keep wet and remove particles',
-            'Apply ice',
-            'Use alcohol'
-          ],
-          correctAnswer: 1
-        }
-      ]
-    }
   }
 ];
 

@@ -65,22 +65,6 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
               ></div>
             </div>
           </div>
-          {/* Step Navigation Dots */}
-          <div className="flex justify-center space-x-2 px-4 sm:px-6 py-2 sm:py-4">
-            {steps.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToStep(index)}
-                className={`w-4 h-4 sm:w-3 sm:h-3 rounded-full transition-colors ${
-                  index === currentStep 
-                    ? 'bg-red-600' 
-                    : index < currentStep 
-                      ? 'bg-green-500' 
-                      : 'bg-gray-300'
-                }`}
-              />
-            ))}
-          </div>
           {/* Flashcard Content */}
           <div className="px-4 sm:px-6 pb-4 sm:pb-6 flex-1 overflow-y-auto">
             <div className="bg-white border border-gray-200 rounded-xl p-4 sm:p-8 shadow-sm">
