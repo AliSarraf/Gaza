@@ -652,28 +652,28 @@ export const trainingModules = [
             title: 'Suspect Spinal Injury',
             content: 'High-risk mechanisms: falls >3 feet, high-speed impacts, head/neck trauma, unconscious patients, numbness/tingling in limbs.',
             warning: 'When in doubt, treat as spinal injury - movement can cause permanent paralysis',
-            image: '/images/flashcards/spinal-injury-mechanism.jpg'
+            image: '/images/flashcards/spinal-cord-trauma-1.jpg'
           },
           {
             step: 2,
             title: 'Test Sensation and Movement',
             content: 'Ask patient to wiggle fingers/toes. Test light touch on hands and feet. Check for numbness, tingling, or weakness.',
             warning: 'Loss of sensation or movement indicates spinal cord damage - immobilize immediately',
-            image: '/images/flashcards/neurological-assessment.jpg'
+            image: '/images/flashcards/spinal-cord-trauma-2.jpg'
           },
           {
             step: 3,
             title: 'Immobilize the Spine',
             content: 'Hold head/neck in neutral position. Use cervical collar if available. Log-roll patient as one unit if must move. Keep spine straight.',
             tip: 'Use towels, blankets, or boards to maintain spinal alignment during transport',
-            image: '/images/flashcards/spinal-immobilization.jpg'
+            image: '/images/flashcards/spinal-cord-trauma-3.jpg'
           },
           {
             step: 4,
             title: 'Manage Complications',
             content: 'Monitor breathing (spinal injuries can affect breathing muscles). Watch for spinal shock: low blood pressure, slow pulse.',
             warning: 'High spinal injuries can cause breathing failure - be prepared to assist ventilation',
-            image: '/images/flashcards/spinal-complications.jpg'
+            image: '/images/flashcards/spinal-cord-trauma-4.jpg'
           }
         ]
       }
