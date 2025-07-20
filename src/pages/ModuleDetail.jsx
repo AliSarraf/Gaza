@@ -38,33 +38,6 @@ const ModuleDetail = () => {
   const isCompleted = isModuleCompleted(moduleId);
   const quizScore = getQuizScore(moduleId);
 
-  const handleDownloadVideo = async (videoId) => {
-    if (!isOnline) {
-      alert(t(['ModuleDetail', 'You need to be online to download videos.']));
-      return;
-    }
-
-    setDownloadingVideos(prev => new Set(prev).add(videoId));
-
-    try {
-      // Simulate download process
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      // Add to downloaded videos
-      await addDownloadedVideo(videoId);
-
-      alert(t(['ModuleDetail', 'Video downloaded successfully! You can now watch it offline.']));
-    } catch (error) {
-      alert(t(['ModuleDetail', 'Failed to download video. Please try again.']));
-    } finally {
-      setDownloadingVideos(prev => {
-        const newSet = new Set(prev);
-        newSet.delete(videoId);
-        return newSet;
-      });
-    }
-  };
-
   const getVideoStatus = (videoId) => {
     if (isVideoDownloaded(videoId)) {
       return 'downloaded';
