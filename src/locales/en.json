@@ -127,7 +127,7 @@
     "Failed to download video. Please try again.": "Failed to download video. Please try again.",
     "You need to be online to download videos.": "You need to be online to download videos.",
     "You're currently offline": "You're currently offline",
-    "Only downloaded videos are available. Connect to the internet to download more content.": "Only downloaded videos are available. Connect to the internet to download more content."
+    "You're currently offline description": "Only downloaded content is available. Connect to the internet to watch related videos"
   },
   "Footer": {
     "First Aid Training": "First Aid Training",
