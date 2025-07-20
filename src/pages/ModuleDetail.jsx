@@ -227,29 +227,17 @@ const ModuleDetail = () => {
                     
                     <div className="flex items-center space-x-2 flex-shrink-0">
                       {/* Download Button */}
-                      {videoStatus === 'not-downloaded' && (
-                        <button
-                          onClick={() => handleDownloadVideo(video.id)}
-                          disabled={!isOnline}
-                          className="p-2 text-gray-600 hover:text-primary-600 disabled:opacity-50 disabled:cursor-not-allowed"
-                          title={!isOnline ? i18n.t(['ModuleDetail', 'You need to be online to download']) : i18n.t(['ModuleDetail', 'Download for offline viewing'])}
-                        >
-                          <Download className="w-5 h-5" />
-                        </button>
-                      )}
-                      
+                      {/* Removed download button */}
                       {videoStatus === 'downloading' && (
                         <div className="p-2 text-primary-600">
                           <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-600"></div>
                         </div>
                       )}
-                      
                       {videoStatus === 'downloaded' && (
                         <div className="p-2 text-green-600">
                           <CheckCircle className="w-5 h-5" />
                         </div>
                       )}
-                      
                       {/* Watch Button */}
                       <Link
                         to={`/video/${video.id}`}

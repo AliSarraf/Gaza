@@ -9,40 +9,19 @@ export const trainingModules = [
     videos: [
       {
         id: 'blast-1',
-        title: 'Blast Injury Assessment',
-        description: 'Rapid assessment of primary, secondary, tertiary, and quaternary blast injuries.',
-        duration: '10:15',
-        thumbnail: '/thumbnails/blast-assessment.jpg',
-        videoUrl: '/videos/blast-assessment.mp4',
-        transcript: 'Blast injuries present unique challenges requiring systematic assessment...'
+        title: 'How to treat blast injuries',
+        videoUrl: 'https://www.youtube.com/embed/7p9JYXGSoQg'
       },
       {
         id: 'blast-2',
-        title: 'Massive Hemorrhage Control',
-        description: 'Advanced bleeding control for blast-related traumatic injuries including tourniquet application.',
-        duration: '9:45',
-        thumbnail: '/thumbnails/hemorrhage-control.jpg',
-        videoUrl: '/videos/hemorrhage-control.mp4',
-        transcript: 'Blast injuries often cause massive bleeding requiring immediate intervention...'
+        title: 'How to make a sling',
+        videoUrl: 'https://www.youtube.com/embed/PwfBGkBXkFA'
       },
       {
         id: 'blast-3',
-        title: 'Amputation and Limb Preservation',
-        description: 'Management of traumatic amputations and preservation techniques for severed limbs.',
-        duration: '11:30',
-        thumbnail: '/thumbnails/amputation-care.jpg',
-        videoUrl: '/videos/amputation-care.mp4',
-        transcript: 'Traumatic amputations from blasts require specific protocols...'
+        title: 'How to treat a fracture',
+        videoUrl: 'https://www.youtube.com/embed/2v8vlXgGXwE'
       },
-      {
-        id: 'blast-4',
-        title: 'Shrapnel and Foreign Body Management',
-        description: 'Safe removal and stabilization of embedded shrapnel and foreign objects.',
-        duration: '8:20',
-        thumbnail: '/thumbnails/shrapnel-management.jpg',
-        videoUrl: '/videos/shrapnel-management.mp4',
-        transcript: 'Shrapnel injuries require careful assessment before removal...'
-      }
     ],
     flashcards: [
       {
@@ -264,8 +243,7 @@ export const trainingModules = [
         description: 'Rapid assessment of burn severity from explosions and airstrikes - first, second, and third-degree classification.',
         duration: '10:45',
         thumbnail: '/thumbnails/explosion-burns.jpg',
-        videoUrl: '/videos/explosion-burns.mp4',
-        transcript: 'Explosion burns present unique challenges requiring rapid assessment of depth and percentage...'
+        videoUrl: '/videos/explosion-burns.mp4'
       },
       {
         id: 'white-phosphorus-1',
@@ -273,8 +251,7 @@ export const trainingModules = [
         description: 'Emergency protocols for white phosphorus burns including immediate decontamination and treatment.',
         duration: '12:20',
         thumbnail: '/thumbnails/white-phosphorus-burns.jpg',
-        videoUrl: '/videos/white-phosphorus-burns.mp4',
-        transcript: 'White phosphorus burns continue to burn until oxygen is removed and require specific treatment protocols...'
+        videoUrl: '/videos/white-phosphorus-burns.mp4'
       },
       {
         id: 'burn-wound-care-1',
@@ -282,8 +259,7 @@ export const trainingModules = [
         description: 'Clean treatment techniques and infection prevention when medical supplies are limited.',
         duration: '11:15',
         thumbnail: '/thumbnails/burn-wound-care.jpg',
-        videoUrl: '/videos/burn-wound-care.mp4',
-        transcript: 'Preventing infection in burn wounds is critical when medical resources are scarce...'
+        videoUrl: '/videos/burn-wound-care.mp4'
       },
       {
         id: 'severe-burns-1',
@@ -291,8 +267,7 @@ export const trainingModules = [
         description: 'Managing third-degree burns, fluid loss, and burn shock in emergency conditions.',
         duration: '9:30',
         thumbnail: '/thumbnails/severe-burns.jpg',
-        videoUrl: '/videos/severe-burns.mp4',
-        transcript: 'Severe burns can cause life-threatening complications including burn shock and infection...'
+        videoUrl: '/videos/severe-burns.mp4'
       }
     ],
     flashcards: [
@@ -537,8 +512,7 @@ export const trainingModules = [
         description: 'Rapid assessment of consciousness levels, Glasgow Coma Scale, and immediate TBI response protocols.',
         duration: '12:30',
         thumbnail: '/thumbnails/tbi-assessment.jpg',
-        videoUrl: '/videos/tbi-assessment.mp4',
-        transcript: 'Traumatic brain injuries from blasts and impacts require systematic assessment of consciousness and neurological function...'
+        videoUrl: '/videos/tbi-assessment.mp4'
       },
       {
         id: 'skull-fractures-1',
@@ -546,8 +520,7 @@ export const trainingModules = [
         description: 'Recognizing skull fractures, managing brain bleeding, and preventing secondary brain injury.',
         duration: '11:45',
         thumbnail: '/thumbnails/skull-fractures.jpg',
-        videoUrl: '/videos/skull-fractures.mp4',
-        transcript: 'Skull fractures can cause life-threatening brain bleeding and require immediate recognition and management...'
+        videoUrl: '/videos/skull-fractures.mp4'
       },
       {
         id: 'spinal-trauma-1',
@@ -555,8 +528,7 @@ export const trainingModules = [
         description: 'Spinal immobilization techniques, paralysis assessment, and preventing further spinal damage.',
         duration: '13:20',
         thumbnail: '/thumbnails/spinal-trauma.jpg',
-        videoUrl: '/videos/spinal-trauma.mp4',
-        transcript: 'Spinal cord injuries can result in permanent paralysis if not handled properly during initial care...'
+        videoUrl: '/videos/spinal-trauma.mp4'
       },
       {
         id: 'head-spinal-transport-1',
@@ -564,8 +536,7 @@ export const trainingModules = [
         description: 'Safe transport techniques for head and spinal injuries, including improvised immobilization methods.',
         duration: '9:15',
         thumbnail: '/thumbnails/head-spinal-transport.jpg',
-        videoUrl: '/videos/head-spinal-transport.mp4',
-        transcript: 'Proper transport of head and spinal injuries is critical to prevent further damage during evacuation...'
+        videoUrl: '/videos/head-spinal-transport.mp4'
       }
     ],
     flashcards: [
@@ -785,8 +756,7 @@ export const trainingModules = [
         description: 'Rapid assessment of life-threatening blood loss and shock classification.',
         duration: '10:30',
         thumbnail: '/thumbnails/massive-hemorrhage.jpg',
-        videoUrl: '/videos/massive-hemorrhage.mp4',
-        transcript: 'Massive hemorrhage is the leading cause of preventable death in trauma situations...'
+        videoUrl: '/videos/massive-hemorrhage.mp4'
       },
       {
         id: 'tourniquet-techniques-1',
@@ -794,8 +764,7 @@ export const trainingModules = [
         description: 'Proper tourniquet placement and tightening techniques for extremity hemorrhage.',
         duration: '8:45',
         thumbnail: '/thumbnails/tourniquet-application.jpg',
-        videoUrl: '/videos/tourniquet-application.mp4',
-        transcript: 'Tourniquets are life-saving devices that can stop arterial bleeding in extremities...'
+        videoUrl: '/videos/tourniquet-application.mp4'
       },
       {
         id: 'pressure-points-1',
@@ -803,8 +772,7 @@ export const trainingModules = [
         description: 'Using pressure points and hemostatic dressings when tourniquets are not effective.',
         duration: '11:20',
         thumbnail: '/thumbnails/pressure-points.jpg',
-        videoUrl: '/videos/pressure-points.mp4',
-        transcript: 'When tourniquets cannot be applied, pressure points and hemostatic agents become critical...'
+        videoUrl: '/videos/pressure-points.mp4'
       },
       {
         id: 'hemorrhagic-shock-1',
@@ -812,8 +780,7 @@ export const trainingModules = [
         description: 'Recognition and pre-hospital management of hemorrhagic shock requiring urgent transfusion.',
         duration: '12:15',
         thumbnail: '/thumbnails/hemorrhagic-shock.jpg',
-        videoUrl: '/videos/hemorrhagic-shock.mp4',
-        transcript: 'Hemorrhagic shock occurs when blood loss exceeds the body\'s ability to compensate...'
+        videoUrl: '/videos/hemorrhagic-shock.mp4'
       }
     ],
     flashcards: [
@@ -1050,8 +1017,7 @@ export const trainingModules = [
         description: 'Recognition and emergency treatment of collapsed lungs, tension pneumothorax, and penetrating chest wounds.',
         duration: '13:45',
         thumbnail: '/thumbnails/lung-punctures.jpg',
-        videoUrl: '/videos/lung-punctures.mp4',
-        transcript: 'Lung injuries from penetrating trauma can rapidly become life-threatening requiring immediate intervention...'
+        videoUrl: '/videos/lung-punctures.mp4'
       },
       {
         id: 'internal-organs-1',
@@ -1059,8 +1025,7 @@ export const trainingModules = [
         description: 'Identifying liver, spleen, and kidney injuries from blunt and penetrating abdominal trauma.',
         duration: '12:20',
         thumbnail: '/thumbnails/internal-organ-damage.jpg',
-        videoUrl: '/videos/internal-organ-damage.mp4',
-        transcript: 'Internal organ injuries often present with subtle signs but can cause rapid deterioration...'
+        videoUrl: '/videos/internal-organ-damage.mp4'
       },
       {
         id: 'respiratory-failure-1',
@@ -1068,8 +1033,7 @@ export const trainingModules = [
         description: 'Managing airway obstruction, breathing difficulties, and ventilation problems in trauma patients.',
         duration: '11:30',
         thumbnail: '/thumbnails/respiratory-failure.jpg',
-        videoUrl: '/videos/respiratory-failure.mp4',
-        transcript: 'Respiratory failure can result from chest trauma, airway obstruction, or severe pain limiting breathing...'
+        videoUrl: '/videos/respiratory-failure.mp4'
       },
       {
         id: 'chest-abdominal-stabilization-1',
@@ -1077,8 +1041,7 @@ export const trainingModules = [
         description: 'Emergency stabilization techniques and transport preparation for serious chest and abdominal injuries.',
         duration: '10:45',
         thumbnail: '/thumbnails/chest-abdominal-stabilization.jpg',
-        videoUrl: '/videos/chest-abdominal-stabilization.mp4',
-        transcript: 'Proper stabilization of chest and abdominal injuries is critical during transport to prevent deterioration...'
+        videoUrl: '/videos/chest-abdominal-stabilization.mp4'
       }
     ],
     flashcards: [
