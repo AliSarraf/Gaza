@@ -122,7 +122,7 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
               {/* Image Placeholder */}
               {step.image && (
                <div className={'flex justify-center'}>
-                   <img src={'/public' + step.image} />
+                   <img src={step.image} />
                </div>
               )}
             </div>
