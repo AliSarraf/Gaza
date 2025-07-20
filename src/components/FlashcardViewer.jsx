@@ -2,6 +2,15 @@ import React, {useState} from 'react';
 import {ChevronLeft, ChevronRight, AlertTriangle, Lightbulb, X} from 'lucide-react';
 import {useLocale} from '../contexts/LocaleContext';
 
+const flashcardImages = import.meta.glob("../assets/flashcards/*.{jpg,webp}", {
+    eager: true,
+    import: "default",
+  });
+
+function getFlashcardImage(baseName, ext) {
+    return flashcardImages[`../assets/flashcards/${baseName}.${ext}`];
+  }
+
 const FlashcardViewer = ({flashcardSet, onClose}) => {
     const [currentStep, setCurrentStep] = useState(0);
     const { t } = useLocale();
@@ -130,7 +139,10 @@ const FlashcardViewer = ({flashcardSet, onClose}) => {
                         {/* Image Placeholder */}
                         {step.image && (
                             <div className={'flex justify-center'}>
-                                <img src={step.image} alt={step.title || t(['Flashcards', 'Flashcard Image'], 'Flashcard Image')} />
+                                <picture>
+                                    <source srcSet={getFlashcardImage(step.image, 'webp')} type="image/webp" />
+                                    <img src={getFlashcardImage(step.image, 'jpg')} alt={step.title} />
+                                </picture>
                             </div>
                         )}
                     </div>
