@@ -130,15 +130,26 @@ const VideoPlayer = () => {
       <div className="relative">
         {/* Video Container */}
         <div className="relative w-full h-screen bg-black">
-          <video
-            ref={videoRef}
-            className="w-full h-full object-contain"
-            poster={video.thumbnail}
-            preload="metadata"
-          >
-            <source src={video.videoUrl} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          {video.videoUrl.includes('youtube.com/embed') ? (
+            <iframe
+              src={video.videoUrl}
+              title={video.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full object-contain bg-black"
+              frameBorder="0"
+            />
+          ) : (
+            <video
+              ref={videoRef}
+              className="w-full h-full object-contain"
+              poster={video.thumbnail}
+              preload="metadata"
+            >
+              <source src={video.videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
 
           {/* Offline Indicator */}
           {!isOnline && isDownloaded && (
