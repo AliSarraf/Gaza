@@ -51,13 +51,15 @@ const Home = () => {
                                 <BookOpen className="w-5 h-5"/>
                                 <span>{t(['Home', 'Start Training'])}</span>
                             </Link>
-                            <Link
-                                to="/progress"
-                                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors flex items-center justify-center space-x-2"
-                            >
-                                <Award className="w-5 h-5"/>
-                                <span>{t(['Home', 'View Progress'])}</span>
-                            </Link>
+                            {progressPercentage > 0 && (
+                                <Link
+                                    to="/progress"
+                                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors flex items-center justify-center space-x-2"
+                                >
+                                    <Award className="w-5 h-5"/>
+                                    <span>{t(['Home', 'View Progress'])}</span>
+                                </Link>
+                            )}
                         </div>
                     </div>
                 </div>
