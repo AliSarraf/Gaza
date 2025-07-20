@@ -1215,14 +1215,12 @@ export const trainingModules = [
             title: 'Feel for Abnormalities',
             content: 'Gently palpate for: tenderness, rigidity, instability, crepitus (air under skin), pulse quality.',
             warning: 'Avoid deep palpation of abdomen - can worsen internal bleeding',
-            image: '/images/flashcards/palpation-technique.jpg'
           },
           {
             step: 4,
             title: 'Prioritize and Document',
             content: 'Identify life-threatening injuries first. Document findings, mechanism of injury, vital signs for medical team.',
             tip: 'Use ABCDE approach: Airway, Breathing, Circulation, Disability, Exposure',
-            image: '/images/flashcards/documentation.jpg'
           }
         ]
       }
