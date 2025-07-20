@@ -238,36 +238,9 @@ export const trainingModules = [
     duration: '55 min',
     videos: [
       {
-        id: 'explosion-burns-1',
-        title: 'Explosion Burn Assessment',
-        description: 'Rapid assessment of burn severity from explosions and airstrikes - first, second, and third-degree classification.',
-        duration: '10:45',
-        thumbnail: '/thumbnails/explosion-burns.jpg',
-        videoUrl: '/videos/explosion-burns.mp4'
-      },
-      {
-        id: 'white-phosphorus-1',
-        title: 'White Phosphorus Exposure Response',
-        description: 'Emergency protocols for white phosphorus burns including immediate decontamination and treatment.',
-        duration: '12:20',
-        thumbnail: '/thumbnails/white-phosphorus-burns.jpg',
-        videoUrl: '/videos/white-phosphorus-burns.mp4'
-      },
-      {
-        id: 'burn-wound-care-1',
-        title: 'Burn Wound Care and Infection Prevention',
-        description: 'Clean treatment techniques and infection prevention when medical supplies are limited.',
-        duration: '11:15',
-        thumbnail: '/thumbnails/burn-wound-care.jpg',
-        videoUrl: '/videos/burn-wound-care.mp4'
-      },
-      {
-        id: 'severe-burns-1',
-        title: 'Severe Burns and Shock Management',
-        description: 'Managing third-degree burns, fluid loss, and burn shock in emergency conditions.',
-        duration: '9:30',
-        thumbnail: '/thumbnails/severe-burns.jpg',
-        videoUrl: '/videos/severe-burns.mp4'
+        id: 'burns-1',
+        title: 'How to treat burns and scalds',
+        videoUrl: 'https://www.youtube.com/embed/TLr2qsEhpC8'
       }
     ],
     flashcards: [
@@ -507,36 +480,14 @@ export const trainingModules = [
     duration: '50 min',
     videos: [
       {
-        id: 'tbi-assessment-1',
-        title: 'Traumatic Brain Injury (TBI) Assessment',
-        description: 'Rapid assessment of consciousness levels, Glasgow Coma Scale, and immediate TBI response protocols.',
-        duration: '12:30',
-        thumbnail: '/thumbnails/tbi-assessment.jpg',
-        videoUrl: '/videos/tbi-assessment.mp4'
+        id: 'tbi-1',
+        title: 'Head injury symptoms and advice',
+        videoUrl: 'https://www.youtube.com/embed/a4cIFZx1f2E'
       },
       {
-        id: 'skull-fractures-1',
-        title: 'Skull Fractures and Brain Bleeding',
-        description: 'Recognizing skull fractures, managing brain bleeding, and preventing secondary brain injury.',
-        duration: '11:45',
-        thumbnail: '/thumbnails/skull-fractures.jpg',
-        videoUrl: '/videos/skull-fractures.mp4'
-      },
-      {
-        id: 'spinal-trauma-1',
-        title: 'Spinal Cord Trauma and Paralysis',
-        description: 'Spinal immobilization techniques, paralysis assessment, and preventing further spinal damage.',
-        duration: '13:20',
-        thumbnail: '/thumbnails/spinal-trauma.jpg',
-        videoUrl: '/videos/spinal-trauma.mp4'
-      },
-      {
-        id: 'head-spinal-transport-1',
-        title: 'Head and Spinal Injury Transport',
-        description: 'Safe transport techniques for head and spinal injuries, including improvised immobilization methods.',
-        duration: '9:15',
-        thumbnail: '/thumbnails/head-spinal-transport.jpg',
-        videoUrl: '/videos/head-spinal-transport.mp4'
+        id: 'tbi-2',
+        title: 'What to do if someone has a spinal cord injury',
+        videoUrl: 'https://www.youtube.com/embed/Uqy2IUhYkVA'
       }
     ],
     flashcards: [
@@ -744,43 +695,16 @@ export const trainingModules = [
   },
   {
     id: 'severe-bleeding',
-    title: 'Severe Bleeding (Hemorrhage)',
+    title: 'Severe Bleeding',
     description: 'Life-threatening blood loss from bomb fragments and building collapses requiring urgent transfusion and advanced hemorrhage control.',
     icon: '🩸',
     color: 'red',
     duration: '45 min',
     videos: [
       {
-        id: 'massive-hemorrhage-1',
-        title: 'Massive Hemorrhage Assessment',
-        description: 'Rapid assessment of life-threatening blood loss and shock classification.',
-        duration: '10:30',
-        thumbnail: '/thumbnails/massive-hemorrhage.jpg',
-        videoUrl: '/videos/massive-hemorrhage.mp4'
-      },
-      {
-        id: 'tourniquet-techniques-1',
-        title: 'Combat Tourniquet Application',
-        description: 'Proper tourniquet placement and tightening techniques for extremity hemorrhage.',
-        duration: '8:45',
-        thumbnail: '/thumbnails/tourniquet-application.jpg',
-        videoUrl: '/videos/tourniquet-application.mp4'
-      },
-      {
-        id: 'pressure-points-1',
-        title: 'Pressure Points and Hemostatic Agents',
-        description: 'Using pressure points and hemostatic dressings when tourniquets are not effective.',
-        duration: '11:20',
-        thumbnail: '/thumbnails/pressure-points.jpg',
-        videoUrl: '/videos/pressure-points.mp4'
-      },
-      {
-        id: 'hemorrhagic-shock-1',
-        title: 'Hemorrhagic Shock Management',
-        description: 'Recognition and pre-hospital management of hemorrhagic shock requiring urgent transfusion.',
-        duration: '12:15',
-        thumbnail: '/thumbnails/hemorrhagic-shock.jpg',
-        videoUrl: '/videos/hemorrhagic-shock.mp4'
+        id: 'bleeding-1',
+        title: 'How to treat severe bleeding',
+        videoUrl: 'https://www.youtube.com/embed/NxO5LvgqZe0'
       }
     ],
     flashcards: [
@@ -1004,7 +928,7 @@ export const trainingModules = [
     }
   },
   {
-    id: 'chest-abdominal-injuries',
+    id: 'chest-abdominal-trauma',
     title: 'Chest & Abdominal Trauma',
     description: 'Critical care for lung punctures, pneumothorax, internal organ damage, and respiratory failure from blast and penetrating injuries.',
     icon: '🫁',
@@ -1012,36 +936,9 @@ export const trainingModules = [
     duration: '55 min',
     videos: [
       {
-        id: 'lung-injuries-1',
-        title: 'Lung Punctures and Pneumothorax',
-        description: 'Recognition and emergency treatment of collapsed lungs, tension pneumothorax, and penetrating chest wounds.',
-        duration: '13:45',
-        thumbnail: '/thumbnails/lung-punctures.jpg',
-        videoUrl: '/videos/lung-punctures.mp4'
-      },
-      {
-        id: 'internal-organs-1',
-        title: 'Internal Organ Damage Assessment',
-        description: 'Identifying liver, spleen, and kidney injuries from blunt and penetrating abdominal trauma.',
-        duration: '12:20',
-        thumbnail: '/thumbnails/internal-organ-damage.jpg',
-        videoUrl: '/videos/internal-organ-damage.mp4'
-      },
-      {
-        id: 'respiratory-failure-1',
-        title: 'Respiratory Failure Management',
-        description: 'Managing airway obstruction, breathing difficulties, and ventilation problems in trauma patients.',
-        duration: '11:30',
-        thumbnail: '/thumbnails/respiratory-failure.jpg',
-        videoUrl: '/videos/respiratory-failure.mp4'
-      },
-      {
-        id: 'chest-abdominal-stabilization-1',
-        title: 'Chest and Abdominal Stabilization',
-        description: 'Emergency stabilization techniques and transport preparation for serious chest and abdominal injuries.',
-        duration: '10:45',
-        thumbnail: '/thumbnails/chest-abdominal-stabilization.jpg',
-        videoUrl: '/videos/chest-abdominal-stabilization.mp4'
+        id: 'chest-abd-1',
+        title: 'What to do if someone is unresponsive and not breathing',
+        videoUrl: 'https://www.youtube.com/embed/dlkgjYvHx-U'
       }
     ],
     flashcards: [
