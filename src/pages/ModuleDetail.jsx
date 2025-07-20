@@ -203,7 +203,7 @@ const ModuleDetail = () => {
           <div className="mt-6">
             <h3 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
               <PlayCircle className="w-6 h-6 text-primary-600" />
-              {i18n.t(['ModuleDetail', 'Training Videos'])}
+              {t(['ModuleDetail', 'Training Videos'])}
             </h3>
             <ul className="divide-y divide-gray-200">
               {module.videos.map((video) => (
@@ -222,7 +222,7 @@ const ModuleDetail = () => {
                       to={`/video/${video.id}`}
                       className="bg-primary-600 text-white px-3 py-2 rounded-lg hover:bg-primary-700 transition-colors text-xs sm:text-sm font-medium flex items-center justify-center"
                     >
-                      {i18n.t(['ModuleDetail', 'Watch'])}
+                      {t(['ModuleDetail', 'Watch'])}
                     </Link>
                   </div>
                 </li>
