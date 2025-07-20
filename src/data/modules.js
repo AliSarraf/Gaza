@@ -172,7 +172,7 @@ export const trainingModules = [
     quiz: {
       questions: [
         {
-          id: 1,
+          id: 'trauma-1',
           question: 'What should you NEVER do when treating a victim with embedded shrapnel?',
           options: [
             'Apply direct pressure around the object',
@@ -183,7 +183,7 @@ export const trainingModules = [
           correctAnswer: 1
         },
         {
-          id: 2,
+          id: 'trauma-2',
           question: 'When applying a tourniquet for blast-related amputation, how far above the wound should it be placed?',
           options: [
             '1 inch above the wound',
@@ -194,7 +194,7 @@ export const trainingModules = [
           correctAnswer: 1
         },
         {
-          id: 3,
+          id: 'trauma-3',
           question: 'Which is a key sign of internal bleeding from blast injuries?',
           options: [
             'External visible wounds only',
@@ -205,7 +205,7 @@ export const trainingModules = [
           correctAnswer: 1
         },
         {
-          id: 4,
+          id: 'trauma-4',
           question: 'What is the biggest risk of crush syndrome?',
           options: [
             'External bleeding',
@@ -216,7 +216,7 @@ export const trainingModules = [
           correctAnswer: 2
         },
         {
-          id: 5,
+          id: 'trauma-5',
           question: 'How should an amputated limb be preserved?',
           options: [
             'Place directly on ice',
@@ -291,28 +291,28 @@ export const trainingModules = [
             title: 'Recognize Third-Degree Burns',
             content: 'Waxy white, leathery, or charred appearance. May be painless due to nerve damage. All skin layers destroyed.',
             warning: 'Third-degree burns always require immediate medical evacuation',
-            image: '/images/flashcards/third-degree-recognition.jpg'
+            image: '/images/flashcards/third-degree-burns-1.jpg'
           },
           {
             step: 2,
             title: 'Do NOT Cool Large Burns',
             content: 'For burns >20% body surface, do NOT use water cooling - risk of hypothermia. Remove from heat source only.',
             warning: 'Large burns can cause life-threatening heat and fluid loss',
-            image: '/images/flashcards/large-burn-care.jpg'
+            image: '/images/flashcards/third-degree-burns-2.jpg'
           },
           {
             step: 3,
             title: 'Cover and Protect',
             content: 'Cover with clean, dry cloth or sterile sheets. Do NOT remove stuck clothing. Wrap each burned finger/toe separately.',
             tip: 'Use plastic wrap for temporary protection if sterile dressings unavailable',
-            image: '/images/flashcards/protect-severe-burn.jpg'
+            image: '/images/flashcards/third-degree-burns-3.jpg'
           },
           {
             step: 4,
             title: 'Treat for Shock',
             content: 'Monitor airway, breathing, circulation. Give fluids if conscious and no vomiting. Arrange immediate evacuation.',
             warning: 'Watch for airway burns - look for singed facial hair, soot in mouth/nose',
-            image: '/images/flashcards/burn-shock.jpg'
+            image: '/images/flashcards/third-degree-burns-4.jpg'
           }
         ]
       },
@@ -327,28 +327,28 @@ export const trainingModules = [
             title: 'Immediate Decontamination',
             content: 'Flush with large amounts of water for 15-20 minutes. Remove all contaminated clothing while flushing.',
             warning: 'White phosphorus ignites on contact with air - keep wet at all times',
-            image: '/images/flashcards/phosphorus-decon.jpg'
+            image: '/images/flashcards/white-phosphorus-1.jpg'
           },
           {
             step: 2,
             title: 'Remove Visible Particles',
             content: 'Use forceps or tweezers to remove visible white phosphorus particles while keeping area wet. Work under water if possible.',
             warning: 'Do NOT use fingers - phosphorus will burn your hands',
-            image: '/images/flashcards/remove-phosphorus.jpg'
+            image: '/images/flashcards/white-phosphorus-2.jpg'
           },
           {
             step: 3,
             title: 'Cover with Wet Dressings',
             content: 'Apply wet, sterile dressings. Keep dressings moist - dry air will cause phosphorus to re-ignite.',
             tip: 'If no sterile dressings available, use clean wet cloth',
-            image: '/images/flashcards/wet-dressing.jpg'
+            image: '/images/flashcards/white-phosphorus-3.jpg'
           },
           {
             step: 4,
             title: 'Continuous Monitoring',
             content: 'Monitor for re-ignition - look for smoke or renewed burning. Keep all affected areas wet until medical evacuation.',
             warning: 'Phosphorus can continue burning for hours if allowed to dry',
-            image: '/images/flashcards/monitor-phosphorus.jpg'
+            image: '/images/flashcards/white-phosphorus-4.jpg'
           }
         ]
       },
@@ -363,28 +363,28 @@ export const trainingModules = [
             title: 'Hand Hygiene First',
             content: 'Wash hands thoroughly with soap and water or use hand sanitizer before any burn care. Wear gloves if available.',
             warning: 'Dirty hands are the #1 source of burn wound infections',
-            image: '/images/flashcards/hand-hygiene.jpg'
+            image: '/images/flashcards/infection-prevention-1.jpg'
           },
           {
             step: 2,
             title: 'Clean the Wound',
             content: 'Rinse gently with clean water or sterile saline. Remove loose debris with sterile tweezers. Do NOT scrub.',
             tip: 'Boiled and cooled water can substitute for sterile saline if needed',
-            image: '/images/flashcards/clean-burn-wound.jpg'
+            image: '/images/flashcards/infection-prevention-2.jpg'
           },
           {
             step: 3,
             title: 'Apply Clean Dressings',
             content: 'Use sterile dressings if available, or clean cloth. Change dressings daily or when soiled. Keep wound moist but not wet.',
             warning: 'Dry wounds heal slower and are more prone to infection',
-            image: '/images/flashcards/sterile-dressing.jpg'
+            image: '/images/flashcards/infection-prevention-3.jpg'
           },
           {
             step: 4,
             title: 'Monitor for Infection Signs',
             content: 'Watch for: increased pain, fever, pus, bad smell, red streaking, green/yellow drainage. Seek medical help immediately.',
             tip: 'Take photos to document progression if medical help is delayed',
-            image: '/images/flashcards/infection-signs.jpg'
+            image: '/images/flashcards/infection-prevention-4.jpg'
           }
         ]
       }
