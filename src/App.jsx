@@ -38,7 +38,7 @@ function App() {
                   <Route path="/video/:videoId" element={<VideoPlayer />} />
                   <Route path="/quiz/:moduleId" element={<Quiz />} />
                   <Route path="/flashcards/:moduleId" element={<Flashcards />} />
-                <Route path="/progress" element={<Progress />} />
+                  <Route path="/progress" element={<Progress />} />
                 </Routes>
               </main>
 
