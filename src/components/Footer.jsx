@@ -15,9 +15,7 @@ const Footer = () => {
           {/* App Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FA</span>
-              </div>
+              <img src="/logo192.png" alt="Site Logo" className="w-8 h-8 rounded-lg bg-white p-1" />
               <span className="text-xl font-bold">{t(['Footer', 'First Aid Training'])}</span>
             </div>
             <p className="text-gray-300 text-sm mb-4">

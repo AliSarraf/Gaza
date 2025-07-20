@@ -129,20 +129,20 @@ const VideoPlayer = () => {
     <div className="min-h-screen bg-black">
       <div className="relative">
         {/* Video Container */}
-        <div className="relative w-full h-screen bg-black">
+        <div className="relative w-full max-w-2xl mx-auto aspect-video bg-black mt-4">
           {video.videoUrl.includes('youtube.com/embed') ? (
             <iframe
               src={video.videoUrl}
               title={video.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="w-full h-full object-contain bg-black"
+              className="w-full h-full object-contain bg-black rounded-lg"
               frameBorder="0"
             />
           ) : (
             <video
               ref={videoRef}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain rounded-lg"
               poster={video.thumbnail}
               preload="metadata"
             >
