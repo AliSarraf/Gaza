@@ -11,6 +11,7 @@ import Quiz from './pages/Quiz';
 import Progress from './pages/Progress';
 import Flashcards from './pages/Flashcards';
 import OfflineIndicator from './components/OfflineIndicator';
+import ScrollToTop from './components/ScrollToTop';
 import { ProgressProvider } from './contexts/ProgressContext';
 import { OfflineProvider } from './contexts/OfflineContext';
 import { LocaleProvider } from './contexts/LocaleContext.jsx';
@@ -23,6 +24,7 @@ function App() {
         <OfflineProvider>
           <ProgressProvider>
             <Router>
+              <ScrollToTop />
               <div className="min-h-screen bg-gray-50 flex flex-col">
                 <Helmet>
                   <title>Yeshfi</title>
